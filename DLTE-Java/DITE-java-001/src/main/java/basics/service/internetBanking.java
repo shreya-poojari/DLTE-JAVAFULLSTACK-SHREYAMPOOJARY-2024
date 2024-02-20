@@ -1,5 +1,5 @@
 package basics.service;
-import java.util.Scanner();
+import java.util.Scanner;
 public class internetBanking {
     public static void main(String[] args) {
         String userName = "", userPass = "", userAuthCode = "", userEmail = "", destName = "", destAcc = "", destPh = "";
@@ -28,7 +28,7 @@ public class internetBanking {
         amount = scanner.nextLong();
         System.out.println("enter otp");
         transferOtp = scanner.nextLong();
-        System.out.println("Dear" + userName + "the amount of RS=" + amount + "is transfered to" + destName);
+        System.out.println("Dear " + userName +" the amount of RS=" + amount + "is transfered");
     }
 }
 

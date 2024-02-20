@@ -29,7 +29,5 @@ public class minimumBalance {
     }
 
 }
-//declare array customerbalance and initialize main method
-//    int[] customerBalance
-//        sout
+
 
