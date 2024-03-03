@@ -3,11 +3,11 @@ package basics.services;
 public class BondAnalysis {
     public static void main(String[] args){
         Bonds BondArray[]={
-                new Bonds(1500,8.33,"Payable","Divya",5),
-                new Bonds(1500,5.22,"Payable","sowmya",5),
-                new Bonds(1500,7.63,"Not-Payable","shruthi",5),
-                new Bonds(1500,9.55,"Payable","bhavya",5),
-                new Bonds(1500,6.28,"Not-Payable","Raksha",5),
+                new Bonds(1500,"Government bond",8.33,"Payable","Divya",5),
+                new Bonds(1500,"Private band",5.22,"Payable","sowmya",5),
+                new Bonds(1500,"Muncipal bond",7.63,"Not-Payable","shruthi",5),
+                new Bonds(1500,"Corporate bond",9.55,"Payable","bhavya",5),
+                new Bonds(1500,"Local authority bond",6.28,"Not-Payable","Raksha",5),
         };
         BondAnalysis Bonds = new BondAnalysis();
         Bonds.sort(BondArray);
