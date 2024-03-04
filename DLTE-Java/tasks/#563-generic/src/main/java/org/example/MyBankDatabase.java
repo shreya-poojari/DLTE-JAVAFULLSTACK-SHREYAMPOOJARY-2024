@@ -37,7 +37,7 @@ public class MyBankDatabase<T> implements Activity<T> {
     }
 
     @Override
-    String deletedata(int position) {
+    public String deletedata(int position) {
         int size = bankDataBase.length;
         Object obj = null;
         if (position >= 0 && position < size) {
