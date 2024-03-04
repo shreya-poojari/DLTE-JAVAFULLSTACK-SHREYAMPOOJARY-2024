@@ -2,30 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e3b7f31-b299-4853-acec-43a497f7be15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../DLTE-java-006/src/main/java/basics/service/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-java-006/src/main/java/basics/service/TransactionAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../DLTE-java-006/src/main/java/basics/service/TransactionFunctionality.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections/src/main/java/basics/service/Linear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../collections/src/main/java/basics/service/LinearImplementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Resources/Application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/src/main/java/org/example/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/src/main/java/org/example/MyBank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/src/main/java/org/example/MyBankLoan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/Loanproduct-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/classes/org/example/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/surefire-reports/TEST-org.example.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/surefire-reports/org.example.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Loanproduct/target/test-classes/org/example/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../collections/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../collections/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/#443-MobileBanking-ExceptionHandling.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/src/main/java/org/example/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/src/main/java/org/example/GPay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/src/main/java/org/example/MyBankException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#443-MobileBanking-ExceptionHandling/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/#532-Concurrent-Transaction-Analysis.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/src/main/java/org/example/ImplementThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/src/main/java/org/example/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/src/main/java/org/example/TransactionAnalysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/target/classes/org/example/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../#532-Concurrent-Transaction-Analysis/target/test-classes/org/example/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-java-005/src/main/java/basics/service/creditCardMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-java-005/src/main/java/basics/service/creditCardMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ExecuteBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ExecuteBank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MyBankDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/MyBankDatabase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +129,7 @@
       <workItem from="1709476746055" duration="176000" />
       <workItem from="1709535815485" duration="1303000" />
       <workItem from="1709537144568" duration="3685000" />
+      <workItem from="1709550596055" duration="1155000" />
     </task>
     <servers />
   </component>

@@ -17,6 +17,7 @@ public class creditCardMain {
                 new creditCard(54697312846L, "bhavya", new Date(2024, 4, 5), 908, 43214, new Date(2024, 7, 28), new Date(2024, 7, 29), 4569),
         };
         creditCardMain creditAnalysis = new creditCardMain();
+        Logger logger= Logger.getLogger
         System.out.println("welcome");
         System.out.println(resourceBundle.getString("welcome.message"));
         System.out.println();
