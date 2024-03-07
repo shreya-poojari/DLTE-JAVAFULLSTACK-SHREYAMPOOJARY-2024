@@ -1,14 +1,15 @@
 package org.example;
 
-import java.util.ResourceBundle;
+import java.util.ArrayList;
 import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.List;
 
 public class MyBankDatabase<T> implements Activity<T> {
+    private  List<T> data;
     T[] bankDataBase;
 
     @Override
-    public String createNewData(T object) {
+   public String createNewData(T object) {
         int size = bankDataBase.length;
         for (int index = 0; index < size; index++)
             if (bankDataBase[index] == null) {

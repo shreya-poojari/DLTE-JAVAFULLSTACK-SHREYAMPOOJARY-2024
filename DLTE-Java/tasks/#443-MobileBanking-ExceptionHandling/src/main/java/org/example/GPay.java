@@ -1,32 +1,63 @@
 package org.example;
 
-import java.util.Enumeration;
+
 import java.util.ResourceBundle;
-import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class GPay {
-    private int upiPin;
+public class GPay extends Account{
+    private String  upiPin;
     private String userName;
+  ResourceBundle resourceBundle= ResourceBundle.getBundle("application");
+  Logger logger=Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
-    public GPay(int upiPin, String userName) {
+    public GPay(Long accountNumber, Double accountBalance, String accountHolder, String  upiPin) {
+        super(accountNumber, accountBalance, accountHolder);
         this.upiPin = upiPin;
-        this.userName = userName;
+        this.userName = accountHolder;
     }
-    public boolean isValidPin(int pin){
-        return pin==upiPin;
+    public boolean validatePin(String newPin) throws MyBankException{
+        if (!upiPin.equals(newPin)){
+            logger.log(Level.WARNING,"INVALID UPI");
+            throw new MyBankException("pin.invalid");
+        }
+        return true;
     }
-    public void payBill(String billerName, Double billedAmount, String billType){
-        Scanner scanner=new Scanner(System.in);
-        ResourceBundle resourceBundle=ResourceBundle.getBundle("application");
-        System.out.println("Enter upi pin");
-        int pin = scanner.nextInt();
-        try {
-            if (!isValidPin(pin)) {
-                throw new MyBankException();
+    public void payBill(String billerName,double BilledAmount,String billType,String upiPin){
+        try{
+            validatePin(upiPin);
+            if (getAccountBalance()>=BilledAmount){
+                logger.log(Level.INFO,"Bill payment succesful to "+billerName+" of amount"+BilledAmount+" for "+billType);
             }
-        } catch (MyBankException exception){
-
-
+            else{
+                logger.log(Level.WARNING,"Insufficient Balance");
+                throw new MyBankException("pin.invalid");
+            }
+        }catch (MyBankException exception){
+            logger.log(Level.WARNING,exception.toString());
+            throw exception;
         }
     }
+
+    //    public GPay(int upiPin, String userName) {
+//        this.upiPin = upiPin;
+//        this.userName = userName;
+//    }
+//    public boolean isValidPin(int pin){
+//        return pin==upiPin;
+//    }
+//    public void payBill(String billerName, Double billedAmount, String billType){
+//        Scanner scanner=new Scanner(System.in);
+//        ResourceBundle resourceBundle=ResourceBundle.getBundle("application");
+//        System.out.println("Enter upi pin");
+//        int pin = scanner.nextInt();
+//        try {
+//            if (!isValidPin(pin)) {
+//                throw new MyBankException();
+//            }
+//        } catch (MyBankException exception){
+//
+//
+//        }
+//    }
 }
