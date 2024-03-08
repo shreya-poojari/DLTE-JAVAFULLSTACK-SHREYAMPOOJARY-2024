@@ -5,6 +5,9 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import static java.lang.System.exit;
+
+
 public class CreditCardAnalysis {
     public static void main(String[] args) {
         creditCard[] MyBank = {
@@ -34,8 +37,57 @@ public class CreditCardAnalysis {
                     }
                 case 2:
                     System.out.println("Enter the start date");
-                    int startdate = s
+                    int startdate = scanner.nextInt();
+                    System.out.println("Enter end date");
+                    int startDate = scanner.nextInt();
+                    System.out.println("Enter the end date");
+                    int endDate = scanner.nextInt();
+                    try{
+                        Analysis.findDateOfBillPayment(MyBank, startDate, endDate);
+                        break;
+                    }
+                    catch (MyBankCreditCardException cardLimit){
+                        logger.log(Level.WARNING,cardLimit.toString());
+                        Analysis.findDateOfBillPayment(MyBank,startdate,endDate);
+                        break;
+                    }
+                case 3:
+                  exit(0);
             }
         }
     }
+    public void findCardLimit(creditCard[] customers){
+        Long StartLimit, EndLimit;
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter Start Limit");
+        StartLimit=scanner.nextLong();
+        System.out.println("Enter End Limit");
+        EndLimit=scanner.nextLong();
+        boolean flag=true;
+        for (creditCard each:customers){
+            if (each.getCreditCardLimit()>= StartLimit && each.getCreditCardLimit()<=EndLimit){
+                flag=false;
+                System.out.println(each.getCreditCardHolder()+" has a limit of "+each.getCreditCardLimit()+" ");
+            }
+        }
+        if (flag){
+            throw new MyBankCreditCardException();
+        }
+    }
+    public void findDateOfBillPayment(creditCard[] customers,int start,int end){
+        System.out.println("customers who made bill payments between "+start+" end "+end);
+        boolean flag=true;
+        for (creditCard each: customers){
+            if (each.getDateOfBilGeneration().getDate()>=start&& each.getDateOfBilGeneration().getDate()<=end){
+                flag=false;
+                System.out.println(each.getCreditCardHolder()+" "+each.getDateOfBilGeneration().getDate());
+            }
+        }
+        if (flag){
+            throw new MyBankCreditCardException();
+        }
+    }
 }
+
+
+
