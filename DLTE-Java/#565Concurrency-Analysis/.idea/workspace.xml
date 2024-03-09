@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="678b5a10-25e5-4a6b-9682-8a88fe191284" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../tasks/#744Lambda-implementation-over-Loan-Product/.idea/#744Lambda-implementation-over-Loan-Product.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#744Lambda-implementation-over-Loan-Product/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/#744Lambda-implementation-over-Loan-Product/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#744Lambda-implementation-over-Loan-Product/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/#744Lambda-implementation-over-Loan-Product/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#744Lambda-implementation-over-Loan-Product/src/main/java/org/example/LoanProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/#744Lambda-implementation-over-Loan-Product/src/main/java/org/example/LoanProduct.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\#565Concurrency-Analysis\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2dRQVax9WSEAO11FBX8i7kC3ADH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <module name="#565Concurrency-Analysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="678b5a10-25e5-4a6b-9682-8a88fe191284" name="Default Changelist" comment="" />
+      <created>1709968436058</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709968436058</updated>
+      <workItem from="1709968439229" duration="1136000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1709986748208">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1709986748208" />
+    <state width="746" height="208" key="GridCell.Tab.0.bottom" timestamp="1709987294004">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="746" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1709987294004" />
+    <state width="746" height="208" key="GridCell.Tab.0.center" timestamp="1709987294004">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="746" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1709987294004" />
+    <state width="746" height="208" key="GridCell.Tab.0.left" timestamp="1709987294004">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="746" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1709987294004" />
+    <state width="746" height="208" key="GridCell.Tab.0.right" timestamp="1709987294004">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="746" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1709987294004" />
+  </component>
+</project>

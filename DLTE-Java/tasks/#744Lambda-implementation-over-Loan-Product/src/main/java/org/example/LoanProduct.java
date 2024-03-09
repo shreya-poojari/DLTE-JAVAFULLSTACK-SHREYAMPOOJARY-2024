@@ -12,7 +12,15 @@ public class LoanProduct {
         loanList.add(new Loan(2,67876.00,"2024-12-25","closed","Divya",9876543212L));
         MyBank myBank=(loan, startDate, endDate) -> {
             List<Loan> filteredLoans = new ArrayList<>();
-            Predicate<Loan> dateRangeFilter = loan
+            Predicate<Loan> dateRangeFilter = Loan -> Loan.getLoanDate().after(startDate)&&Loan.getLoanDate().before(endDate);
+            loans.stream().filter(dateRangeFilter).forEach(filteredLoans::add);
+            return filteredLoans;
         };
+        Date startDate = new Date(); // Replace with actual start date
+        Date endDate = new Date();   // Replace with actual end date
+        List<Loan> filteredLoans = myBank.filterLoansByDateRange(loanList, startDate, endDate);
+
+        System.out.println("Filtered Loans:");
+        filteredLoans.forEach(System.out::println);
     }
 }
