@@ -2,7 +2,7 @@ package org.example.entity;
 import  java.io.Serializable;
 import java.util.Date;
 
-public class userDetails {
+public class userDetails implements Serializable{
     private  String  userName;
     private  String password;
     private Date dateOfBirth;

@@ -23,6 +23,7 @@ public class UserDetailFileRepository implements UserDetailRepository{
 
     public  UserDetailFileRepository(String url){
         filePath=url;
+        userDetailsList = new ArrayList<>();
         try{
             File file = new File(filePath);
             if (!file.exists()){
