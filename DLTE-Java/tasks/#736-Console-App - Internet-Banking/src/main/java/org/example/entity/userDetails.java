@@ -8,12 +8,12 @@ public class userDetails {
     private Date dateOfBirth;
     private  String address;
     private String emailId;
-    private String phoneNumber;
+    private Long phoneNumber;
 
     public userDetails() {
     }
 
-    public userDetails(String userName, String password, Date dateOfBirth, String address, String emailId, String phoneNumber) {
+    public userDetails(String userName, String password, Date dateOfBirth, String address, String emailId, Long phoneNumber) {
         this.userName = userName;
         this.password = password;
         this.dateOfBirth = dateOfBirth;
@@ -74,11 +74,11 @@ public class userDetails {
         this.emailId = emailId;
     }
 
-    public String getPhoneNumber() {
+    public Long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(Long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }
