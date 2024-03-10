@@ -1,8 +1,9 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public interface MyBank {
-    List<Loan> filterLoansByDateRange(List<Loan> loan, Date startDate,Date endDate);
+    ArrayList<Loan> loan=new ArrayList<>(20);
+    void filterDate(Date startDate,Date endDate);
 }

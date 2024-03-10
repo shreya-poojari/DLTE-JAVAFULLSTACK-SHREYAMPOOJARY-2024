@@ -1,14 +1,17 @@
 package org.example;
 import java.util.Date;
 public class Loan {
-    private int loanNumber;
-    private double loanAmount;
-    private String loanDate;
+    private Long loanNumber;
+    private Long loanAmount;
+    private Date loanDate;
     private String loanStatus;
     private String borrowerName;
     private Long borrowerContact;
 
-    public Loan(int loanNumber, double loanAmount, String loanDate, String loanStatus, String borrowerName, Long borrowerContact) {
+    public Loan() {
+    }
+
+    public Loan(Long loanNumber, Long loanAmount,Date loanDate, String loanStatus, String borrowerName, Long borrowerContact) {
         this.loanNumber = loanNumber;
         this.loanAmount = loanAmount;
         this.loanDate = loanDate;
@@ -17,30 +20,39 @@ public class Loan {
         this.borrowerContact = borrowerContact;
     }
 
-    public Loan() {
+    @Override
+    public String toString() {
+        return "Loan{" +
+                "loanNumber=" + loanNumber +
+                ", loanAmount=" + loanAmount +
+                ", loanDate='" + loanDate + '\'' +
+                ", loanStatus='" + loanStatus + '\'' +
+                ", borrowerName='" + borrowerName + '\'' +
+                ", borrowerContact=" + borrowerContact +
+                '}';
     }
 
-    public int getLoanNumber() {
+    public Long getLoanNumber() {
         return loanNumber;
     }
 
-    public void setLoanNumber(int loanNumber) {
+    public void setLoanNumber(Long loanNumber) {
         this.loanNumber = loanNumber;
     }
 
-    public double getLoanAmount() {
+    public Long getLoanAmount() {
         return loanAmount;
     }
 
-    public void setLoanAmount(double loanAmount) {
+    public void setLoanAmount(Long loanAmount) {
         this.loanAmount = loanAmount;
     }
 
-    public String getLoanDate() {
+    public Date getLoanDate() {
         return loanDate;
     }
 
-    public void setLoanDate(String loanDate) {
+    public void setLoanDate(Date loanDate) {
         this.loanDate = loanDate;
     }
 
