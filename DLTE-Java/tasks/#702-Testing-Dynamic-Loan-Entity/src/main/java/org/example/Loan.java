@@ -1,16 +1,17 @@
 package org.example;
 import  java.io.Serializable;
+import java.util.Date;
 import java.util.logging.Logger;
 
 public class Loan {
     private Long loannumber;
     private Double loanAmount;
-    private String loanDate;
+    private String  loanDate;
     private String loanStatus;
     private String borrowerName;
     private Long borrowerContact;
 
-    public Loan(Long loannumber, Double loanAmount, String loanDate, String loanStatus, String borrowerName, Long borrowerContact) {
+    public Loan(Long loannumber, Double loanAmount, String  loanDate, String loanStatus, String borrowerName, Long borrowerContact) {
         this.loannumber = loannumber;
         this.loanAmount = loanAmount;
         this.loanDate = loanDate;
@@ -20,6 +21,9 @@ public class Loan {
     }
 
     public Loan() {
+    }
+
+    public static void add(Loan loan) {
     }
 
     public Long getLoannumber() {
@@ -42,7 +46,7 @@ public class Loan {
         return loanDate;
     }
 
-    public void setLoanDate(String loanDate) {
+    public void setLoanDate(String  loanDate) {
         this.loanDate = loanDate;
     }
 
