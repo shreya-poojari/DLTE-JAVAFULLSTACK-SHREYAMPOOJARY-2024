@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="690c33cb-c895-4b78-9bb1-830e231506b3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Review-2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/.idea/Review-2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/Review-2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/src/main/java/org/first/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/src/main/java/org/first/FileOperations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/src/test/java/org/first/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/classes/org/first/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/classes/org/first/FileOperations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/surefire-reports/TEST-org.first.AppTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/surefire-reports/org.first.AppTest.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/test-classes/org/first/AppTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Review-2/target/untitled-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tasks/DLTE-Java-MyBankCreditCard-ConsoleApp/.idea/DLTE-Java-MyBankCreditCard-ConsoleApp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tasks/DLTE-Java-MyBankCreditCard-ConsoleApp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tasks/DLTE-Java-MyBankCreditCard-ConsoleApp/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tasks/DLTE-Java-MyBankCreditCard-ConsoleApp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tasks/DLTE-Java-MyBankCreditCard-ConsoleApp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/#837-Web-SIP-Calculator-and-Tax-slab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/#838-Rest-Webservice-Transaction-Module/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/.idea/#837-Web-SIP-Calculator-and-Tax-slab.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/src/main/java/SIP/SipCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/target/#837-Web-SIP-Calculator-and-Tax-slab.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/target/#837-Web-SIP-Calculator-and-Tax-slab/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/target/#837-Web-SIP-Calculator-and-Tax-slab/WEB-INF/classes/SIP/SipCalculator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/target/#837-Web-SIP-Calculator-and-Tax-slab/WEB-INF/lib/gson-2.10.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/target/#837-Web-SIP-Calculator-and-Tax-slab/WEB-INF/lib/javax.ws.rs-api-2.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/target/#837-Web-SIP-Calculator-and-Tax-slab/WEB-INF/lib/slf4j-api-2.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/target/#837-Web-SIP-Calculator-and-Tax-slab/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/target/#837-Web-SIP-Calculator-and-Tax-slab/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#837-Web-SIP-Calculator-and-Tax-slab/target/classes/SIP/SipCalculator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/src/main/java/WebService/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/src/main/java/WebService/details.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/#838-Rest-Webservice-Transaction-Module/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/#565Concurrency-Analysis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/src/main/java/org/example/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/src/main/java/org/example/TransactionAnalysis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#565Concurrency-Analysis/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#700-Loan-Product-Entity/#700-Loan-Product-Entity.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#700-Loan-Product-Entity/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#700-Loan-Product-Entity/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#700-Loan-Product-Entity/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../#700-Loan-Product-Entity/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/review.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/review.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EmployeeDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Employeefile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/EmployeeDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Employeefile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/review-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/credit-card-logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/credit-card-logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/credit-card-logs.txt.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/src/main/java/org/example/services/UserDetailServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/src/main/java/org/example/services/UserDetailServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/target/classes/org/example/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/target/classes/org/example/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/target/classes/org/example/services/UserDetailServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/target/classes/org/example/services/UserDetailServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/userdetail.doc" beforeDir="false" afterPath="$PROJECT_DIR$/../tasks/#736-Console-App - Internet-Banking/userdetail.doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/.idea/untitled.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/Review-2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/src/main/java/org/first/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/src/main/java/org/first/FileOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/src/test/java/org/first/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/classes/org/first/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/classes/org/first/FileOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/surefire-reports/TEST-org.first.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/surefire-reports/org.first.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/test-classes/org/first/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tasks/untitled/Review-2/target/untitled-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JAVAEE-001/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JAVAEE-001/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JAVAEE-001/src/main/java/first/MyFirstServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../DLTE-JavaEE/DLTE-JAVAEE-001/src/main/java/first/MyFirstServlet.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\review\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="2dBGK2jM69zSJd1NN6uuMTs8igO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager" selected="Application.EmployeeDetails">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <module name="review" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeDetails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.EmployeeDetails" />
+      <module name="review" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.EmployeeDetails" />
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="690c33cb-c895-4b78-9bb1-830e231506b3" name="Default Changelist" comment="" />
+      <created>1709473990994</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709473990994</updated>
+      <workItem from="1709473994364" duration="2137000" />
+      <workItem from="1709476640716" duration="8000" />
+      <workItem from="1709608686888" duration="16048000" />
+      <workItem from="1709695232889" duration="830000" />
+      <workItem from="1709696395232" duration="8050000" />
+      <workItem from="1709780445015" duration="64000" />
+      <workItem from="1709780531732" duration="129000" />
+      <workItem from="1710179704071" duration="4844000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="164" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1709626615730">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="499" y="164" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.816@0.0.1536.816" timestamp="1709626615730" />
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1710180454891">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1710180454891" />
+    <state x="216" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1710218025282">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="216" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.816@0.0.1536.816" timestamp="1710218025282" />
+    <state x="499" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1709619270547">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="499" y="156" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1709619270547" />
+    <state x="337" y="4" key="CommitChangelistDialog2" timestamp="1709697210560">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="337" y="4" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1709697210560" />
+    <state x="549" y="164" key="FileChooserDialogImpl" timestamp="1710180006425">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="164" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1710180006425" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1709699373114">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1709699373114" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1709699373114">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1709699373114" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1709699373114">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1709699373114" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1709699373114">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1709699373114" />
+    <state x="277" y="52" key="SettingsEditor" timestamp="1709696069157">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="277" y="52" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1709696069157" />
+    <state x="179" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1709476641455">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="179" y="234" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1709476641455" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/App.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$USER_HOME$/Downloads/DLTE-Java-Technical-Review/DLTE-Java-Technical-Review/src/main/java/org/example/App.java</url>
+          <line>10</line>
+          <properties class="org.example.App" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
