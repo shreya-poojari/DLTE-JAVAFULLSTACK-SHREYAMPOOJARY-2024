@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -61,5 +62,12 @@ public class Transaction extends HttpServlet {
         resp.setStatus(HttpServletResponse.SC_OK);
         resp.getWriter().println(detail.getTo()+" has added to the records");
     }
-
+    ArrayList<details> transactions= (ArrayList<details>) Stream.of(
+            new details(new Date(2024,11,15),1234.0,"shreya","Family"),
+            new details(new Date(2024,9,25),9876.0,"Snehal","Friend"),
+            new details(new Date(2024,12,5),9856.0,"kavya","Education"),
+            new details(new Date(2024,5,19),2345.0,"sumanth","Emergency"),
+            new details(new Date(2024,7,3),8734.0,"dhanush","food"),
+            new details(new Date(2024,1,12),3333.0,"anith","Friend")
+    ).collect(Collectors.toList());
 }
