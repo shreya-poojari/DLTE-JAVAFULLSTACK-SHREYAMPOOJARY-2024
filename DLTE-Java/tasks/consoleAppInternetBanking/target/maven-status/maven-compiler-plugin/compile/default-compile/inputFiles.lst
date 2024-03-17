@@ -1,0 +1,9 @@
+C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\consoleAppInternetBanking\src\main\java\org\example\App.java
+C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\consoleAppInternetBanking\src\main\java\org\example\Entity\Transactions.java
+C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\consoleAppInternetBanking\src\main\java\org\example\Exceptions\UserDetailsException.java
+C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\consoleAppInternetBanking\src\main\java\org\example\Middleware\UserDetailsFileRepository.java
+C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\consoleAppInternetBanking\src\main\java\org\example\Remote\StorageTarget.java
+C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\consoleAppInternetBanking\src\main\java\org\example\Entity\UserDetails.java
+C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\consoleAppInternetBanking\src\main\java\org\example\Middleware\FileStorageTarget.java
+C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\consoleAppInternetBanking\src\main\java\org\example\Services\UserDetailsServices.java
+C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\DLTE-Java\tasks\consoleAppInternetBanking\src\main\java\org\example\Remote\UserDetailsRepository.java

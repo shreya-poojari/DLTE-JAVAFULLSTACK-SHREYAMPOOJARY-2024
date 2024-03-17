@@ -1,4 +1,0 @@
-Mar 10, 2024 8:10:38 PM org.example.App updateUserDetails
-INFO: shreyaupdate successful
-Mar 10, 2024 8:11:10 PM org.example.App updateUserDetails
-INFO: shreyaupdate successful
