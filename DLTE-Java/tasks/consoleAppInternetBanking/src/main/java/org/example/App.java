@@ -95,6 +95,7 @@ public class App
                 if (userDetails.getpassword().equals(scanner.nextLine())) {
                     System.out.println("Set new password");
                     String newPass = scanner.nextLine();
+
                     Matcher matcher = passwordPattern.matcher(newPass);
                     if (matcher.matches()) {
                         userDetails.setpassword(newPass);

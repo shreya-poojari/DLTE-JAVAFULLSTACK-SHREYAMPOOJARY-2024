@@ -1,7 +1,6 @@
 package org.example.Services;
 import org.example.Entity.Transactions;
 import org.example.Entity.UserDetails;
-import org.example.Exceptions.UserDetailsException;
 import org.example.Remote.StorageTarget;
 import org.example.Remote.UserDetailsRepository;
 
@@ -27,19 +26,15 @@ public class UserDetailsServices {
 //            return null;
 //        }
 //    }
-//    public void calladdusers() {
-//        try {
-//            userDetailsRepository.addUsers();
-//        } catch (UserDetailsException userDetailsException) {
-//            throw userDetailsException;
-//        }
-//    }
+    public void calladdusers() {
+        userDetailsRepository.addUsers();
+    }
 
     public void callUpdate(UserDetails userDetails) {
         userDetailsRepository.update(userDetails);
     }
 
-    public UserDetails callVerifyPassword(String username, String password) {
+    public boolean callVerifyPassword(String username, String password) {
         try {
             return (UserDetails) userDetailsRepository.verifyPassword(username, password);
         } catch (Exception e) {
