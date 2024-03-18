@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d68598c6-e0a1-4b71-ac51-fbf44a29aa33" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CreateTransactions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/FilterByUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ReadAll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Transactions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/SOAP_Read_Service_with_DAO.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/DAOlayertoConsoleAppInternetBanking-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/FastInfoset-1.2.13.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/gmbal-api-only-3.1.0-b001.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/ha-api-3.1.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/javax.annotation-api-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/javax.xml.soap-api-1.3.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/jaxb-api-2.2.12-b140109.1041.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/jaxb-core-2.2.10-b140802.1033.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/jaxb-impl-2.2.10-b140802.1033.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/jaxws-api-2.2.11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/jsr181-api-1.0-MR1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/logback-classic-1.3.14.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/logback-core-1.3.14.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/management-api-3.0.0-b012.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/mimepull-1.9.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/ojdbc6-11.2.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/ons-11.2.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/oraclepki-11.2.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/osdt_cert-11.2.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/osdt_core-11.2.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/policy-2.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/resolver-20050927.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/saaj-impl-1.3.25.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/simplefan-11.2.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/slf4j-api-2.0.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/stax-ex-1.7.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/stax2-api-3.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/streambuffer-1.5.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/ucp-11.2.0.4.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/lib/woodstox-core-asl-4.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/SOAP_Read_Service_with_DAO/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SOAP_Read_Service_with_DAO/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DLTE-JavaEE/tasks/Restful_webservice_for_DAO_layer/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/#565Concurrency-Analysis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/src/main/java/org/example/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/src/main/java/org/example/TransactionAnalysis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#565Concurrency-Analysis/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#700-Loan-Product-Entity/#700-Loan-Product-Entity.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#700-Loan-Product-Entity/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#700-Loan-Product-Entity/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#700-Loan-Product-Entity/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../#700-Loan-Product-Entity/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/DataBase.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/src/main/java/org/example/DatabaseRepositoryImplementation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../DataBase/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_3_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/libraries/Maven__ch_qos_logback_logback_core_1_3_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/libraries/Maven__org_projectlombok_lombok_1_18_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/EmployeeFile.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/src/main/java/org/employeefile/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/src/main/java/org/employeefile/OperationOnEmployee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/src/test/java/org/employeefile/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/EmployeeFile-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/classes/org/employeefile/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/classes/org/employeefile/OperationOnEmployee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/surefire-reports/TEST-org.employeefile.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/surefire-reports/org.employeefile.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../EmployeeFile/target/test-classes/org/employeefile/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/Rest-Webservice-Transaction-Module.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/src/main/java/webservice/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/src/main/java/webservice/details.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/classes/webservice/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/classes/webservice/details.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/lib/javax.ws.rs-api-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/lib/slf4j-api-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/classes/webservice/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Rest-Webservice-Transaction-Module/target/classes/webservice/details.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/.idea/Review-2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/Review-2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/src/main/java/org/first/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/src/main/java/org/first/FileOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/src/test/java/org/first/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/classes/org/first/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/classes/org/first/FileOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/surefire-reports/TEST-org.first.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/surefire-reports/org.first.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/test-classes/org/first/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Review-2/target/untitled-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/WebSIPCalculatorAndTaxSlab.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/src/main/java/WebServlet/SipTax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../WebSIPCalculatorAndTaxSlab/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/console_app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_3_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/libraries/Maven__ch_qos_logback_logback_core_1_3_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/libraries/Maven__junit_junit_4_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/libraries/Maven__org_projectlombok_lombok_1_18_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/libraries/Maven__org_slf4j_slf4j_api_2_0_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/EmployeeFile/EmployeeFile.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/EmployeeFile/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/EmployeeFile/src/main/java/org/employeefile/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/EmployeeFile/src/main/java/org/employeefile/EmployeeFileOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/EmployeeFile/src/test/java/org/employeefile/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/.idea/review.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/review.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/src/main/java/org/example/EmployeeAddressDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/src/main/java/org/example/EmployeeDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/src/main/java/org/example/EmployeeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/src/main/java/org/example/EmployeeFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/src/main/java/org/example/EmployeeInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/src/main/java/org/example/EmployeePersonalDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/classes/org/example/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/classes/org/example/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/classes/org/example/EmployeeDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/classes/org/example/Employeefile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/review-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../console_app/review/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../employee-app/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../employee-app/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../employee-app/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../employee-app/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../employee-app/employee-app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../employee-app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../employee-app/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../employee-app/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review-1/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/.idea/review.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/employee.doc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/src/main/java/org/example/EmployeeAddressDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/src/main/java/org/example/EmployeeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/src/main/java/org/example/EmployeeFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/src/main/java/org/example/EmployeeInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/src/main/java/org/example/EmployeePersonalDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/org/example/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/org/example/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/org/example/EmployeeAddressDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/org/example/EmployeeDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/org/example/EmployeeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/org/example/EmployeeInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/org/example/EmployeePersonalDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/classes/org/example/Employeefile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/review-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../review/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/reviewdb.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/src/main/java/org/example/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/src/main/java/org/example/EmployeeAddressDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/src/main/java/org/example/EmployeeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../reviewdb/src/test/java/org/example/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/src/main/java/org/example/Middleware/UserDetailsDatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/src/main/java/org/example/Middleware/UserDetailsDatabaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/src/main/java/org/example/Remote/UserDetailsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/src/main/java/org/example/Remote/UserDetailsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/src/main/java/org/example/Services/UserDetailsServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/src/main/java/org/example/Services/UserDetailsServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/DAOlayertoConsoleAppInternetBanking-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/DAOlayertoConsoleAppInternetBanking-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/classes/org/example/Middleware/UserDetailsDatabaseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/classes/org/example/Middleware/UserDetailsDatabaseRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/classes/org/example/Remote/UserDetailsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/classes/org/example/Remote/UserDetailsRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/classes/org/example/Services/UserDetailsServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/classes/org/example/Services/UserDetailsServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/surefire-reports/TEST-org.example.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../DAOlayertoConsoleAppInternetBanking/target/surefire-reports/org.example.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/Rest_Get_mapping_of_Transactions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/src/main/java/rest/ReadAll.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/src/main/java/rest/ReadAllByDate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/src/main/java/rest/ReadAllByUsername.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/DAOlayertoConsoleAppInternetBanking-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/FastInfoset-1.2.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/gmbal-api-only-3.1.0-b001.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/ha-api-3.1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/javax.annotation-api-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/javax.xml.soap-api-1.3.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/jaxb-api-2.2.12-b140109.1041.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/jaxb-core-2.2.10-b140802.1033.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/jaxb-impl-2.2.10-b140802.1033.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/jaxws-api-2.2.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/jsr181-api-1.0-MR1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/logback-classic-1.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/logback-core-1.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/management-api-3.0.0-b012.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/mimepull-1.9.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/ojdbc6-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/ons-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/oraclepki-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/osdt_cert-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/osdt_core-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/policy-2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/resolver-20050927.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/saaj-impl-1.3.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/simplefan-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/slf4j-api-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/stax-ex-1.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/stax2-api-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/streambuffer-1.5.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/ucp-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/lib/woodstox-core-asl-4.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/Rest_Get_mapping_of_Transactions/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/classes/rest/ReadAll.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/classes/rest/ReadAllByDate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/classes/rest/ReadAllByUsername.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Rest_Get_mapping_of_Transactions/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/Restful_webservice_for_DAO_layer.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/org/example/Services/annotations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/src/main/java/webService/FindByUsers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/src/main/java/webService/UpdateAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/src/main/resources/exception.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/classes/webService/FindByUsers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/classes/webService/UpdateAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/DAOlayertoConsoleAppInternetBanking-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/FastInfoset-1.2.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/gmbal-api-only-3.1.0-b001.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/ha-api-3.1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/javax.annotation-api-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/javax.xml.soap-api-1.3.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/jaxb-api-2.2.12-b140109.1041.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/jaxb-core-2.2.10-b140802.1033.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/jaxb-impl-2.2.10-b140802.1033.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/jaxws-api-2.2.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/jsr181-api-1.0-MR1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/logback-classic-1.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/logback-core-1.3.14.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/management-api-3.0.0-b012.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/mimepull-1.9.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/ojdbc6-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/ons-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/oraclepki-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/osdt_cert-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/osdt_core-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/policy-2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/resolver-20050927.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/saaj-impl-1.3.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/simplefan-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/slf4j-api-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/stax-ex-1.7.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/stax2-api-3.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/streambuffer-1.5.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/ucp-11.2.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/lib/woodstox-core-asl-4.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/Restful_webservice_for_DAO_layer/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Restful_webservice_for_DAO_layer/target/classes/webService/FindByUsers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../consoleAppInternetBanking/User-details-logs.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../consoleAppInternetBanking/User-details-logs.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/DLTE-INTERNSHIP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/src/main/java/basic/services/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/src/test/java/basic/services/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/DLTE-INTERNSHIP-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/classes/basic/services/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/surefire-reports/TEST-basic.services.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/surefire-reports/basic.services.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/DLTE-INTERNSHIP/target/test-classes/basic/services/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/.idea/Rest-Webservice-Transaction-Module.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/Rest-Webservice-Transaction-Module.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/src/main/java/webservice/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/src/main/java/webservice/details.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/classes/webservice/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/classes/webservice/details.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/lib/javax.ws.rs-api-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/lib/slf4j-api-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/Rest-Webservice-Transaction-Module/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/classes/webservice/Transaction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/Rest-Webservice-Transaction-Module/target/classes/webservice/details.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/WebSIPCalculatorAndTaxSlab.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/src/main/java/WebServlet/SipTax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/target/WebSIPCalculatorAndTaxSlab.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/target/WebSIPCalculatorAndTaxSlab/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/target/WebSIPCalculatorAndTaxSlab/WEB-INF/classes/WebServlet/SipTax.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/target/WebSIPCalculatorAndTaxSlab/WEB-INF/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/target/WebSIPCalculatorAndTaxSlab/WEB-INF/lib/javax.ws.rs-api-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/target/WebSIPCalculatorAndTaxSlab/WEB-INF/lib/slf4j-api-2.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/target/WebSIPCalculatorAndTaxSlab/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/target/WebSIPCalculatorAndTaxSlab/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/WebSIPCalculatorAndTaxSlab/target/classes/WebServlet/SipTax.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/tasks/Restful_webservice_for_DAO_layer/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-JavaEE/tasks/Restful_webservice_for_DAO_layer/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-JavaEE/tasks/Restful_webservice_for_DAO_layer/src/main/java/webService/UpdateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../DLTE-JavaEE/tasks/Restful_webservice_for_DAO_layer/src/main/java/webService/UpdateAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/DLTE_JAVA_jndi.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/src/main/java/lookup/primitiveServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/src/main/java/lookup/readCreditCards.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/target/DLTE_JAVA_jndi.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/target/DLTE_JAVA_jndi/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/target/DLTE_JAVA_jndi/WEB-INF/classes/lookup/primitiveServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/target/DLTE_JAVA_jndi/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/target/DLTE_JAVA_jndi/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/target/classes/lookup/primitiveServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../DLTE-spring/DLTE_JAVA_jndi/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/DataBase/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/DataBase/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/DataBase/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/DataBase/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/DataBase/src/main/java/org/example/DatabaseRepositoryImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/DataBase/src/main/java/org/example/DatabaseRepositoryImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/DataBase/target/DataBase-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/DataBase/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/DataBase/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/DataBase/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/DataBase/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/appconsole/src/main/java/org/example/validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/appconsole/src/main/java/org/example/validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/appconsole/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/appconsole/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/console/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/console/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/console/src/main/java/org/app/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/console/src/main/java/org/app/ConsoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/console/src/main/java/org/app/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/console/src/main/java/org/app/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/console/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/console/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/consoleap/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/consoleap/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/consoleap/src/main/java/org/console/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/consoleap/src/main/java/org/console/Validate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/consoleap/src/main/java/org/console/consoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/consoleap/src/main/java/org/console/consoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/consoleap/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/consoleap/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/consoleapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/consoleapp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/consoleapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/consoleapp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/middleWare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/middleWare.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/EmployeeAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/EmployeeAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/EmployeeDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/EmployeeDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/Validation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/consoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/src/main/java/org/example/consoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/target/middleWare-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/target/middleWare-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/target/surefire-reports/TEST-org.example.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/middleWare/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/middleWare/target/surefire-reports/org.example.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/reviewdb/src/main/java/org/example/EmployeeDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/reviewdb/src/main/java/org/example/EmployeeDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/reviewdb/src/main/java/org/example/EmployeeInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/reviewdb/src/main/java/org/example/EmployeeInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/reviewdb/src/main/java/org/example/EmployeePersonalDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/reviewdb/src/main/java/org/example/EmployeePersonalDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../technical-review/reviewdb/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../technical-review/reviewdb/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2dqP6SOpOEaHulPthouI7iVuAfy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager">
+    <configuration name="CreateTransactions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.CreateTransactions" />
+      <module name="JAXB_task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CreateTransactions" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d68598c6-e0a1-4b71-ac51-fbf44a29aa33" name="Default Changelist" comment="" />
+      <created>1710732459650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710732459650</updated>
+      <workItem from="1710732462792" duration="3594000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1710737697201">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1710737697201" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1710745449331">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710745449331" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1710745449331">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1710745449331" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1710745449331">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1710745449331" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1710745449331">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1710745449331" />
+  </component>
+</project>
