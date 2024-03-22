@@ -2,18 +2,17 @@ package spring.sqlhql.demo.remotes;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
-import spring.sqlhql.demo.model.Transaction;
+import spring.sqlhql.demo.model.TransactionDetails;
 
 import java.util.List;
 
-public interface TransactionRepo extends JpaRepository<Transaction,Long> {
-    Transaction save(Transaction transaction);
+public interface TransactionRepo extends JpaRepository<TransactionDetails,Integer> {
+    //for sql(native) query
+    @Query(value = "select * from transactions where user_name=:user and transaction_type=:type", nativeQuery = true)
+    List<TransactionDetails> findByUserAndType(String user, String type);
 
-    @Query(value = "SELECT * FROM names_transaction WHERE transactionid = :userId AND name= :type", nativeQuery = true)
-    List<Transaction> findAllByUserAndType(@Param("userId") Long userId, @Param("type") String type);
+    //for hql query
+    @Query("from TransactionDetails where transactionAmount between :amount1 and :amount2")
+    List<TransactionDetails> findByRangeOfTransactionAmount(double amount1, double amount2);
 
-    @Query("FROM Transaction  WHERE transactionAmount >= :minAmount AND transactionAmount <= :maxAmount")
-    List<Transaction> findAllByRangeOfTransactionAmount(@Param("minAmount") double minAmount, @Param("maxAmount") double maxAmount);
 }
-

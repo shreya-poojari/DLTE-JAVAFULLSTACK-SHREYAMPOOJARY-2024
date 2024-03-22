@@ -5,8 +5,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name="Transaction")
-public class Transaction implements Serializable {
+@Table(name="Transactions")
+public class TransactionDetails implements Serializable {
     @Id
     private int transactionId;
     private String userName;
@@ -16,10 +16,10 @@ public class Transaction implements Serializable {
     private double transactionAmount;
     private double transactionBalance;
 
-    public Transaction() {
+    public TransactionDetails() {
     }
 
-    public Transaction(int transactionId, String userName, Date transactionDate, String transactionType, double transactionAmount, double transactionBalance) {
+    public TransactionDetails(int transactionId, String userName, Date transactionDate, String transactionType, double transactionAmount, double transactionBalance) {
         this.transactionId = transactionId;
         this.userName = userName;
         this.transactionDate = transactionDate;
@@ -78,7 +78,7 @@ public class Transaction implements Serializable {
 
     @Override
     public String toString() {
-        return "Transaction{" +
+        return "Transactions{" +
                 "transactionId=" + transactionId +
                 ", userName='" + userName + '\'' +
                 ", transactionDate=" + transactionDate +
