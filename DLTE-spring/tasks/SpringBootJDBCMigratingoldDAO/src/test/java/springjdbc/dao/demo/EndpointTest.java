@@ -32,8 +32,7 @@ public class EndpointTest {
 
     @Test
     public void testNewTransactionEndpoint() throws Exception {
-//        Transactions transactions;
-        Transactions transaction1 = new Transactions(104, java.sql.Date.valueOf("2024-03-26"), "dhanush", 2000, "food", "shreya");
+        Transactions transaction = new Transactions(104, java.sql.Date.valueOf("2024-03-26"), "dhanush", 2000, "food", "shreya");
         String request = "{\"transactionId\": 123456, \"transactionDate\": \"2024-03-25\", \"transactionTo\": \"Receiver\", \"transactionAmount\": 1000, \"transactionRemarks\": \"Test\", \"transactionBy\": \"Sender\"}";
         getMockMvc().perform(MockMvcRequestBuilders.post("/Transactions/addTransaction")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -51,8 +50,8 @@ public class EndpointTest {
         getMockMvc().perform(MockMvcRequestBuilders.get("/transactions/sender/seetha")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$[0].transactionBy").value("seetha")); //pass
-        //.andExpect(MockMvcResultMatchers.jsonPath("$[0].transactionBy").value("shreya")); //fail
+                .andExpect(MockMvcResultMatchers.jsonPath("$[0].transactionBy").value("shreya")); //fail
+                //.andExpect(MockMvcResultMatchers.jsonPath("$[0].transactionBy").value("seetha")); //pass
     }
 
     @Test
@@ -77,8 +76,9 @@ public class EndpointTest {
         getMockMvc().perform(MockMvcRequestBuilders.get("/transactions/amount/500")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                //.andExpect(MockMvcResultMatchers.jsonPath("$[0].transactionAmount").value(50000)); //pass
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].transactionAmount").value(300)); //fail
+                //.andExpect(MockMvcResultMatchers.jsonPath("$[0].transactionAmount").value(50000)); //pass
+
     }
 
     public MockMvc getMockMvc() {
