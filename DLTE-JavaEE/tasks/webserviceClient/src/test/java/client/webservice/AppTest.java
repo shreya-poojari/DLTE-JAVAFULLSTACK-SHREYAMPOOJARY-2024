@@ -15,9 +15,6 @@ import java.util.List;
 import soap.dao.FetchAccount;
 import soap.dao.SoapService;
 
-/**
- * Unit test for simple App.
- */
 @RunWith(MockitoJUnitRunner.class)
 public class AppTest 
 {
@@ -42,19 +39,16 @@ public class AppTest
         String email = "shrey@gmail.com";
         long phoneNumber = 9886697394L;
 
-        // Mocking service response
+
         doNothing().when(fetchAccount).create(username, password, dateOfBirth, address, email, phoneNumber);
 
-        // Verifying service method invocation
         verify(fetchAccount).create(username, password, dateOfBirth, address, email, phoneNumber);
     }
 
     @Test
     public void testFindUser() {
-        // Mocking user input
         String username = "shreya";
 
-        // Mocking service response
         List<FetchAccount> accounts = new ArrayList<>();
         FetchAccount account = new FetchAccount();
         account.setuserName(username);
@@ -62,33 +56,27 @@ public class AppTest
         when(fetchAccount.findUser(username)).thenReturn(fetchAccount);
         when(fetchAccount.getuserDetailsList()).thenReturn(accounts);
 
-        // Verifying service method invocation and output
         verify(fetchAccount).findUser(username);
         assertEquals("Username: " + username + " Password: null", getConsoleOutput());
     }
 
     @Test
     public void update() {
-        // Mocking user input
         String username = "shreya";
 
-        // Mocking service response
         List<FetchAccount> accounts = new ArrayList<>();
         FetchAccount account = new FetchAccount();
         account.setuserName(username);
         accounts.add(account);
         when(fetchAccount.findUser(username)).thenReturn(fetchAccount);
         when(fetchAccount.getuserDetailsList()).thenReturn(accounts);
-
-        // Verifying service method invocation and output
+        
         verify(fetchAccount).findUser(username);
     }
     @Test
     public void testUpdateUser() {
-        // Mocking user input
         String username = "testUser";
 
-        // Mocking service response for finding user
         List<FetchAccount> accounts = new ArrayList<>();
         FetchAccount account = new FetchAccount();
         account.setuserName(username);
@@ -96,7 +84,6 @@ public class AppTest
         when(fetchAccount.findUser(username)).thenReturn(fetchAccount);
         when(fetchAccount.getuserDetailsList()).thenReturn(accounts);
 
-        // Mocking service response for update process
         String newPassword = "shre";
         String newAddress = "Mudbidri";
         String newEmail = "shrey@gmail.com";
@@ -107,7 +94,6 @@ public class AppTest
     }
 
 
-    // Helper method
     private String getConsoleOutput() {
         return null;
     }
