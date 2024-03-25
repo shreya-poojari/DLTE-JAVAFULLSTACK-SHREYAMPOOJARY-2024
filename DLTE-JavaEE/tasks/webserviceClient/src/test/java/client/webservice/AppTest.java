@@ -70,7 +70,7 @@ public class AppTest
         accounts.add(account);
         when(fetchAccount.findUser(username)).thenReturn(fetchAccount);
         when(fetchAccount.getuserDetailsList()).thenReturn(accounts);
-        
+
         verify(fetchAccount).findUser(username);
     }
     @Test
