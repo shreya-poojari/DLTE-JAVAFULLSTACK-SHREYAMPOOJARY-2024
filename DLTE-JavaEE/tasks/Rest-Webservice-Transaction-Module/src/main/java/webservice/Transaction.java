@@ -16,14 +16,14 @@ import java.util.stream.Stream;
 
 @WebServlet("/transaction/webservice/*")
 public class Transaction extends HttpServlet {
-    List<details> transactionList = Stream.of(new details(new Date(2024,7,28),58741.00,"shreya","Friend"),
+    public List<details> transactionList = Stream.of(new details(new Date(2024,7,28),58741.00,"shreya","Friend"),
             new details(new Date(2024,5,5),52364.00,"snehal","family"),
             new details(new Date(2024,2,8),98546.00,"kavya","studies"),
             new details(new Date(2024,11,25),32156.00,"dhanush","hospital"),
             new details(new Date(2024,9,30),12547.00,"sumanth","Food")).collect(Collectors.toList());
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //initializing the parameters in url
         String minimumAmount = req.getParameter("minimum");
         String maxAmount = req.getParameter("maximum");
@@ -52,7 +52,7 @@ public class Transaction extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //creating Transaction
         Gson gson=new Gson();
 
