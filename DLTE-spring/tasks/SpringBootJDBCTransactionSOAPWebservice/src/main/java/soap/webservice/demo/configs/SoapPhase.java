@@ -57,19 +57,17 @@ public class SoapPhase {
 
         Iterator<Transactions> iterator = transactions.iterator();
         while (iterator.hasNext()) {
-            Transactions currentTransactions = new Transactions();
+            services.transactions.Transactions currentTransactions = new services.transactions.Transactions();
+           // Transactions currentTransactions = new Transactions();
          //   XMLGregorianCalendar date=currentTransactions.getTransactionDate().toGregorianCalendar().getTime();
 
             BeanUtils.copyProperties(iterator.next(), currentTransactions);
             //Date date=currentTransactions.getTransactionDate().t;\
            // XMLGregorianCalendar date=currentTransactions.getTransactionDate().toGregorianCalendar().getTime();
-            GregorianCalendar gregorianCalendar = new GregorianCalendar();
-            gregorianCalendar.setTime(endDate);
-            XMLGregorianCalendar xmlGregorianCalendar = DatatypeFactory.newInstance().newXMLGregorianCalendar(gregorianCalendar);
-
-
-
-            currentTransactions.setTransactionDate(date);
+//            GregorianCalendar gregorianCalendar = new GregorianCalendar();
+//            gregorianCalendar.setTime(endDate);
+//            XMLGregorianCalendar xmlGregorianCalendar = DatatypeFactory.newInstance().newXMLGregorianCalendar(gregorianCalendar);
+            //currentTransactions.setTransactionDate(date);
             transactionsList.add(currentTransactions);
         }
         if (transactions != null && !transactions.isEmpty()) {
