@@ -9,12 +9,14 @@ import org.mockito.junit.MockitoJUnitRunner;
 import webservice.Transaction;
 import webservice.details;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -22,6 +24,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -29,58 +33,92 @@ import static org.mockito.Mockito.when;
 public class test {
     @Mock
     private HttpServletRequest httpServletRequest;
-
     @Mock
-    private HttpServletResponse httpServletResponse;
-
+    private HttpServletRequest request;
+    @Mock
+    private HttpServletResponse response;
     @Mock
     private StringWriter stringWriter;
-
     @Mock
     private PrintWriter printWriter;
+
 
     @Before
     public void initiate() throws IOException {
         stringWriter = new StringWriter();
         printWriter = new PrintWriter(stringWriter);
-        when(httpServletResponse.getWriter()).thenReturn(printWriter);
+        when(response.getWriter()).thenReturn(printWriter);
+
     }
 
     @Test
-    public void testDoGet() throws Exception {
-        List<details> transactionList = Stream.of(
-                new details(new Date("6/5/2024"),52364.00,"snehal","family"),
-                new details(new Date("3/8/2024"),12547.00,"sumanth","food")
-        ).collect(Collectors.toList());
+    public void testFindAll() throws ServletException, IOException {
+        details transaction=new details();
+        details.userInfoServices=services;
+        StringBuilder builder = new StringBuilder("Deposit,0,");
+        builder.append(new SimpleDateFormat("dd-MM-yyyy").format(new Date()));
+        ArrayList<StringBuilder> transactionOne = new ArrayList<>();
+        transactionOne.add(builder);
+        //details customer1 = new details("shreya","shre123","mudbidri","shrey@gmail.com",789267177L,23400L,transactionOne);
+       // details customer2=new details("kavya", "kav123", "udupi", "kav@gmail", 987455335L, 1986L,transactionOne);
+        details customer3=new details("snehal", "sne123", "Mangalore", "sne@gmail", 987455335L, 1560L,transactionOne);
+        List<details> detailsList = Stream.of(customer3).collect(Collectors.toList());
 
-        Transaction transaction = new Transaction();
-        transaction.transactionList= (ArrayList<details>) transactionList;
-        when(httpServletRequest.getParameter("Maximum")).thenReturn("1000");
-        when(httpServletRequest.getParameter("Minimum")).thenReturn("0");
+        when(services.callFindAll()).thenReturn(detailsList);
+        transaction.doGet(request,response);
 
-        transaction.doGet(httpServletRequest, httpServletResponse);
+        verify(response).setContentType("application/json");
 
-        verify(httpServletResponse).setContentType("application/json");
-        assertEquals("Expected response", "[{\"dateOfTransaction\":\"Jun 5, 2024 12:00:00 AM\",\"amountInTransaction\":52364.0,\"to\":\"snehal\",\"remarks\":\"family\"},{\"dateOfTransaction\":\"Mar 8, 2024 12:00:00 AM\",\"amountInTransaction\":12547.0,\"to\":\"sumanth\",\"remarks\":\"food\"}]", stringWriter.toString().trim());
+        verify(services).callFindAll();
+        System.out.println(services.callFindAll());
+
+        assertEquals("test: ","[Customer{username='snehal', password='sne123', address='Manglore', email='sne@gmail.com', contact=789267177, initialBalace=1560, transactionDetails=[Deposit,0,19-03-2024]}",stringWriter.toString().trim());
+
     }
 
     @Test
-    public void testDoPost() throws Exception {
+    public void testFindUser() throws ServletException, IOException {
+        details transaction=new details();
+        transaction.userInfoServices=services;
+        StringBuilder builder = new StringBuilder("Deposit,0,");
+        builder.append(new SimpleDateFormat("dd-MM-yyyy").format(new Date()));
+        ArrayList<StringBuilder> transactionOne = new ArrayList<>();
+        transactionOne.add(builder);
+       // details customer1 = new details("shreya","shre123","mudbidri","shrey@gmail.com",789267177L,23400L,transactionOne);
+        details customer2=new details("kavya", "kav123", "udupi", "kav@gmail", 987455335L, 1986L,transactionOne);
+        //details customer3=new details("snehal", "sne123", "Mangalore", "sne@gmail", 987455335L, 1560L,transactionOne);
 
-        Transaction transaction = new Transaction();
-        Gson gson = new Gson();
-        details Details = new details(new Date("3/8/2024"),12547.00,"sumanth","food");
-        String jsonDetails = gson.toJson(Details);
+        List<details> customerList = Stream.of(customer2).collect(Collectors.toList());
 
+        when(request.getParameter("username")).thenReturn("rakesh");
+        when(services.callOneUserTransact(anyString())).thenReturn(customerList);
+        transaction.doGet(request,response);
 
-        BufferedReader bufferedReader = new BufferedReader(new java.io.StringReader(jsonDetails));
-        when(httpServletRequest.getReader()).thenReturn(bufferedReader);
+        verify(response).setContentType("application/json");
 
+        verify(services).callOneUserTransact(anyString());
+        assertEquals("expected","[Customer{username='kavya', password='kav123', address='udupi', email='kav@gmail', contact=987455335, initialBalace=1986, transactionDetails=[Deposit,0,19-03-2024]}]",stringWriter.toString().trim());
+    }
 
-        transaction.doPost(httpServletRequest, httpServletResponse);
+    @Test
+    public void findByDate() throws ServletException, IOException {
+        details transaction=new details();
+        transaction.userInfoServices=services;
+        StringBuilder builder = new StringBuilder("Deposit,0,");
+        builder.append(new SimpleDateFormat("dd-MM-yyyy").format(new Date()));
+        ArrayList<StringBuilder> transactionOne = new ArrayList<>();
+        transactionOne.add(builder);
+        details customer1 = new details("shreya","shre123","mudbidri","shrey@gmail.com",789267177L,23400L,transactionOne);
+        //details customer2=new details("kavya", "kav123", "udupi", "kav@gmail", 987455335L, 1986L,transactionOne);
+       // details customer3=new details("snehal", "sne123", "Mangalore", "sne@gmail", 987455335L, 1560L,transactionOne);
 
-
-        verify(httpServletResponse).setStatus(HttpServletResponse.SC_OK);
-        verify(printWriter).println("transaction has been done");
+        List<details> customerList = Stream.of(customer1).collect(Collectors.toList());
+        when(request.getParameter("username")).thenReturn("prasha02");
+        when(request.getParameter("date")).thenReturn("19-03-2024");
+        when(services.callTransactionByDate(anyString(),anyString())).thenReturn(customerList);
+        transaction.doGet(request,response);
+        verify(response).setContentType("application/json");
+        verify(services).callTransactionByDate(anyString(),anyString());
+        assertNotEquals("Expected","[Customer{username='shreya', password='shre321', address='mudbidri', email='shrey@gmail.com', contact=789267177, initialBalace=23400, transactionDetails=[Deposit,0,19-03-2024]}",stringWriter.toString().trim());
     }
 }
