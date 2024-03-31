@@ -149,3 +149,21 @@ public class EndPointTest {
         assertEquals("done", response.getServiceStatus().getMessage());
     }
 }
+
+
+//    Perform Spring boot security authority based authorization on #1148 with considering following roles
+//
+//        user should have:
+//
+//        username, password, role, address ,contact, email
+//
+//        roles are:
+//
+//        admin,customer,manager
+//
+//        new transaction             >> admin
+//        findBySender                  >> customer
+//        findByReciever                >> customer
+//        findByAmount                 >> customer
+//        updateRemarks                >> manager, admin
+//        removeTransactionBetweenDates >> start date and end date    >> admin
