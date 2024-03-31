@@ -26,4 +26,9 @@ public class TransactionService {
         String sql = "SELECT * FROM transaction WHERE transaction_amount = ?";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Transactions.class), amount);
     }
+    public  List<Transactions> updateRemarks(Transactions transactions){
+        jdbcTemplate.update("UPDATE transaction_entity SET remarks = ? WHERE transaction_id = ?",
+                new Object[]{transactions.getTransactionRemarks(), transactions.getTransactionId()});
+        return (List<Transactions>) transactions;
+    }
 }
