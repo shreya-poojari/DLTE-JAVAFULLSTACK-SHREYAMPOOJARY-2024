@@ -6,11 +6,10 @@ import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-import soap.webservice.demo.dao.TransactionService;
+import soap.webservice.demo.TransactionService;
 import soap.webservice.demo.dao.Transactions;
 import services.transactions.*;
 
-import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.*;
 
 @Endpoint

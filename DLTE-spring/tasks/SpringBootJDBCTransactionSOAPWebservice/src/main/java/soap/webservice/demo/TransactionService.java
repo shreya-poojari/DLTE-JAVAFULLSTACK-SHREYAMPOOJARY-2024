@@ -1,9 +1,10 @@
-package soap.webservice.demo.dao;
+package soap.webservice.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.*;
 import org.springframework.stereotype.Service;
-import javax.xml.datatype.XMLGregorianCalendar;
+import soap.webservice.demo.dao.Transactions;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Service
 public class TransactionService {
-     @Autowired
+    @Autowired
     // private JdbcTemplate jdbcTemplate;
      private JdbcTemplate jdbcTemplate;
     // Method to insert a new transaction

@@ -39,3 +39,5 @@ public class SoapServiceConfiguration extends WsConfigurerAdapter {
         return new SimpleXsdSchema(new ClassPathResource("transaction.xsd"));
     }
 }
+
+
