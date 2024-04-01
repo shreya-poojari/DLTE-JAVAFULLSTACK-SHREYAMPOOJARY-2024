@@ -1,0 +1,52 @@
+System.out.println("Enter the start date");
+                        int startDate = scanner.nextInt();
+                        System.out.println("Enter the end date");
+                        int endDate = scanner.nextInt();
+                        try{
+                        analysis.findDateOfBillPayment(myBank, startDate, endDate);
+                        break;
+                    }
+                    catch (MyBankCreditCardException cardLimit){
+                        logger.log(Level.WARNING,cardLimit.toString());
+                        analysis.findDateOfBillPayment(myBank,startDate,endDate);
+                        break;
+                    }
+                case 3:
+                    exit(0);
+            }
+        }
+    }
+    //filter based on card limit
+    public void findCardLimit(CreditCard[] customers){
+        Long StartLimit, EndLimit;
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter the start range");
+        StartLimit=scanner.nextLong();
+        System.out.println("Enter the end limit");
+        EndLimit=scanner.nextLong();
+        boolean flag=true;
+        for(CreditCard each:customers){
+            if(each.getCreditCardLimit()>= StartLimit && each.getCreditCardLimit()<=EndLimit){
+                flag=false;
+                System.out.println(each.getCreditCardHolder()+ " has a limit of " +each.getCreditCardLimit()+ " ");
+            }
+        }
+        if(flag){
+            throw new MyBankCreditCardException();
+        }
+    }
+    //filter customer based on date of bill generation
+    public void findDateOfBillPayment(CreditCard[] customers,int start,int end){
+        System.out.println("Customers who made bill payments between " +start+ " and" +end);
+        boolean flag=true;
+        for(CreditCard each: customers){
+            if(each.getDateOfBillGeneration().getDate()>= start && each.getDateOfBillGeneration().getDate()<=end){
+                flag=false;
+                System.out.println(each.getCreditCardHolder() + " " + each.getDateOfBillGeneration().getDate());
+            }
+        }
+        if(flag){
+            throw new MyBankCreditCardException();
+        }
+    }
+}
