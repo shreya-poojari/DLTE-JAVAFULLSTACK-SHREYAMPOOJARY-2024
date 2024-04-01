@@ -33,7 +33,7 @@ public class TransactionController {
     public List<Transactions> findByAmount(@PathVariable Long amount) {
         return transactionService.findByAmount(amount);
     }
-    @PutMapping("/Update")
+    @PutMapping("/Update/*")
     public List<Transactions> updateRemarks(@RequestBody Transactions transactions){
         Transactions transactions1= (Transactions) transactionService.updateRemarks(transactions);
         return (List<Transactions>) transactions1;

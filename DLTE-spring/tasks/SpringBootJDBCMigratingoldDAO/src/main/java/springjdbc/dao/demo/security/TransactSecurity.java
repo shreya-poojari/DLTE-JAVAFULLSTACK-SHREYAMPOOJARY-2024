@@ -31,9 +31,10 @@ public class TransactSecurity {
 
         httpSecurity.authorizeRequests().antMatchers("/profile/addTransaction").permitAll();
 
-        httpSecurity.authorizeRequests().antMatchers("/transact/Sender/*").hasAuthority("customer");
-        httpSecurity.authorizeRequests().antMatchers("/transact/Receiver/*").hasAuthority("customer");
-        httpSecurity.authorizeRequests().antMatchers("/transact/Amount/*").hasAuthority("customer");
+        httpSecurity.authorizeRequests().antMatchers("/transaction/Sender/*").hasAuthority("customer");
+        httpSecurity.authorizeRequests().antMatchers("/transaction/Receiver/*").hasAuthority("customer");
+        httpSecurity.authorizeRequests().antMatchers("/transaction/Amount/*").hasAuthority("customer");
+        httpSecurity.authorizeRequests().antMatchers("/transaction/Update/*").hasAnyAuthority("manager","admin");
         httpSecurity.authorizeRequests().antMatchers(HttpMethod.POST).hasAuthority("admin");
         httpSecurity.authorizeRequests().antMatchers(HttpMethod.DELETE).hasAuthority("admin");
         httpSecurity.authorizeRequests().antMatchers(HttpMethod.PUT).hasAnyAuthority("manager","admin");
