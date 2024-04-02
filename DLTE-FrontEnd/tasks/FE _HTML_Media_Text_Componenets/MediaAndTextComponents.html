@@ -4,95 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BankProduct</title>
+        <body style="background-color: darkseagreen;"></body>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: azure;
+            background-color: burlywood; /*  background */
         }
-    
-        .container {
+
+        #container {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            width: 80%;
-            max-width: 500px;
             flex-wrap: wrap;
         }
-        
-        .heading {
-            display: inline;
-            flex-direction: initial;
-            font-size: large; 
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        
-        }
-    
+
         .product {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 10px;
-            padding: 2px;
-            border-radius: 30px;
-            box-shadow: rosybrown;
+            margin: 20px;
+            text-align: center;
+            background-color: aliceblue; /* background color */
+            border-radius: 10px;
+            padding: 20px;
         }
-    
-        .product img,
-        .product video {
-            max-width: 50%;
-            height: auto;
-            margin-bottom: 5px;
+
+        .product img, .product video {
+            width: 200px; /* Set the width*/
+            height: 150px; /* Set the height*/
+            object-fit: cover; 
             border-radius: 5px;
-            display: flex;
-            justify-content: center;
-      
         }
-    
-        .product h3 {
-            margin: 0;
-            font-size: 1.2rem;
-            text-align: center;
-        }
-        .product h2 {
-            margin: 0;
-            font-size: 1.2rem;
-            text-align: center;
-        }
-        .product p {
-            margin: 5px 0;
-            text-align: center;
+
+        .product:hover .details {
+            opacity: 1;
         }
     </style>
 </head>
 <body>
-    <h2 class="heading">4 Bank Products</h2>
-<div class="container">
-    <div class="product">
-        <img src="image4.jpg" alt="Image 4">
-        <h3>Cards</h3>
-    </div>
-   
-    <div class="product">
-        <img src="image3.jpg" alt="image 3">
-        <h3>Insurance</h3>
-    </div>
 
+<div id="container">
     <div class="product">
-        <img src="image1.jpg" alt="Image 1">
-        <h3>Account</h3>
+        <img src="Images/image1.jpg" alt="Bank Product 1">
+        <div class="details">
+            <h2>ACCOUNT</h2>
+            <p>A versatile financial product </p>
+        </div>
     </div>
-
+    <div class="product">
+        <img src="Images/image4.jpg" alt="Bank Product 2">
+        <div class="details">
+            <h2>CREDIT CARD</h2>
+            <p>Experience financial flexibility</p>
+            <p>through our credit card offerings</p>
+        </div>
+    </div>
+    <div class="product">
+        <img src="Images/image3.jpg" alt="Bank Product 3">
+        <div class="details">
+            <h2>INSURANCE</h2>
+            <p>Protect your future with</p>
+            <p>comprehensive insurance coverage</p>
+        </div>
+    </div>
     <div class="product">
         <video controls muted autoplay>
-            <source src="istockphoto-1486117185-640_adpp_is.mp4" type="video/mp4">
+            <source src="Images/istockphoto-1486117185-640_adpp_is.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <h3>My Bank</h3>
+        <div class="details">
+            <h2>My Bank</h2>
+            <p>Empower your financial journey</p>
+            <p>with our comprehensive banking solutions</p>
+        </div>    
     </div>
 </div>
-
 </body>
 </html>
