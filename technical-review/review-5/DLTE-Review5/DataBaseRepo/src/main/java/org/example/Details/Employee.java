@@ -59,5 +59,8 @@ public class Employee {
         this.employeePermanentAddress = employeePermanentAddress;
         this.employeeTemporaryAddress = employeeTemporaryAddress;
     }
+
+    public Employee() {
+    }
 }
 

@@ -5,13 +5,13 @@ import java.util.Date;
 public class Transaction {
     private Date dateOfTransaction;
     private double amountInTransaction;
-    private String to;
+    private String transTo;
     private String remarks;
 
     public Transaction(Date dateOfTransaction, double amountInTransaction, String to, String remarks) {
         this.dateOfTransaction = dateOfTransaction;
         this.amountInTransaction = amountInTransaction;
-        this.to = to;
+        this.transTo = to;
         this.remarks = remarks;
     }
 
@@ -23,7 +23,7 @@ public class Transaction {
         return "Transaction{" +
                 "dateOfTransaction=" + dateOfTransaction +
                 ", amountInTransaction=" + amountInTransaction +
-                ", to='" + to + '\'' +
+                ", to='" + transTo + '\'' +
                 ", remarks='" + remarks + '\'' +
                 '}';
     }
@@ -45,11 +45,11 @@ public class Transaction {
     }
 
     public String getTo() {
-        return to;
+        return transTo;
     }
 
     public void setTo(String to) {
-        this.to = to;
+        this.transTo = to;
     }
 
     public String getRemarks() {

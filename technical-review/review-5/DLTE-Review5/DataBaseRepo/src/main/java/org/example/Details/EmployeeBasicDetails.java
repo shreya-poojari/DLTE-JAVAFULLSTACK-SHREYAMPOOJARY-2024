@@ -13,6 +13,9 @@ public class EmployeeBasicDetails {
         this.phoneNumber = phoneNumber;
     }
 
+    public EmployeeBasicDetails() {
+    }
+
     @Override
     public String toString() {
         return "EmployeebasicDetails{" +

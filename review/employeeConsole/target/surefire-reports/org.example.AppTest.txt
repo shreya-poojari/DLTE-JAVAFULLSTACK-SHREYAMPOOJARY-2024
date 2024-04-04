@@ -1,4 +1,24 @@
 -------------------------------------------------------------------------------
 Test set: org.example.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s - in org.example.AppTest
+Tests run: 10, Failures: 4, Errors: 1, Skipped: 0, Time elapsed: 0.05 s <<< FAILURE! - in org.example.AppTest
+testMobileFails(org.example.AppTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NumberFormatException: For input string: "52dfgh8590"
+	at org.example.AppTest.testMobileFails(AppTest.java:41)
+
+testEmailIdFails(org.example.AppTest)  Time elapsed: 0.007 s  <<< FAILURE!
+java.lang.AssertionError
+	at org.example.AppTest.testEmailIdFails(AppTest.java:57)
+
+testPincode(org.example.AppTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at org.example.AppTest.testPincode(AppTest.java:64)
+
+failsEmployeeID(org.example.AppTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at org.example.AppTest.failsEmployeeID(AppTest.java:86)
+
+testPincodeFails(org.example.AppTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError
+	at org.example.AppTest.testPincodeFails(AppTest.java:72)
+

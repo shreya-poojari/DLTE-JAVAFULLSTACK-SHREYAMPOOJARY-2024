@@ -1,1 +1,19 @@
 10:13:20.429 [34m[main][0;39m INFO  org.console.Console - [34mdata is successfully collected[0;39m 
+10:22:22.284 [34m[main][0;39m INFO  org.console.Console - [34memployee details fetched[0;39m 
+10:25:34.580 [31m[main][0;39m WARN  org.console.Console - [31mInvalid Username, Re-enter[0;39m 
+10:25:47.869 [31m[main][0;39m WARN  org.console.Console - [31mInvalid Username, Re-enter[0;39m 
+10:28:05.253 [34m[main][0;39m INFO  org.console.Console - [34mdata is successfully collected[0;39m 
+11:24:11.927 [34m[main][0;39m INFO  org.console.Console - [34mdata collected successfully [0;39m 
+11:29:08.048 [31m[main][0;39m WARN  org.console.Console - [31mUsername not valid, enter again[0;39m 
+11:29:08.484 [31m[main][0;39m WARN  org.console.Console - [31mUsername not valid, enter again[0;39m 
+11:29:44.206 [34m[main][0;39m INFO  org.console.Console - [34mdata collected successfully [0;39m 
+11:33:51.881 [31m[main][0;39m WARN  org.console.Console - [31mUsername not valid, enter again[0;39m 
+11:34:28.330 [34m[main][0;39m INFO  org.console.Console - [34mdata collected successfully [0;39m 
+11:34:28.724 [34m[main][0;39m INFO  org.backend.EmployeeDB - [34memployee details added [0;39m 
+11:37:49.074 [34m[main][0;39m INFO  org.console.Console - [34mfetched employee details[0;39m 
+11:58:03.106 [34m[main][0;39m INFO  org.console.Console - [34mfetched employee details[0;39m 
+12:06:38.016 [34m[main][0;39m INFO  org.console.Console - [34mfetched employee details[0;39m 
+12:13:41.979 [34m[main][0;39m INFO  org.console.Console - [34mfetched employee details[0;39m 
+15:33:20.291 [34m[main][0;39m INFO  org.console.Console - [34mfetched employee details[0;39m 
+15:34:44.910 [34m[main][0;39m INFO  org.console.Console - [34mfetched employee details[0;39m 
+15:35:33.397 [34m[main][0;39m INFO  org.console.Console - [34mfetched employee details[0;39m 

@@ -2,8 +2,8 @@ package htmltry;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Arrays;
-import java.util.Date;
+
+import java.sql.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -12,7 +12,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.transaction.Transaction;
 
 public class practice {
 
@@ -21,11 +20,7 @@ public class practice {
     public class TransactionServlet extends HttpServlet {
         // Sample transaction data
         List<Transaction> transactionList = Stream.of(
-                new Transaction(new Date(2024, 11, 9), 10000.0, "vineeth", "Family"),
-                new Transaction(new Date(2025, 02, 19), 50000.0, "Elroy", "Education"),
-                new Transaction(new Date(2022, 12, 18), 10000.0, "Varun", "Bills"),
-                new Transaction(new Date(2025, 06, 5), 10000.0, "Vignesh", "Emergency"),
-                new Transaction(new Date(2024, 2, 20), 20000.0, "Shreyas", "Friends")
+                new Transaction(new Date(2023,12,25), 10000.0, "shreya", "Family"),
         ).collect(Collectors.toList());
 
         protected void doGet(HttpServletRequest req, HttpServletResponse resp)

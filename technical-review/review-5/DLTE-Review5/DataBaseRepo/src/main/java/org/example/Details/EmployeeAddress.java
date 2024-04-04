@@ -65,6 +65,9 @@ public class EmployeeAddress {
     public void setPinCode(Integer pinCode) {
         this.pinCode = pinCode;
     }
+
+    public EmployeeAddress() {
+    }
 }
 
 

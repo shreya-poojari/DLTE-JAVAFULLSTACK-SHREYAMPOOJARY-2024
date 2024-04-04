@@ -1,0 +1,10 @@
+.banner{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #7fffd4 ;
+    color: black;
+    font-family: Georgia;
+    letter-spacing: 8px;
+    text-shadow: 2px 2px 4px powderblue;
+}

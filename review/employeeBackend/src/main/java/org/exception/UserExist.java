@@ -1,4 +1,9 @@
 package org.exception;
 
-public class UserExist {
+import java.util.ResourceBundle;
+
+public class UserExist extends RuntimeException{
+    public UserExist (){
+        super(ResourceBundle.getBundle("database").getString("user.exist"));
+    }
 }

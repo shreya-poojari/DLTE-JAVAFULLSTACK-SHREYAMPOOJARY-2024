@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="styleSheet" href="forms.css">
+</head>
+<body>
+    <div class="banner">
+        <h1>Mybank</h1>
+        <h1>credit card portal</h1>
+    </div>
+    <hr/>
+        <h2>new CreditCard application</h2>
+    <div class="row">
+            <form name="application" action="#">
+                <div>
+                    <label>Applicant Name</label>
+                    <input type="text" name="ApplicantNAme" placeholder="ApplicantNAme"/>
+                </div>
+                <div>
+                    <label>Applicant DOB</label>
+                    <input type="date" name="ApplicantDOB" placeholder="ApplicantDOB"/>
+                </div>
+                <div>
+                    <label>Expected Limit</label>
+                    <input type="number" name="ExpectedLimit" placeholder="ExpectedLimit"/>
+                </div>
+                <div>
+                    <label>Applicant Contact</label>
+                    <input type="number" name="ApplicantContact" placeholder="ApplicantContact"/>
+                </div>
+                <div>
+                    <label>Applicant pan</label>
+                    <input type="file" name="ApplicantPan" placeholder="ApplicantPan"/>
+                </div>
+                <div>
+                    <input type="submit" value="Apply"/>
+                    <input type="reset" value="Cancel"/>
+                    <buttons></buttons>
+                </div>
+                <div>
+                    <label>Card Purpose</label>
+                    <select name="cardPurpose">
+                        <option>select Purpose</option>
+                        <option>travel</option><option>shopping</option><option>fuel</option>
+                        <option>International</option>
+                    </select>
+                </div>
+            </form>
+    </div>
+</body>
+</html>

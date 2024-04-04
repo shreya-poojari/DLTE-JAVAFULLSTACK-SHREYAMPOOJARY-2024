@@ -17,7 +17,7 @@ public class App
         UserDetailsServices userDetailsServices=new UserDetailsServices(storageTarget);
         //DatabaseTarget databaseTarget=new DatabaseTarget();
         // UserDetailsDatabaseRepository userDetailsDatabaseRepository=new UserDetailsDatabaseRepository();
-       
+
 
       //  System.out.println( "Hello World!" );
     }
