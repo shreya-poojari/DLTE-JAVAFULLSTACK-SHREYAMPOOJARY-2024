@@ -34,44 +34,6 @@ private LoanService loanService;
 @Autowired
 private LoansdaoApplication loansdaoApplication;
 
-//    @Test
-//    void testallAvailableLoans() {
-//        LoansAvailable loansAvailable1=new LoansAvailable(101,"Gold","Gold Loan","education, medical expenses, travel or use for personal cases",9.75);
-//        LoansAvailable loansAvailable2=new LoansAvailable(102,"Home","Home Loan","to build home of dreams",9.75);
-//        List<LoansAvailable> expect= Stream.of(loansAvailable1,loansAvailable2).collect(Collectors.toList());
-//        when(jdbcTemplate.query(anyString(),any(Object[].class),any(LoanService.LoansMapper.class))).thenReturn(expect);
-//        List<LoansAvailable> actual=loanService.allAvailableLoans();
-//        assertEquals(expect,actual);
-//
-//    }
-
-//    @Before
-//    public void setup() {
-//        // Mocking behavior of jdbcTemplate.query method
-//        LoansAvailable loansAvailable1 = new LoansAvailable(101, "Gold", "Gold Loan",
-//                "education, medical expenses, travel or use for personal cases", 9.75);
-//        LoansAvailable loansAvailable2 = new LoansAvailable(102, "Home", "Home Loan", "to build home of dreams", 9.75);
-//        List<LoansAvailable> expect = Stream.of(loansAvailable1, loansAvailable2).collect(Collectors.toList());
-//        when(jdbcTemplate.query(any(String.class), any(Object[].class), any(LoanService.LoansMapper.class)))
-//                .thenReturn(expect);
-//    }
-//    @Test
-//    public void testAllAvailableLoans() {
-//        List<LoansAvailable> actual = loanService.allAvailableLoans();
-//
-//        // Verify that the expected list is equal to the actual list returned by the method
-//        assertEquals(2, actual.size());
-//        assertEquals(101, actual.get(0).getLoanNumber());
-//        assertEquals("Gold", actual.get(0).getLoanType());
-//        assertEquals("Gold Loan", actual.get(0).getLoanName());
-//        assertEquals("education, medical expenses, travel or use for personal cases",actual.get(0).getLoanDescription());
-//        assertEquals(9.75, actual.get(0).getLoanRoi(), 0.01);
-//        assertEquals(102, actual.get(1).getLoanNumber());
-//        assertEquals("Home", actual.get(1).getLoanType());
-//        assertEquals("to build home of dreams",actual.get(1).getLoanDescription());
-//        assertEquals("Home Loan", actual.get(1).getLoanName());
-//        assertEquals(9.75, actual.get(1).getLoanRoi(), 0.01);
-//    }
 
     @Test
     void allAvailableLoan_Success() {
@@ -84,10 +46,28 @@ private LoansdaoApplication loansdaoApplication;
         // Calling the method of test
         List<LoansAvailable> result = loanService.allAvailableLoans();
 
-       // assertEquals(1, result.size());//fail
+        assertEquals(2, result.size());//pass
 
         assertEquals("Gold", result.get(0).getLoanType());//pass
 
-        //   assertEquals("Home Loan", result.get(1).getLoanName());//pass
+        assertEquals("Home Loan", result.get(1).getLoanName());//pass
     }
+
+//    @Test
+//    void allAvailableLoan_failure(){
+//        // Mocking
+//        List<LoansAvailable> availableLoans = new ArrayList<>();
+//        availableLoans.add(new LoansAvailable(101,"Gold","Gold Loan","education, medical expenses, travel or use for personal cases",9.75));
+//        availableLoans.add(new LoansAvailable(102, "Home", "Home Loan", "to build home of dreams", 9.75));
+//        when(jdbcTemplate.query(anyString(), any(LoanService.LoansMapper.class))).thenReturn(availableLoans);
+//
+//        // Calling the method of test
+//        List<LoansAvailable> result = loanService.allAvailableLoans();
+//
+//         assertEquals(1, result.size());//fail
+//
+//        //assertEquals("Home", result.get(0).getLoanType());//fail
+//
+//       // assertEquals("Gold Loan", result.get(1).getLoanName());//fail
+//    }
 }
