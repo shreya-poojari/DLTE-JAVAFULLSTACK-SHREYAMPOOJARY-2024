@@ -1,7 +1,6 @@
 package org.console.entity;
 
 
-
 import java.io.Serializable;
 
 public class EmployeepersonalDetails implements Serializable {

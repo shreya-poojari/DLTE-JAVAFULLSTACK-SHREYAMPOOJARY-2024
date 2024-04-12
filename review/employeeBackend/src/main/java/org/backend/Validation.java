@@ -10,62 +10,62 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Validation {
-    String validate=null;
-    static ResourceBundle resourceBundle= ResourceBundle.getBundle("validation");
-    private static Logger logger= LoggerFactory.getLogger(App.class);
-    public String validateEmployee(EmployeePersonalDetails employee){
-        if(!validateEmail(employee.getEmployeeEmail())){
+    String validate = null;
+    static ResourceBundle resourceBundle = ResourceBundle.getBundle("validation");
+    private static Logger logger = LoggerFactory.getLogger(App.class);
+
+    public String validateEmployee(EmployeePersonalDetails employee) {
+        if (!validateEmail(employee.getEmployeeEmail())) {
             logger.info(resourceBundle.getString("validation.email"));
-            validate="email";
+            validate = "email";
             throw new InvalidContactException("email");
         }
-        if(!validatePhone(employee.getEmployeeContactNumber())) {
+        if (!validatePhone(employee.getEmployeeContactNumber())) {
             logger.info(resourceBundle.getString("validation.phone"));
-            validate="Phone";
+            validate = "Phone";
             throw new InvalidContactException("phone number");
         }
-        if(!validateEmployeeId(employee.getEmployeeID())){
+        if (!validateEmployeeId(employee.getEmployeeID())) {
             logger.info(resourceBundle.getString("validation.id"));
-            validate="ID";
+            validate = "ID";
             throw new InvalidContactException("Employee id");
         }
-        if(!validateName(employee.getFirstNameOfEmployee())||!validateName(employee.getMiddleNameOfEmployee())||!validateName(employee.getLastNameOfEmployee()) ){
+        if (!validateName(employee.getFirstNameOfEmployee()) || !validateName(employee.getMiddleNameOfEmployee()) || !validateName(employee.getLastNameOfEmployee())) {
             logger.info(resourceBundle.getString("validation.name"));
-            validate="name";
+            validate = "name";
             throw new InvalidUserException("Name");
         }
-        if(!validateAdress(employee.getPermanentAddress().getHouseName())){
+        if (!validateAdress(employee.getPermanentAddress().getHouseName())) {
             logger.info(resourceBundle.getString("validation.house"));
-            validate="house";
+            validate = "house";
             throw new InvalidUserException("House name");
         }
-        if(!validateAdress(employee.getPermanentAddress().getCity())){
+        if (!validateAdress(employee.getPermanentAddress().getCity())) {
             logger.info(resourceBundle.getString("validation.city"));
-            validate="city";
+            validate = "city";
             throw new InvalidUserException("City name");
         }
-        if(!validateAdress(employee.getPermanentAddress().getState())){
+        if (!validateAdress(employee.getPermanentAddress().getState())) {
             logger.info(resourceBundle.getString("validation.state"));
-            validate="state";
+            validate = "state";
             throw new InvalidUserException("State name");
         }
-        if(!validateAdress(employee.getPermanentAddress().getStreetName())){
+        if (!validateAdress(employee.getPermanentAddress().getStreetName())) {
             logger.info(resourceBundle.getString("validation.street"));
-            validate="street";
+            validate = "street";
             throw new InvalidUserException("Street name");
         }
-        if(!validatePincode(employee.getPermanentAddress().getPincode()))
-        {
+        if (!validatePincode(employee.getPermanentAddress().getPincode())) {
             logger.info(resourceBundle.getString("validation.pin"));
-            validate="pin";
+            validate = "pin";
             throw new InvalidUserException("Pincode");
         }
         logger.info(resourceBundle.getString("validation.done"));
-        validate=null;
+        validate = null;
         return validate;
     }
 
-    public boolean validateName(String anyName){
+    public boolean validateName(String anyName) {
         String nameRegex = "[a-zA-Z]+";
         Pattern pattern = Pattern.compile(nameRegex);
         Matcher matcher = pattern.matcher(anyName);
@@ -77,11 +77,11 @@ public class Validation {
             return false;
         }
     }
-    public boolean validateAdress(String data){
-        if(data.length()!=0){
+
+    public boolean validateAdress(String data) {
+        if (data.length() != 0) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
 
@@ -100,8 +100,9 @@ public class Validation {
             return false;
         }
     }
+
     //validate phone number
-    public boolean validatePhone(Long phone){
+    public boolean validatePhone(Long phone) {
         String phoneRegex = "^[0-9]{10}";
         Pattern pattern = Pattern.compile(phoneRegex);
         Matcher matcher = pattern.matcher(phone.toString());
@@ -115,7 +116,8 @@ public class Validation {
         }
 
     }
-    public boolean validatePincode(int pin){
+
+    public boolean validatePincode(int pin) {
         String pinRegex = "^[0-9]{6}";
         Pattern pattern = Pattern.compile(pinRegex);
         Matcher matcher = pattern.matcher(String.valueOf(pin));
@@ -128,7 +130,8 @@ public class Validation {
             return false;
         }
     }
-    public boolean validateEmployeeId(int empId){
+
+    public boolean validateEmployeeId(int empId) {
         String empIdRegex = "^[0-9]{5}";
         Pattern pattern = Pattern.compile(empIdRegex);
         Matcher matcher = pattern.matcher(String.valueOf(empId));

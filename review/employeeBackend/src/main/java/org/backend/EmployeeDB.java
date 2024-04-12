@@ -11,11 +11,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class EmployeeDB implements MyInterface{
+public class EmployeeDB implements MyInterface {
     private Validation validation = new Validation();
     static Logger logger = LoggerFactory.getLogger(EmployeeDB.class);
     private static ResourceBundle resourceBundle = ResourceBundle.getBundle("database");
     ResultSet resultSet;
+
     public EmployeeDB() {
     }
 
@@ -29,11 +30,11 @@ public class EmployeeDB implements MyInterface{
 //        ALTER TABLE EMPLOYEETEMPORARYADDRESS ADD EMPLOYEEID number;
 //        alter table EMPLOYEETEMPORARYADDRESS add FOREIGN key(EMPLOYEEID) references EMPLOYEES(EMPLOYEEID);
 
-   //     ALTER TABLE EMPLOYEEPERMANENTADDRESS
+        //     ALTER TABLE EMPLOYEEPERMANENTADDRESS
 ////        ADD FOREIGN KEY (EmployeeID)
 ////        REFERENCES EMPLOYEEPERSONAL(EmployeeID)
 ////        ON  DELETE CASCADE;
-      //  System.out.println(employeePersonalDetails);
+        //  System.out.println(employeePersonalDetails);
         try {
             DriverInitializer setConnection = new DriverInitializer();
             Connection connection = setConnection.makeConnection();
@@ -47,7 +48,7 @@ public class EmployeeDB implements MyInterface{
                 preparedStatement.setLong(5, employeePersonalDetails.getEmployeeContactNumber());
                 preparedStatement.setString(6, employeePersonalDetails.getEmployeeEmail());
                 int record = preparedStatement.executeUpdate();
-             //   System.out.println(employeePersonalDetails);
+                //   System.out.println(employeePersonalDetails);
 
                 String query1 = "insert into EMPLOYEEADDRESS values(?,?,?,?,?,?,?,?,?,?,?)";
                 preparedStatement = connection.prepareStatement(query1);
@@ -70,8 +71,8 @@ public class EmployeeDB implements MyInterface{
 //                preparedStatement.setString(4, employeePersonalDetails.getPermanentAddress().getState());
 //                preparedStatement.setInt(5, employeePersonalDetails.getPermanentAddress().getPincode());
 //                preparedStatement.setInt(6, employeePersonalDetails.getEmployeeID());
-               int recordOne = preparedStatement.executeUpdate();
-              //  System.out.println(employeePersonalDetails);
+                int recordOne = preparedStatement.executeUpdate();
+                //  System.out.println(employeePersonalDetails);
 //                String query2 = "insert into EMPLOYEETEMPORARYADDRESS values(?,?,?,?,?,?)";
 //                preparedStatement = connection.prepareStatement(query2);
 //                preparedStatement.setString(1, employeePersonalDetails.getTemporaryAddress().getHouseName());
@@ -81,9 +82,9 @@ public class EmployeeDB implements MyInterface{
 //                preparedStatement.setInt(5, employeePersonalDetails.getTemporaryAddress().getPincode());
 //                preparedStatement.setInt(6, employeePersonalDetails.getEmployeeID());
 //                int recordTwo = preparedStatement.executeUpdate();
-              //  System.out.println(employeePersonalDetails);
+                //  System.out.println(employeePersonalDetails);
 
-                if (record != 0 && recordOne != 0 ) {
+                if (record != 0 && recordOne != 0) {
                     logger.info(resourceBundle.getString("employee.added"));
                     preparedStatement.close();
                     connection.close();
@@ -118,7 +119,7 @@ public class EmployeeDB implements MyInterface{
 //            PreparedStatement preparedStatementTwo = connection.prepareStatement(queryTwo);
 //            String queryThree = "select * from EMPLOYEETEMPORARYADDRESS where EMPLOYEEID=?";
 //            PreparedStatement preparedStatementThree = connection.prepareStatement(queryThree);
-           // ResultSet resultSetTwo;
+            // ResultSet resultSetTwo;
             ResultSet resultSetOne;
             ResultSet resultSet = preparedStatement.executeQuery();
             if (!resultSet.next()) {
@@ -185,8 +186,8 @@ public class EmployeeDB implements MyInterface{
             Connection connection = setConnection.makeConnection();
             ResultSet resultSet;
             try {
-               // String query="SELECT * FROM EMPLOYEES emp INNER JOIN EMPLOYEEPERMANENTADDRESS permadd ON emp.EMPLOYEEID = permadd.EMPLOYEEID INNER JOIN EMPLOYEETEMPORARYADDRESS tempadd ON emp.EMPLOYEEID = tempadd.EMPLOYEEID  WHERE tempadd.pincode =?  or permadd.pincode = ?";
-                String query="select e.FIRSTNAMEOFEMPLOYEE,e.EMPLOYEEEMAIL,e.EMPLOYEEID,a.PERMANENTHOUSENAME,a.PERMANENTSTREETNAME,a.PERMANENTCITY,a.PERMANENTSTATENAME,a.PERMANENTPINCODE, a.TEMPORARYHOUSENAME,a.TEMPORARYSTREETNAME,a.TEMPORARYCITY,a.TEMPORARYSTATENAME,a.TEMPORARYPINCODE from EMPLOYEEPERSONAL e join EMPLOYEEADDRESS a on e.EMPLOYEEID=a.EMPLOYEEID where a.PERMANENTPINCODE=? or a.TEMPORARYPINCODE=?";
+                // String query="SELECT * FROM EMPLOYEES emp INNER JOIN EMPLOYEEPERMANENTADDRESS permadd ON emp.EMPLOYEEID = permadd.EMPLOYEEID INNER JOIN EMPLOYEETEMPORARYADDRESS tempadd ON emp.EMPLOYEEID = tempadd.EMPLOYEEID  WHERE tempadd.pincode =?  or permadd.pincode = ?";
+                String query = "select e.FIRSTNAMEOFEMPLOYEE,e.EMPLOYEEEMAIL,e.EMPLOYEEID,a.PERMANENTHOUSENAME,a.PERMANENTSTREETNAME,a.PERMANENTCITY,a.PERMANENTSTATENAME,a.PERMANENTPINCODE, a.TEMPORARYHOUSENAME,a.TEMPORARYSTREETNAME,a.TEMPORARYCITY,a.TEMPORARYSTATENAME,a.TEMPORARYPINCODE from EMPLOYEEPERSONAL e join EMPLOYEEADDRESS a on e.EMPLOYEEID=a.EMPLOYEEID where a.PERMANENTPINCODE=? or a.TEMPORARYPINCODE=?";
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 preparedStatement.setInt(1, pin);
                 preparedStatement.setInt(2, pin);
@@ -246,11 +247,10 @@ public class EmployeeDB implements MyInterface{
                 resultSet.close();
 
 
-
             } catch (SQLException exp) {
                 throw new SQLException();
             }
-        }catch (ConnectionException | SQLException connectionExcp){
+        } catch (ConnectionException | SQLException connectionExcp) {
             throw new ConnectionException();
         }
         return employeeList;
@@ -258,19 +258,20 @@ public class EmployeeDB implements MyInterface{
 
     @Override
     public boolean delete(int EmployeeId) {
-        try{
+        try {
             DriverInitializer setConnection = new DriverInitializer();
             Connection connection = setConnection.makeConnection();
-            String query="DELETE FROM EMPLOYEES WHERE EMPLOYEEID=?";
-            PreparedStatement preparedStatement=connection.prepareStatement(query);
-            preparedStatement.setInt(1,EmployeeId);
-            int ResultSet=preparedStatement.executeUpdate();
-            if(ResultSet!=0) {
+            String query = "DELETE FROM EMPLOYEES WHERE EMPLOYEEID=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, EmployeeId);
+            int ResultSet = preparedStatement.executeUpdate();
+            if (ResultSet != 0) {
                 return true;
             }
-        }catch (SQLException | ConnectionException exp){
+        } catch (SQLException | ConnectionException exp) {
             System.out.println(exp);
-            logger.info(resourceBundle.getString("connection.failed"));;
+            logger.info(resourceBundle.getString("connection.failed"));
+            ;
         }
         return false;
     }

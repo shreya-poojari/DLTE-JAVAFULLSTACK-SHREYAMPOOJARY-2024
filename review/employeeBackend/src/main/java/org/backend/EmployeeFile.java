@@ -6,16 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeFile implements MyInterface {
-    static File myfile= new File("employee.doc");
-    static File AddresssFile= new File("EmployeeAddress");
+    static File myfile = new File("employee.doc");
+    static File AddresssFile = new File("EmployeeAddress");
 //        static File temporaryFile= new File("temporaryAddress");
 
     public EmployeeFile() throws IOException {
         System.out.println("inside constructor");
-        if (myfile.exists()){
+        if (myfile.exists()) {
             System.out.println("File present");
-        }
-        else
+        } else
             System.out.println("file absent");
     }
 
@@ -24,67 +23,65 @@ public class EmployeeFile implements MyInterface {
         return null;
     }
 
-    public void writeIntoFile(EmployeePersonalDetails employee){
+    public void writeIntoFile(EmployeePersonalDetails employee) {
         readFromFile();
         System.out.println("Inside write");
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(myfile);
-            ObjectOutputStream objectOutputStream=new ObjectOutputStream(fileOutputStream);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(employee);
             System.out.println("file written");
             objectOutputStream.close();
             fileOutputStream.close();
-        }
-        catch (IOException expection){
+        } catch (IOException expection) {
             System.out.println(expection);
         }
     }
 
-    public void writeIntoFileAdd(EmployeeAddressDetails employeeAddressDetails){
+    public void writeIntoFileAdd(EmployeeAddressDetails employeeAddressDetails) {
         readFromFile();
         System.out.println("Inside write");
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(AddresssFile);
-            ObjectOutputStream objectOutputStream=new ObjectOutputStream(fileOutputStream);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(employeeAddressDetails);
             System.out.println("file written");
             objectOutputStream.close();
             fileOutputStream.close();
-        }
-        catch (IOException expection){
+        } catch (IOException expection) {
             System.out.println(expection);
         }
     }
-    public ArrayList<Object> readFromFile(){
-        try{
+
+    public ArrayList<Object> readFromFile() {
+        try {
             //Employee employee=new Employee();
             System.out.println("inside read");
-            ArrayList<Object> employeeArray=new ArrayList<>();
-            FileInputStream fileInputStream=new FileInputStream(myfile);
-            ObjectInputStream objectInputStream=new ObjectInputStream(fileInputStream);
-            employeeArray=((ArrayList<Object>) objectInputStream.readObject());
+            ArrayList<Object> employeeArray = new ArrayList<>();
+            FileInputStream fileInputStream = new FileInputStream(myfile);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            employeeArray = ((ArrayList<Object>) objectInputStream.readObject());
             objectInputStream.close();
             fileInputStream.close();
             return employeeArray;
-        }
-        catch (IOException | ClassNotFoundException  ioException){
+        } catch (IOException | ClassNotFoundException ioException) {
             System.out.println(ioException);
         }
         return null;
     }
-    public ArrayList<Object> readFromFileAdd(){
-        try{
+
+    public ArrayList<Object> readFromFileAdd() {
+        try {
             //Employee employee=new Employee();
             System.out.println("inside read");
-            ArrayList<Object> employeeArray=new ArrayList<>();
-            FileInputStream fileInputStream=new FileInputStream(AddresssFile);
-            ObjectInputStream objectInputStream=new ObjectInputStream(fileInputStream);
-            employeeArray=((ArrayList<Object>) objectInputStream.readObject());
+            ArrayList<Object> employeeArray = new ArrayList<>();
+            FileInputStream fileInputStream = new FileInputStream(AddresssFile);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            employeeArray = ((ArrayList<Object>) objectInputStream.readObject());
             objectInputStream.close();
             fileInputStream.close();
             return employeeArray;
-        }
-        catch (IOException | ClassNotFoundException  ioException){
+        } catch (IOException | ClassNotFoundException ioException) {
             System.out.println(ioException);
         }
         return null;

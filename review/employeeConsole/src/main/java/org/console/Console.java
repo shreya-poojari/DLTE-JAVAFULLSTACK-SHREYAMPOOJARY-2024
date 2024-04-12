@@ -49,7 +49,7 @@ public class Console {
                         System.out.println(personalDetails2);
                         try {
                             String check = myInterface.input(personalDetails2);
-                              // System.out.println(resourceBundle.getString(check));
+                            // System.out.println(resourceBundle.getString(check));
                         } catch (EmployeeException | ConnectionException | InvalidContactException | InvalidUserException exception) {
                             System.out.println(exception);
                         }

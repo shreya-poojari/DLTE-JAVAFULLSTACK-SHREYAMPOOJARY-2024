@@ -10,8 +10,7 @@ import java.io.ByteArrayInputStream;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
+public class AppTest {
     @Test
     public void testName() {
         String input = "Shreya\n";
@@ -79,6 +78,7 @@ public class AppTest
         System.setIn(new ByteArrayInputStream(input.getBytes()));
         assertTrue(EmployeeValidation.isValidID(Integer.valueOf(input.trim())));
     }
+
     @Test
     public void failsEmployeeID() {
         String input = "9195\n";
