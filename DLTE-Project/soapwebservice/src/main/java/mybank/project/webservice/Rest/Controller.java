@@ -60,15 +60,23 @@ public class Controller {
 //        }
 //    }
 
-    @GetMapping("/find/{loanType}")
-    public ResponseEntity<List<LoansAvailable>> findByLoanType(@PathVariable String loanType) {
+    @GetMapping("/{loanType}")
+    public ResponseEntity<Object> findByLoanType(@PathVariable String loanType, HttpServletResponse response) {
         try {
             List<LoansAvailable> loans = interfaceServices.findByLoanType(loanType);
-            return new ResponseEntity<>(loans, HttpStatus.OK);
+            if (loans.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            } else {
+                return ResponseEntity.ok(loans);
+            }
         } catch (NoLoanData e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            response.setStatus(HttpServletResponse.SC_NO_CONTENT);//204 no content
+            logger.error(resourceBundle.getString("no.loanType"), e);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         } catch (NoLoanException e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);//500 no content
+            logger.error(resourceBundle.getString("db.error"), e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
 }

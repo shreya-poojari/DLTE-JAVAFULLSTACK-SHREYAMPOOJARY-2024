@@ -23,3 +23,194 @@
 2024-04-12 08:07:01 [http-nio-6081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2024-04-12 08:07:01 [http-nio-6081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
 2024-04-12 08:36:08 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=28m20s329ms493µs600ns).
+2024-04-12 08:48:29 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 7 class path changes (0 additions, 6 deletions, 1 modification)
+2024-04-12 08:48:29 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-12 08:48:29 [Thread-11] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-04-12 08:48:29 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-12 08:48:29 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-12 08:48:29 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Starting RestwebserviceApplication using Java 1.8.0_292 on WPF45CTVS with PID 19116 (C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice\target\classes started by xxpoojas in C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice)
+2024-04-12 08:48:29 [restartedMain] INFO  t.w.r.RestwebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-12 08:48:29 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-12 08:48:29 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JDBC repository interfaces.
+2024-04-12 08:48:29 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$faaa9b79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-12 08:48:29 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-12 08:48:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6081 (http)
+2024-04-12 08:48:30 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-12 08:48:30 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-12 08:48:30 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-12 08:48:30 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 552 ms
+2024-04-12 08:48:30 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2024-04-12 08:48:30 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-12 08:48:30 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-2 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-12 08:48:30 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2024-04-12 08:48:30 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-12 08:48:30 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 6081 (http) with context path ''
+2024-04-12 08:48:30 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Started RestwebserviceApplication in 0.942 seconds (JVM running for 2565.057)
+2024-04-12 08:48:30 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-04-12 08:48:31 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2024-04-12 08:48:33 [Thread-18] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-12 08:48:33 [Thread-18] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2024-04-12 08:48:33 [Thread-18] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2024-04-12 08:48:33 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Starting RestwebserviceApplication using Java 1.8.0_292 on WPF45CTVS with PID 19116 (C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice\target\classes started by xxpoojas in C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice)
+2024-04-12 08:48:33 [restartedMain] INFO  t.w.r.RestwebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-12 08:48:33 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-12 08:48:33 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JDBC repository interfaces.
+2024-04-12 08:48:33 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$faaa9b79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-12 08:48:33 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-12 08:48:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6081 (http)
+2024-04-12 08:48:33 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-12 08:48:33 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-12 08:48:33 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-12 08:48:33 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 332 ms
+2024-04-12 08:48:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2024-04-12 08:48:33 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-12 08:48:33 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-3 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-12 08:48:33 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2024-04-12 08:48:33 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-12 08:48:33 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 6081 (http) with context path ''
+2024-04-12 08:48:33 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Started RestwebserviceApplication in 0.621 seconds (JVM running for 2568.475)
+2024-04-12 08:48:33 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-04-12 08:52:39 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-04-12 08:52:40 [Thread-23] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-12 08:52:40 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+2024-04-12 08:52:40 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+2024-04-12 08:52:40 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Starting RestwebserviceApplication using Java 1.8.0_292 on WPF45CTVS with PID 19116 (C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice\target\classes started by xxpoojas in C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice)
+2024-04-12 08:52:40 [restartedMain] INFO  t.w.r.RestwebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-12 08:52:40 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-12 08:52:40 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+2024-04-12 08:52:40 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$faaa9b79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-12 08:52:40 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-12 08:52:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6081 (http)
+2024-04-12 08:52:40 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-12 08:52:40 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-12 08:52:40 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-12 08:52:40 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 189 ms
+2024-04-12 08:52:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2024-04-12 08:52:40 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-12 08:52:40 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-4 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-12 08:52:40 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2024-04-12 08:52:40 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-12 08:52:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 6081 (http) with context path ''
+2024-04-12 08:52:40 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Started RestwebserviceApplication in 0.344 seconds (JVM running for 2815.292)
+2024-04-12 08:52:40 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-04-12 08:52:51 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-04-12 08:52:51 [Thread-28] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-12 08:52:51 [Thread-28] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+2024-04-12 08:52:51 [Thread-28] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2024-04-12 08:52:51 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Starting RestwebserviceApplication using Java 1.8.0_292 on WPF45CTVS with PID 19116 (C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice\target\classes started by xxpoojas in C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice)
+2024-04-12 08:52:51 [restartedMain] INFO  t.w.r.RestwebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-12 08:52:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-12 08:52:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JDBC repository interfaces.
+2024-04-12 08:52:52 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$faaa9b79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-12 08:52:52 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-12 08:52:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6081 (http)
+2024-04-12 08:52:52 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-12 08:52:52 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-12 08:52:52 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-12 08:52:52 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 318 ms
+2024-04-12 08:52:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2024-04-12 08:52:52 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-12 08:52:52 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-5 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-12 08:52:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2024-04-12 08:52:52 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-12 08:52:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 6081 (http) with context path ''
+2024-04-12 08:52:52 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Started RestwebserviceApplication in 0.841 seconds (JVM running for 2827.312)
+2024-04-12 08:52:52 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-04-12 08:54:45 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-04-12 08:54:45 [Thread-33] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-12 08:54:45 [Thread-33] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+2024-04-12 08:54:45 [Thread-33] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+2024-04-12 08:54:45 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Starting RestwebserviceApplication using Java 1.8.0_292 on WPF45CTVS with PID 19116 (C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice\target\classes started by xxpoojas in C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice)
+2024-04-12 08:54:45 [restartedMain] INFO  t.w.r.RestwebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-12 08:54:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-12 08:54:45 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+2024-04-12 08:54:45 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$faaa9b79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-12 08:54:45 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-12 08:54:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6081 (http)
+2024-04-12 08:54:45 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-12 08:54:45 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-12 08:54:45 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-12 08:54:45 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 191 ms
+2024-04-12 08:54:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2024-04-12 08:54:45 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-12 08:54:45 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-6 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-12 08:54:45 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2024-04-12 08:54:45 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-12 08:54:45 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 6081 (http) with context path ''
+2024-04-12 08:54:45 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Started RestwebserviceApplication in 0.702 seconds (JVM running for 2940.584)
+2024-04-12 08:54:45 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-04-12 08:56:07 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 2 deletions, 1 modification)
+2024-04-12 08:56:07 [Thread-38] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-12 08:56:07 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+2024-04-12 08:56:07 [Thread-38] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2024-04-12 08:56:07 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Starting RestwebserviceApplication using Java 1.8.0_292 on WPF45CTVS with PID 19116 (C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice\target\classes started by xxpoojas in C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice)
+2024-04-12 08:56:07 [restartedMain] INFO  t.w.r.RestwebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-12 08:56:07 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-12 08:56:07 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 0 ms. Found 0 JDBC repository interfaces.
+2024-04-12 08:56:07 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$faaa9b79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-12 08:56:07 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-12 08:56:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6081 (http)
+2024-04-12 08:56:07 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-12 08:56:07 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-12 08:56:07 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-12 08:56:07 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 198 ms
+2024-04-12 08:56:07 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2024-04-12 08:56:07 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-12 08:56:07 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-7 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-12 08:56:07 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2024-04-12 08:56:07 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-12 08:56:07 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 6081 (http) with context path ''
+2024-04-12 08:56:07 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Started RestwebserviceApplication in 0.372 seconds (JVM running for 3022.253)
+2024-04-12 08:56:07 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-04-12 08:56:16 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (2 additions, 0 deletions, 1 modification)
+2024-04-12 08:56:16 [Thread-43] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-12 08:56:16 [Thread-43] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+2024-04-12 08:56:16 [Thread-43] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+2024-04-12 08:56:16 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Starting RestwebserviceApplication using Java 1.8.0_292 on WPF45CTVS with PID 19116 (C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice\target\classes started by xxpoojas in C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice)
+2024-04-12 08:56:16 [restartedMain] INFO  t.w.r.RestwebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-12 08:56:16 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-12 08:56:16 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+2024-04-12 08:56:16 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$faaa9b79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-12 08:56:16 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-12 08:56:16 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6081 (http)
+2024-04-12 08:56:16 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-12 08:56:16 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-12 08:56:17 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-12 08:56:17 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 177 ms
+2024-04-12 08:56:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+2024-04-12 08:56:17 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-12 08:56:17 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-8 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-12 08:56:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+2024-04-12 08:56:17 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-12 08:56:17 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 6081 (http) with context path ''
+2024-04-12 08:56:17 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Started RestwebserviceApplication in 0.475 seconds (JVM running for 3031.921)
+2024-04-12 08:56:17 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-04-12 08:59:24 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2024-04-12 08:59:24 [Thread-48] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-12 08:59:24 [Thread-48] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+2024-04-12 08:59:24 [Thread-48] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+2024-04-12 08:59:24 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Starting RestwebserviceApplication using Java 1.8.0_292 on WPF45CTVS with PID 19116 (C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice\target\classes started by xxpoojas in C:\DLTE-JAVAFULLSTACK-SHREYAMPOOJARY-2024\review\restwebservice)
+2024-04-12 08:59:24 [restartedMain] INFO  t.w.r.RestwebserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-12 08:59:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-04-12 08:59:24 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 JDBC repository interfaces.
+2024-04-12 08:59:24 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$faaa9b79] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-04-12 08:59:24 [restartedMain] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-04-12 08:59:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 6081 (http)
+2024-04-12 08:59:25 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-12 08:59:25 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2024-04-12 08:59:25 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-12 08:59:25 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 442 ms
+2024-04-12 08:59:25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+2024-04-12 08:59:25 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2024-04-12 08:59:25 [restartedMain] INFO  com.zaxxer.hikari.pool.PoolBase - HikariPool-9 - Driver does not support get/set network timeout for connections. (oracle.jdbc.driver.T4CConnection.getNetworkTimeout()I)
+2024-04-12 08:59:25 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+2024-04-12 08:59:25 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-04-12 08:59:25 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 6081 (http) with context path ''
+2024-04-12 08:59:25 [restartedMain] INFO  t.w.r.RestwebserviceApplication - Started RestwebserviceApplication in 1.228 seconds (JVM running for 3220.506)
+2024-04-12 08:59:25 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2024-04-12 09:50:31 [http-nio-6081-exec-8] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-12 09:50:31 [http-nio-6081-exec-8] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-12 09:50:31 [http-nio-6081-exec-8] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 33 ms
+2024-04-12 11:14:59 [HikariPool-9 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-9 - Thread starvation or clock leap detected (housekeeper delta=24m31s587ms755µs100ns).
+2024-04-12 12:57:10 [HikariPool-9 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-9 - Thread starvation or clock leap detected (housekeeper delta=11m39s959ms563µs200ns).
+2024-04-12 14:30:04 [HikariPool-9 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-9 - Thread starvation or clock leap detected (housekeeper delta=1h15m23s190ms212µs600ns).

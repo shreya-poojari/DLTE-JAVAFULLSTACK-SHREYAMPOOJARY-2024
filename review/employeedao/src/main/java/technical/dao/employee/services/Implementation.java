@@ -1,4 +1,4 @@
-package technical.webservice.restwebservice.services;
+package technical.dao.employee.services;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import technical.dao.employee.entity.Employee;
 import technical.dao.employee.entity.EmployeeAddress;
@@ -17,12 +18,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Repository
 public class Implementation implements InputEmployeeDetails {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    Logger logger = LoggerFactory.getLogger(technical.webservice.restwebservice.services.Implementation.class);
+    Logger logger = LoggerFactory.getLogger(technical.dao.employee.services.Implementation.class);
 
     @Override
     public List<Employee> create(List<Employee> list) {

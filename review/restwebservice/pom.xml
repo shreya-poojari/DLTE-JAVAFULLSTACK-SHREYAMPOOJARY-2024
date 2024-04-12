@@ -52,7 +52,7 @@
         <dependency>
             <groupId>technical.dao</groupId>
             <artifactId>employee</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
@@ -70,5 +70,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>

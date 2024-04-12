@@ -60,8 +60,8 @@ public class LoanService implements LoanInterface {
 
     @Override
     public List<LoansAvailable> findByLoanType(String loanType) {
+        List<LoansAvailable> loansList = new ArrayList<>();
         try {
-            List<LoansAvailable> loansList = new ArrayList<>();
             CallableStatementCreator creator = con -> {
                 CallableStatement statement = con.prepareCall("{call read_loans_by_type(?,?,?,?,?,?,?)}");
                 statement.setString(1, loanType);
@@ -84,6 +84,17 @@ public class LoanService implements LoanInterface {
             );
             Map<String, Object> returnedLoans = jdbcTemplate.call(creator, sqlParameters);
 
+            String loanInfo = (String) returnedLoans.get("loan_info");
+            if (loanInfo != null) {
+
+                if (loanInfo.equals("NO_LOAN_FOUND")) {
+                    logger.warn(resourceBundle.getString("no.loanType"));
+                    throw new NoLoanData(resourceBundle.getString("no.loanType") + loanType);
+                } else if (loanInfo.equals("SQ001")) {
+                    logger.warn(resourceBundle.getString("error.loanType"));
+                    throw new NoLoanException(resourceBundle.getString("error.loanType"));
+                }
+            }
             LoansAvailable loan = new LoansAvailable();
             loan.setLoanNumber(((BigDecimal) returnedLoans.get("loan_number")).intValue());
             loan.setLoanType((String) returnedLoans.get("loan_type_out"));
@@ -94,15 +105,14 @@ public class LoanService implements LoanInterface {
                 loan.setLoanRoi(loanRoi.doubleValue());
             }
             loansList.add(loan);
-            return loansList;
-        } catch (NoLoanData e) {
-            throw new NoLoanData(resourceBundle.getString("no.loanType") + loanType);
-        } catch (NoLoanException e) {
-            throw new NoLoanData(resourceBundle.getString("error.LoanType") + e.getMessage());
+        } catch (DataAccessException ex) {
+            logger.warn(resourceBundle.getString("db.error"));
+            throw new NoLoanException(resourceBundle.getString("db.error"));
         }
+        logger.info(resourceBundle.getString("loan.server.available"));
+        return loansList;
     }
-}
-
+    }
 ////method to find list of loans by loan type
 ////    @Override
 ////    public List<LoansAvailable> findByLoanType(String loanType) {

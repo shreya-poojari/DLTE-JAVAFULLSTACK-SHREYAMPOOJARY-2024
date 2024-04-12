@@ -1,5 +1,6 @@
 package technical.webservice.restwebservice.rest;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import technical.dao.employee.entity.Employee;
@@ -7,10 +8,11 @@ import technical.dao.employee.exception.EmployeeException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import technical.webservice.restwebservice.services.Implementation;
+import technical.dao.employee.services.Implementation;
+
 
 import java.util.List;
-
+@ComponentScan("technical.dao.employee.services")
 @RestController
 @RequestMapping("/employees")
 public class Controller {
