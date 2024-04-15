@@ -60,9 +60,12 @@ public class LoanService implements LoanInterface {
 
     @Override
     public List<LoansAvailable> findByLoanType(String loanType) {
+        // Initialize an empty list to hold the loans
         List<LoansAvailable> loansList = new ArrayList<>();
         try {
+            // Create a CallableStatementCreator
             CallableStatementCreator creator = con -> {
+                // Prepare the callable statement for the stored procedure
                 CallableStatement statement = con.prepareCall("{call read_loans_by_type(?,?,?,?,?,?,?)}");
                 statement.setString(1, loanType);
                 statement.registerOutParameter(2, Types.VARCHAR);
@@ -90,6 +93,7 @@ public class LoanService implements LoanInterface {
                 if (loanInfo.equals("NO_LOAN_FOUND")) {
                     logger.warn(resourceBundle.getString("no.loanType"));
                     throw new NoLoanData(resourceBundle.getString("no.loanType") + loanType);
+
                 } else if (loanInfo.equals("SQ001")) {
                     logger.warn(resourceBundle.getString("error.loanType"));
                     throw new NoLoanException(resourceBundle.getString("error.loanType"));
@@ -113,6 +117,9 @@ public class LoanService implements LoanInterface {
         return loansList;
     }
     }
+
+
+
 ////method to find list of loans by loan type
 ////    @Override
 ////    public List<LoansAvailable> findByLoanType(String loanType) {
@@ -135,34 +142,36 @@ public class LoanService implements LoanInterface {
 //////        }
 ////
 ////
-//////        // Method to find list of loans by loan type using streams
-////        try {
-////            List<LoansAvailable> lists = jdbcTemplate.query("SELECT * FROM MyBank_App_LoanAvailable ", new Object[]{loanType}, new LoansMapper());
-////            //List<LoansAvailable> lists = allAvailableLoans();
-////            if (lists == null || lists.isEmpty()) {
-////                throw new NoLoanException(resourceBundle.getString("error.loanType"));
-////            }
-////            List<LoansAvailable> filterByLoanType = lists.stream()
-////                    .filter(loan -> loan.getLoanType().equalsIgnoreCase(loanType))
-////                    .collect(Collectors.toList());
-////            //System.out.println("Loans found by type " + loanType + ": " + filterByLoansType.toString());
-////            //return filterByLoansType;
-////            if (lists.isEmpty()) {
-////                throw new NoLoanException(resourceBundle.getString("no.loanType")+loanType);
-////                //System.out.println("no loan");
-////            }
-////            //else {
-////            //System.out.println("retrived");
-////            //}
-////            return lists;
-////        } catch (NoLoanException exception) {
-////            throw new NoLoanException(resourceBundle.getString("no.loanType")+loanType);
-////            //System.out.println("no loan");
-////        } catch (Exception exception) {
-////            throw new NoLoanException(resourceBundle.getString("error.loanType")+exception.getMessage());
-////            //System.out.println("errror");
-////        }
-//////        //return null;
-//////    }
-////    }
-//}
+
+
+
+        // Method to find list of loans by loan type using streams
+//        try {
+//           List<LoansAvailable> lists = jdbcTemplate.query("SELECT * FROM MyBank_App_LoanAvailable ", new Object[]{loanType}, new LoansMapper());
+//            //List<LoansAvailable> lists = allAvailableLoans();
+//            if (lists == null || lists.isEmpty()) {
+//                throw new NoLoanException(resourceBundle.getString("error.loanType"));
+//            }
+//            List<LoansAvailable> filterByLoanType = lists.stream()
+//                    .filter(loan -> loan.getLoanType().equalsIgnoreCase(loanType))
+//                    .collect(Collectors.toList());
+//            //System.out.println("Loans found by type " + loanType + ": " + filterByLoansType.toString());
+//            //return filterByLoansType;
+//            if (lists.isEmpty()) {
+//                throw new NoLoanException(resourceBundle.getString("no.loanType")+loanType);
+//                //System.out.println("no loan");
+//            }
+//            //else {
+//            //System.out.println("retrived");
+//            //}
+//            return lists;
+//        } catch (NoLoanException exception) {
+//            throw new NoLoanException(resourceBundle.getString("no.loanType")+loanType);
+//            //System.out.println("no loan");
+//        } catch (Exception exception) {
+//            throw new NoLoanException(resourceBundle.getString("error.loanType")+exception.getMessage());
+//            //System.out.println("errror");
+//        }
+//        //return null;
+//    }
+//   }

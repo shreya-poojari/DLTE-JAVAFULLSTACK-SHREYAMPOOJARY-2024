@@ -1,5 +1,7 @@
 package mybank.project.webservice.Rest;
 
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import mybank.project.loansdao.Entity.LoansAvailable;
 import mybank.project.loansdao.Exception.NoLoanData;
 import mybank.project.loansdao.Exception.NoLoanException;
@@ -27,40 +29,14 @@ public class Controller {
     private LoanInterface interfaceServices;
     ResourceBundle resourceBundle = ResourceBundle.getBundle("application");// Loading resource bundle
     Logger logger = LoggerFactory.getLogger(LoanService.class);// Initializing logger
-//    @GetMapping("/loans/{loanType}")
-//    public List<LoansAvailable> findByLoanType(@PathVariable String loanType, HttpServletResponse response) throws LoanServiceException {
-//        try {
-//            List<LoansAvailable> loans = loanService.findByLoanType(loanType);
-//            if (loans.isEmpty()) {
-//                response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-//                logger.warn(resourceBundle.getString("no.loan.type"), loanType);
-//                throw new NoLoanDataException(resourceBundle.getString("no.loan.type") + loanType);
-//            }
-//            return loans;
-//        } catch (NoLoanDataException e) {
-//            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-//            logger.error(resourceBundle.getString("no.loan.type"), loanType, e);
-//            throw e;
-//        } catch (DataAccessException e) {
-//            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-//            logger.error(resourceBundle.getString("loan.server.error"), e);
-//            throw new LoanServiceException(resourceBundle.getString("loan.server.error"));
-//        }
-//    }
-
-//    @GetMapping("/findByLoanType")
-//    public ResponseEntity<List<LoansAvailable>> findByLoanType(@PathVariable String loanType) {
-//        try {
-//            List<LoansAvailable> loans = interfaceServices.findByLoanType(loanType);
-//            return new ResponseEntity<>(loans, HttpStatus.OK);
-//        } catch (NoLoanData e) {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        } catch (NoLoanException e) {
-//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
 
     @GetMapping("/{loanType}")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204",description = "There are no loans available for the selected loan type."),
+            @ApiResponse(responseCode = "500",description = "Internal server error."),
+            @ApiResponse(responseCode = "200",description = "loans are fetched"),
+            @ApiResponse(responseCode = "404",description = "no loans found")
+    })
     public ResponseEntity<Object> findByLoanType(@PathVariable String loanType, HttpServletResponse response) {
         try {
             List<LoansAvailable> loans = interfaceServices.findByLoanType(loanType);
@@ -70,11 +46,11 @@ public class Controller {
                 return ResponseEntity.ok(loans);
             }
         } catch (NoLoanData e) {
-            response.setStatus(HttpServletResponse.SC_NO_CONTENT);//204 no content
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND);//204 no content
             logger.error(resourceBundle.getString("no.loanType"), e);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         } catch (NoLoanException e) {
-            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);//500 no content
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);//500
             logger.error(resourceBundle.getString("db.error"), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
