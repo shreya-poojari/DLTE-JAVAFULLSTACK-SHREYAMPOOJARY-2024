@@ -11,93 +11,93 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script>
-        $(document).ready(()=>{
+        // $(document).ready(()=>{
 
-            $("#cancel").click(()=>{
-                $("#loanName").val("")
-                $("#loanType").val("")
-                $("#loanDescription").val("")
-                $("#loanRoi").val("")
-            })
+        //     $("#cancel").click(()=>{
+        //         $("#loanName").val("")
+        //         $("#loanType").val("")
+        //         $("#loanDescription").val("")
+        //         $("#loanRoi").val("")
+        //     })
 
-            $("#add").click(()=>{
-                const name = $("#loanName").val()
-                const type = $("#loanType").val()
-                const desc = $("#loanDescription").val()
-                const roi = $("#loanRoi").val()
+        //     $("#add").click(()=>{
+        //         const name = $("#loanName").val()
+        //         const type = $("#loanType").val()
+        //         const desc = $("#loanDescription").val()
+        //         const roi = $("#loanRoi").val()
     
-                const request = {
-                    "loanName":name,
-                    "loanType":type,
-                    "loanDescription":desc,
-                    "loanRoi":roi
-                }
-                console.log(JSON.stringify(request))
-                $.ajax({
-                    url:"http://localhost:3002/$loantype",
-                    type:"POST",
-                    dataType:"text",
-                    beforeSend:function(handler){
-                        handler.setRequestHeader("Authorization","Basic "+btoa("shreyas:shetty"))
-                    },
-                    contentType:"application/json;charset=utf-8",
-                    data:JSON.stringify(request),
-                    success:function(response){
-                        alert(JSON.stringify(response))
-                        /*
-                        let element = $("#status")
-                        element.append(`<h1>${response.loanName} has added</h1>`)*/
-                    },
-                    error:function(err){
-                        let element = $("#status")
-                        element.append(`<h1>${err.status}</h1>`)
-                    }
-                })
-            })
-        })
+        //         const request = {
+        //             "loanName":name,
+        //             "loanType":type,
+        //             "loanDescription":desc,
+        //             "loanRoi":roi
+        //         }
+        //         console.log(JSON.stringify(request))
+        //         $.ajax({
+        //             url:"http://localhost:3002/$loantype",
+        //             type:"POST",
+        //             dataType:"text",
+        //             beforeSend:function(handler){
+        //                 handler.setRequestHeader("Authorization","Basic "+btoa("shreyas:shetty"))
+        //             },
+        //             contentType:"application/json;charset=utf-8",
+        //             data:JSON.stringify(request),
+        //             success:function(response){
+        //                 alert(JSON.stringify(response))
+        //                 /*
+        //                 let element = $("#status")
+        //                 element.append(`<h1>${response.loanName} has added</h1>`)*/
+        //             },
+        //             error:function(err){
+        //                 let element = $("#status")
+        //                 element.append(`<h1>${err.status}</h1>`)
+        //             }
+        //         })
+        //     })
+        // })
 
-//         $(document).ready(() => {
-//     $("#loanForm").submit(function(event) {
-//         event.preventDefault(); // Prevent the form from submitting normally
+        $(document).ready(() => {
+    $("#loanForm").submit(function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
 
         
-//         const type = $("#loanType").val();
-//         const name = $("#loanName").val();
-//         const desc = $("#loanDescription").val();
-//         const roi = $("#loanRoi").val();
+        const type = $("#loanType").val();
+        const name = $("#loanName").val();
+        const desc = $("#loanDescription").val();
+        const roi = $("#loanRoi").val();
 
-//         const request = {
-//             "loanType": type,
-//             "loanName": name,
-//             "loanDescription": desc,
-//             "loanRoi": roi
-//         };
+        const request = {
+            "loanType": type,
+            "loanName": name,
+            "loanDescription": desc,
+            "loanRoi": roi
+        };
 
-//         console.log(JSON.stringify(request));
+        console.log(JSON.stringify(request));
 
-//         // Make the AJAX request
-//         $.ajax({
-//             url: "http://localhost:3002/$loantype",
-//             type: "POST",
-//             dataType: "text",
-//             beforeSend: function(handler) {
-//                 handler.setRequestHeader("Authorization", "Basic " + btoa("shreya:shrey"));
-//             },
-//             contentType: "application/json;charset=utf-8",
-//             data: JSON.stringify(request),
-//             success: function(response) {
-//                 $("#status").text(`${response.loanName} has been added`);
-//             },
-//             error: function(err) {
-//                 $("#status").text(`Error: ${err.status}`);
-//             }
-//         });
-//     });
+        // Make the AJAX request
+        $.ajax({
+            url: "http://localhost:3002/loans/$loantype",
+            type: "POST",
+            dataType: "text",
+            beforeSend: function(handler) {
+                handler.setRequestHeader("Authorization", "Basic " + btoa("shreya:shrey"));
+            },
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify(request),
+            success: function(response) {
+                $("#status").text(`${response.loanName} has been added`);
+            },
+            error: function(err) {
+                $("#status").text(`Error: ${err.status}`);
+            }
+        });
+    });
 
-//     $("#cancel").click(function() {
-//         $("#loanForm")[0].reset();
-//     });
-// });
+    $("#cancel").click(function() {
+        $("#loanForm")[0].reset();
+    });
+});
     </script>
 </head>
 <body>
