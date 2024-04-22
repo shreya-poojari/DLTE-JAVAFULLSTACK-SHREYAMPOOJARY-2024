@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import technical.dao.employee.entity.Employee;
 import technical.dao.employee.entity.EmployeeAddress;
 import technical.dao.employee.entity.EmployeebasicDetails;
+import technical.dao.employee.exception.EmployeeException;
 import technical.dao.employee.interfaces.InputEmployeeDetails;
 
 import java.sql.ResultSet;
@@ -28,8 +29,8 @@ public class Implementation implements InputEmployeeDetails {
     @Override
     public List<Employee> create(List<Employee> list) {
         List<Employee> createdEmployees = new ArrayList<>();
-        try {
-            for (Employee employee : list) {
+        for (Employee employee : list) {
+            try {
                 String employeeID = employee.getEmployeebasicDetails().getEmployeeId();
 
                 // Inserting into Employee table
@@ -39,24 +40,58 @@ public class Implementation implements InputEmployeeDetails {
 
                 // Inserting into Address table (temporary)
                 String insertTemporaryAddress = "INSERT INTO EmployeeAddress(ADDRESSID,EMPLOYEEID,HOUSENAME,STREETNAME,CITYNAME,STATENAME,PINCODE,ISTEMPORARY) VALUES (address_seq.nextval,?,?,?,?,?,?,1)";
-                jdbcTemplate.update(insertTemporaryAddress, employeeID, employee.getEmployeeTemporaryAddress().getAddress(),
-                        employee.getEmployeeTemporaryAddress().getHouseNumber(), employee.getEmployeeTemporaryAddress().getCity(),
+                jdbcTemplate.update(insertTemporaryAddress, employeeID, employee.getEmployeeTemporaryAddress().getHouseNumber(),
+                        employee.getEmployeeTemporaryAddress().getAddress(), employee.getEmployeeTemporaryAddress().getCity(),
                         employee.getEmployeeTemporaryAddress().getState(), employee.getEmployeeTemporaryAddress().getPinCode());
 
                 // Inserting into Address table (permanent)
                 String insertPermanentAddress = "INSERT INTO EmployeeAddress(ADDRESSID,EMPLOYEEID,HOUSENAME,STREETNAME,CITYNAME,STATENAME,PINCODE,ISTEMPORARY) VALUES (address_seq.nextval,?,?,?,?,?,?,0)";
-                jdbcTemplate.update(insertPermanentAddress, employeeID, employee.getEmployeePermanentAddress().getAddress(),
-                        employee.getEmployeePermanentAddress().getHouseNumber(), employee.getEmployeePermanentAddress().getCity(),
+                jdbcTemplate.update(insertPermanentAddress, employeeID, employee.getEmployeePermanentAddress().getHouseNumber(),
+                        employee.getEmployeePermanentAddress().getAddress(), employee.getEmployeePermanentAddress().getCity(),
                         employee.getEmployeePermanentAddress().getState(), employee.getEmployeePermanentAddress().getPinCode());
 
                 createdEmployees.add(employee);
-                logger.info("Employee added: " + employeeID);
+                logger.info("Employee added successfully: {}", employeeID);
+            } catch (DataAccessException e) {
+                logger.error("Error creating employee with ID: " + employee.getEmployeebasicDetails().getEmployeeId(), e);
+
+                throw new EmployeeException("Failed to create employee", e);
             }
-        } catch (DataAccessException e) {
-            logger.error("Error creating employees", e);
         }
         return createdEmployees;
     }
+
+
+//        List<Employee> createdEmployees = new ArrayList<>();
+//        try {
+//            for (Employee employee : list) {
+//                String employeeID = employee.getEmployeebasicDetails().getEmployeeId();
+//
+//                // Inserting into Employee table
+//                String employees = "INSERT INTO Employee(EmployeeId, EmployeeName, emailId, phoneNumber) VALUES (?, ?, ?, ?)";
+//                jdbcTemplate.update(employees, employeeID, employee.getEmployeebasicDetails().getEmployeeName(),
+//                        employee.getEmployeebasicDetails().getEmailId(), employee.getEmployeebasicDetails().getPhoneNumber());
+//
+//                // Inserting into Address table (temporary)
+//                String insertTemporaryAddress = "INSERT INTO EmployeeAddress(ADDRESSID,EMPLOYEEID,HOUSENAME,STREETNAME,CITYNAME,STATENAME,PINCODE,ISTEMPORARY) VALUES (address_seq.nextval,?,?,?,?,?,?,1)";
+//                jdbcTemplate.update(insertTemporaryAddress, employeeID, employee.getEmployeeTemporaryAddress().getAddress(),
+//                        employee.getEmployeeTemporaryAddress().getHouseNumber(), employee.getEmployeeTemporaryAddress().getCity(),
+//                        employee.getEmployeeTemporaryAddress().getState(), employee.getEmployeeTemporaryAddress().getPinCode());
+//
+//                // Inserting into Address table (permanent)
+//                String insertPermanentAddress = "INSERT INTO EmployeeAddress(ADDRESSID,EMPLOYEEID,HOUSENAME,STREETNAME,CITYNAME,STATENAME,PINCODE,ISTEMPORARY) VALUES (address_seq.nextval,?,?,?,?,?,?,0)";
+//                jdbcTemplate.update(insertPermanentAddress, employeeID, employee.getEmployeePermanentAddress().getAddress(),
+//                        employee.getEmployeePermanentAddress().getHouseNumber(), employee.getEmployeePermanentAddress().getCity(),
+//                        employee.getEmployeePermanentAddress().getState(), employee.getEmployeePermanentAddress().getPinCode());
+//
+//                createdEmployees.add(employee);
+//                logger.info("Employee added: " + employeeID);
+//            }
+//        } catch (DataAccessException e) {
+//            logger.error("Error creating employees", e);
+//        }
+//        return createdEmployees;
+//    }
 
     @Override
     public void closeConnections() throws SQLException {

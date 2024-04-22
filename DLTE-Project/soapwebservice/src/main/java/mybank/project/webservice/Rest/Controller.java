@@ -12,10 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
@@ -23,6 +20,7 @@ import java.util.ResourceBundle;
 
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/loans")
 public class Controller {
     @Autowired
@@ -41,18 +39,18 @@ public class Controller {
         try {
             List<LoansAvailable> loans = interfaceServices.findByLoanType(loanType);
             if (loans.isEmpty()) {
-                return ResponseEntity.notFound().build();
+                return ResponseEntity.notFound().build();// If the list of loans is empty 404 Not Found
             } else {
-                return ResponseEntity.ok(loans);
+                return ResponseEntity.ok(loans); // If loans found 200 OK
             }
         } catch (NoLoanData e) {
-            response.setStatus(HttpServletResponse.SC_NOT_FOUND);//204 no content
+            //response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             logger.error(resourceBundle.getString("no.loanType"), e);
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());//for no loan data found 404
         } catch (NoLoanException e) {
-            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);//500
+            //response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             logger.error(resourceBundle.getString("db.error"), e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());//500 Internal Server Error
         }
     }
 }

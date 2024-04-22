@@ -17,10 +17,10 @@ public class practice {
 
     //http://localhost:7001/DLTE-JavaEE-1/
     @WebServlet("/test")
-    public class TransactionServlet extends HttpServlet {
+    public static class TransactionServlet extends HttpServlet {
         // Sample transaction data
         List<Transaction> transactionList = Stream.of(
-                new Transaction(new Date(2023,12,25), 10000.0, "shreya", "Family"),
+                new Transaction(new Date(2024,4,12), 10000.0, "shreya", "Family"),
         ).collect(Collectors.toList());
 
         protected void doGet(HttpServletRequest req, HttpServletResponse resp)

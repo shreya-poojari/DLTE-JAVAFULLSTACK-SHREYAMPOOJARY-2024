@@ -1,13 +1,13 @@
 package org.example.services;
 
-import org.example.soappractice.Practice;
-import org.example.soappractice.PracticeService;
+import soappractice.Practice;
+import soappractice.PracticeService;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class App
 {
     public static void main( String[] args )
     {

@@ -10,6 +10,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class MyBankOfficialsService implements UserDetailsService {
     @Autowired
@@ -27,11 +30,22 @@ public class MyBankOfficialsService implements UserDetailsService {
     }
 
     public MyBankOfficials findByUsername(String username){
-        MyBankOfficials myBankOfficials = jdbcTemplate.queryForObject("select * from MYBANK_APP_CUSTOMER where username=?",
-                new Object[]{username},new BeanPropertyRowMapper<>(MyBankOfficials.class));
+        List<MyBankOfficials> myBankOfficialsList = jdbcTemplate.query("select * from MYBANK_APP_CUSTOMER",new BeanPropertyRowMapper<>(MyBankOfficials.class));
+        //new Object[]{username},new BeanPropertyRowMapper<>(MyBankOfficials.class));
+                MyBankOfficials myBankOfficials=filterByUserName(myBankOfficialsList, username);
         return myBankOfficials;
     }
-
+    public MyBankOfficials filterByUserName(List<MyBankOfficials> myBankOfficialsList,String username){
+        // stream Filter
+        List<MyBankOfficials> filteredMyBankOfficials = myBankOfficialsList.stream()
+                .filter(myBankOfficials -> myBankOfficials.getUsername().equals(username))
+                .collect(Collectors.toList());
+        if (!filteredMyBankOfficials.isEmpty()) {
+            return filteredMyBankOfficials.get(0);
+        } else {
+            return null;
+        }
+    }
     public void updateAttempts(MyBankOfficials myBankOfficials){
         jdbcTemplate.update("update MYBANK_APP_CUSTOMER set attempts=? where username=?",
                 new Object[]{myBankOfficials.getAttempts(),myBankOfficials.getUsername()});

@@ -25,8 +25,20 @@ public class Controller {
             List<Employee> createdEmployees = employeeRepository.create(employees);
             return new ResponseEntity<>(createdEmployees, HttpStatus.CREATED);
         } catch (EmployeeException e) {
+            // Return appropriate error response based on the exception type
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        } catch (Exception e) {
+            // Catch other exceptions and return 400 Bad Request
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
+
+
+//        try {
+//            List<Employee> createdEmployees = employeeRepository.create(employees);
+//            return new ResponseEntity<>(createdEmployees, HttpStatus.CREATED);
+//        } catch (EmployeeException e) {
+//            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+//        }
     }
 
     @GetMapping("allEmployee")
@@ -42,7 +54,7 @@ public class Controller {
         }
     }
 
-    @GetMapping("/employeeId{employeeId}")
+    @GetMapping("/employeeId/{employeeId}")
     public ResponseEntity<Employee> displayBasedOnEmployeeId(@PathVariable String employeeId) {
         try {
             Employee employee = employeeRepository.displayBasedOnEmployeeId(employeeId);

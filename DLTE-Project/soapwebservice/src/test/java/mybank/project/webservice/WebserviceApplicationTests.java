@@ -44,94 +44,94 @@
 //    @Autowired
 //    private MockMvc mockMvc;
 //
-////    @Test
-////    void viewAvailableLoanRequestSuccess() {
-////        // Arrange
-////        ViewAllAvailableLoanRequest request = new ViewAllAvailableLoanRequest();
-////
-////        List<LoansAvailable> availableLoans = new ArrayList<>();
-////
-////        availableLoans.add(new LoansAvailable());
-////        when(interfaceServices.allAvailableLoans()).thenReturn(availableLoans);
-////
-////        // Act
-////        ViewAllAvailableLoanResponse response = soapPhase.viewAvailLoanRequest(request);
-////
-////        // Assert
-////        assertNotNull(response);
-////        assertEquals(HttpServletResponse.SC_OK, response.getServiceStatus().getStatus());
-////        assertNotNull(response.getLoanAvailable());
-////        assertEquals(1, response.getLoanAvailable().size());
-////    }
-////
-////
-////    @Test
-////    void viewAvailableLoanRequestFailure() {
-////        // Arrange
-////        ViewAllAvailableLoanRequest request = new ViewAllAvailableLoanRequest();
-////        List<LoansAvailable> availableLoans = new ArrayList<>();
-////        availableLoans.add(new LoansAvailable());
-////        when(interfaceServices.allAvailableLoans()).thenReturn(availableLoans);
-////        // Act
-////        ViewAllAvailableLoanResponse response = soapPhase.viewAvailLoanRequest(request);
-////        // Assert
-////        assertNotNull(response);
-////        assertEquals(HttpServletResponse.SC_OK, response.getServiceStatus().getStatus());
-////        assertNotNull(response.getLoanAvailable());
-////        assertEquals(2, response.getLoanAvailable().size());
-////    }
-////    @Test
-////    public void testFindByLoanType_Success() {
-////        // Arrange
-////        String loanType = "home";
-////        HttpServletResponse response = null;
-////        List<LoansAvailable> mockLoanList = new ArrayList<>();
-////        mockLoanList.add(new LoansAvailable());
-////        when(interfaceServices.findByLoanType(loanType)).thenReturn(mockLoanList);
-////        // Act
-////        List<LoansAvailable> result = interfaceServices.findByLoanType(loanType);
-////        // Assert
-////        assertNotNull(result);
-////        assertEquals(1, result.size());
-////
-////    }
-////
-////    @Test
-////    public void testFindByLoanType_Failure() {
-////        // Arrange
-////        String loanType = "home";
-////        HttpServletResponse response = null;
-////        List<LoansAvailable> mockLoanList = new ArrayList<>();
-////        mockLoanList.add(new LoansAvailable());
-////        mockLoanList.add(new LoansAvailable());
-////        when(interfaceServices.findByLoanType(loanType)).thenReturn(mockLoanList);
-////        // Act
-////        List<LoansAvailable> result = interfaceServices.findByLoanType(loanType);
-////        // Assert
-////        assertNotNull(result);
-////        assertEquals(1, result.size());
-////        assertTrue(result.isEmpty());
-////    }
+//    @Test
+//    void viewAvailableLoanRequestSuccess() {
+//        // Arrange
+//        ViewAllAvailableLoanRequest request = new ViewAllAvailableLoanRequest();
 //
-////    @Test
-////    @WithMockUser(username = "shreya")
-////    public void testingFindByLoanType_Success1() throws Exception {
-////        String loanType = "Home"; // Adjust the loan type as needed
-////
-////        // Act & Assert
-////        mockMvc.perform(get("/loans/{loanType}", loanType))
-////                .andExpect(status().isNotFound());
-////    }
-////
-////    @Test
-////    @WithMockUser(username = "shreya")
-////    public void testingFindByLoanType_Failure1() throws Exception {
-////        String loanType = "Gold";
-////
-////        // Act & Assert
-////        mockMvc.perform(get("http://localhost:3002/loans/{loanType}", loanType))
-////                .andExpect(status().isOk());
-////    }
+//        List<LoansAvailable> availableLoans = new ArrayList<>();
+//
+//        availableLoans.add(new LoansAvailable());
+//        when(interfaceServices.allAvailableLoans()).thenReturn(availableLoans);
+//
+//        // Act
+//        ViewAllAvailableLoanResponse response = soapPhase.viewAvailLoanRequest(request);
+//
+//        // Assert
+//        assertNotNull(response);
+//        assertEquals(HttpServletResponse.SC_OK, response.getServiceStatus().getStatus());
+//        assertNotNull(response.getLoanAvailable());
+//        assertEquals(1, response.getLoanAvailable().size());
+//    }
+//
+//
+//    @Test
+//    void viewAvailableLoanRequestFailure() {
+//        // Arrange
+//        ViewAllAvailableLoanRequest request = new ViewAllAvailableLoanRequest();
+//        List<LoansAvailable> availableLoans = new ArrayList<>();
+//        availableLoans.add(new LoansAvailable());
+//        when(interfaceServices.allAvailableLoans()).thenReturn(availableLoans);
+//        // Act
+//        ViewAllAvailableLoanResponse response = soapPhase.viewAvailLoanRequest(request);
+//        // Assert
+//        assertNotNull(response);
+//        assertEquals(HttpServletResponse.SC_OK, response.getServiceStatus().getStatus());
+//        assertNotNull(response.getLoanAvailable());
+//        assertEquals(2, response.getLoanAvailable().size());
+//    }
+//    @Test
+//    public void testFindByLoanType_Success() {
+//        // Arrange
+//        String loanType = "home";
+//        HttpServletResponse response = null;
+//        List<LoansAvailable> mockLoanList = new ArrayList<>();
+//        mockLoanList.add(new LoansAvailable());
+//        when(interfaceServices.findByLoanType(loanType)).thenReturn(mockLoanList);
+//        // Act
+//        List<LoansAvailable> result = interfaceServices.findByLoanType(loanType);
+//        // Assert
+//        assertNotNull(result);
+//        assertEquals(1, result.size());
+//
+//    }
+//
+//    @Test
+//    public void testFindByLoanType_Failure() {
+//        // Arrange
+//        String loanType = "home";
+//        HttpServletResponse response = null;
+//        List<LoansAvailable> mockLoanList = new ArrayList<>();
+//        mockLoanList.add(new LoansAvailable());
+//        mockLoanList.add(new LoansAvailable());
+//        when(interfaceServices.findByLoanType(loanType)).thenReturn(mockLoanList);
+//        // Act
+//        List<LoansAvailable> result = interfaceServices.findByLoanType(loanType);
+//        // Assert
+//        assertNotNull(result);
+//        assertEquals(1, result.size());
+//        assertTrue(result.isEmpty());
+//    }
+//
+//    @Test
+//    @WithMockUser(username = "shreya")
+//    public void testingFindByLoanType_Success1() throws Exception {
+//        String loanType = "Home"; // Adjust the loan type as needed
+//
+//        // Act & Assert
+//        mockMvc.perform(get("/loans/{loanType}", loanType))
+//                .andExpect(status().isNotFound());
+//    }
+//
+//    @Test
+//    @WithMockUser(username = "shreya")
+//    public void testingFindByLoanType_Failure1() throws Exception {
+//        String loanType = "Gold";
+//
+//        // Act & Assert
+//        mockMvc.perform(get("http://localhost:3002/loans/{loanType}", loanType))
+//                .andExpect(status().isOk());
+//    }
 //}
 //
 //

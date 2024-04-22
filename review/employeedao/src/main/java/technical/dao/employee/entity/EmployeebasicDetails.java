@@ -9,7 +9,7 @@ public class EmployeebasicDetails {
     private String employeeName;
 
     @NotNull(message = "id.null")
-    @Pattern(regexp = "^[a-zA-Z0-9]+$", message = "id.invalid")
+    @Pattern(regexp = "^[0-9]{3}$", message = "id.invalid")
     private String employeeId;
 
     @NotNull(message = "email.null")
