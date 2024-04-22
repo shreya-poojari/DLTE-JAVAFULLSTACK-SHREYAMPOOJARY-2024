@@ -1293,3 +1293,11 @@ org.springframework.dao.IncorrectResultSizeDataAccessException: Incorrect result
 2024-04-22 17:28:27 [http-nio-3002-exec-9] INFO  m.p.loansdao.Service.LoanService - data loaded to server
 2024-04-22 17:28:27 [http-nio-3002-exec-7] INFO  m.p.loansdao.Service.LoanService - available list of loans fetched successfully.
 2024-04-22 17:28:27 [http-nio-3002-exec-7] INFO  m.p.loansdao.Service.LoanService - data loaded to server
+2024-04-22 17:36:41 [http-nio-3002-exec-6] INFO  m.p.loansdao.Service.LoanService - available list of loans fetched successfully.
+2024-04-22 17:36:41 [http-nio-3002-exec-6] INFO  m.p.loansdao.Service.LoanService - data loaded to server
+2024-04-22 17:36:41 [http-nio-3002-exec-3] INFO  m.p.loansdao.Service.LoanService - available list of loans fetched successfully.
+2024-04-22 17:36:41 [http-nio-3002-exec-3] INFO  m.p.loansdao.Service.LoanService - data loaded to server
+2024-04-22 17:36:41 [http-nio-3002-exec-2] INFO  m.p.loansdao.Service.LoanService - available list of loans fetched successfully.
+2024-04-22 17:36:41 [http-nio-3002-exec-2] INFO  m.p.loansdao.Service.LoanService - data loaded to server
+2024-04-22 17:36:46 [http-nio-3002-exec-1] INFO  m.p.loansdao.Service.LoanService - available list of loans fetched successfully.
+2024-04-22 17:36:46 [http-nio-3002-exec-1] INFO  m.p.loansdao.Service.LoanService - data loaded to server
