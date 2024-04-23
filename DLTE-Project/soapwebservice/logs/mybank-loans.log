@@ -171,3 +171,4 @@ mybank.project.loansdao.Exception.NoLoanData: There are no loans available for t
 2024-04-23 16:39:04 [http-nio-3002-exec-6] INFO  m.p.loansdao.Service.LoanService - available list of loans fetched successfully.
 2024-04-23 16:39:04 [http-nio-3002-exec-6] INFO  m.p.loansdao.Service.LoanService - data loaded to server
 2024-04-23 16:40:48 [http-nio-3002-exec-5] INFO  m.p.loansdao.Service.LoanService - available list of loans fetched successfully.
+2024-04-23 16:40:48 [http-nio-3002-exec-5] INFO  m.p.loansdao.Service.LoanService - data loaded to server

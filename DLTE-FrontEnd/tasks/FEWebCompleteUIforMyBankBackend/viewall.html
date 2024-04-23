@@ -43,10 +43,12 @@
             $.ajax({
                 url: 'http://localhost:3002/loansrepo',
                 type: 'POST',
-                contentType: 'text/xml',
-                headers: {
-                    'Authorization': 'Basic ' + btoa('shreya:shrey')
-                },
+
+                beforeSend:function(handler){
+                    handler.setRequestHeader("Authorization","Basic "+sessionStorage.getItem("logged"))
+                            // headers: {
+                //     'Authorization': 'Basic ' + btoa('shreya:shrey')
+                // },
                 data: `<?xml version="1.0"?>
                     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dep="http://loansavail.services">
                         <soapenv:Header/>
