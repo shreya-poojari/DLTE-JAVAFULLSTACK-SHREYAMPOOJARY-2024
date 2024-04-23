@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All loans</title>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+         body {
+            background-color: #f0f2f4;
+        }
+        .card {
+            border: none;
+            padding: 30;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px #f5f5f8(2, 2, 2, 0.1);
+            background-color:#f3f3f3;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            padding: 30;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px#f1f1f2(2, 2, 2, 2);
+        }
+
+        .card-body {
+            padding: 50px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <h1>All Available loans</h1>
+    <div class="card" id="loansList"></div>
+    
+            <!-- <div class="card-body"> -->
+    <script>
+        // Function to fetch all loans 
+        $(document).ready(function(){
+            $.ajax({
+                url: 'http://localhost:3002/loansrepo',
+                type: 'POST',
+                contentType: 'text/xml',
+                headers: {
+                    'Authorization': 'Basic ' + btoa('shreya:shrey')
+                },
+                data: `<?xml version="1.0"?>
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dep="http://loansavail.services">
+                        <soapenv:Header/>
+                        <soapenv:Body>
+                            <dep:viewAllAvailableLoanRequest/>
+                        </soapenv:Body>
+                    </soapenv:Envelope>`,
+                success: function(response) {
+                    //console.log($(response).find('loans').length); // Log 
+
+                    // Check if response is XML
+                    if ( $(response).find('ns2\\:LoanAvailable').length > 0) {
+                        console.log("hello");
+                        // Parse the XML response
+                        $(response).find('ns2\\:LoanAvailable').each(function() {
+                            var loanNumber = $(this).find('ns2\\:loanNumber').text();
+                            var loanType = $(this).find('ns2\\:loanType').text();
+                            var loanName = $(this).find('ns2\\:loanName').text();
+                            var loanDescription = $(this).find('ns2\\:loanDescription').text();
+                            var loanRoi = $(this).find('ns2\\:loanRoi').text();
+                            console.log(loanType);
+                            // Append loans details to the UI
+                            $('#loansList').append(`
+                                <div>
+                                    <h3>Loan Number: ${loanNumber}</h3>
+                                    <p>Type: ${loanType}</p>
+                                    <p>Name: ${loanName}</p>
+                                    <p>Description: ${loanDescription}</p>
+                                    <p>ROI: ${loanRoi}</p>
+                                </div>
+                                <hr>
+                            `);
+                        });
+                     } else {
+                        console.error('No loan data found in response.');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error fetching loans:', error);
+                }
+            });
+        });
+    </script>
+           
+        
+</body>
+</html>

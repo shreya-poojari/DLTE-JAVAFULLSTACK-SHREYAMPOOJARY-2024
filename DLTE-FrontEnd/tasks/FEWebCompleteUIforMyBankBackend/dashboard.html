@@ -19,7 +19,7 @@
                         $("iframe").attr("src","ViewAll.html")
                     }
                     else if(current.hasClass("new")){
-                        $("iframe").attr("src","introduce.html")
+                        $("iframe").attr("src","searchloan.html")
                     }
                     else if(current.hasClass("update")){
                         $("iframe").attr("src","Changes.html")
@@ -38,10 +38,10 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" style="background:linear-gradient(90deg,white,red);">
+    <nav class="navbar navbar-expand-lg" style="background:linear-gradient(90deg,rgb(124, 186, 225),rgb(38, 95, 218));">
         <div class="container-fluid">
             <!-- 1st logo/ brand -->
-          <a class="navbar-brand text-danger display-6 text-uppercase" style="font-weight: bold;" href="#">MyBank</a>
+          <a class="navbar-brand text display-6 text-uppercase" style="font-weight: bold;" href="#">MyBank</a>
             <!-- 2nd toggle button -->
           <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#myBankMenu">
             <span class="navbar-toggler-icon"></span>
@@ -50,13 +50,10 @@
           <div class="collapse navbar-collapse" id="myBankMenu">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <button class="view btn btn-outline-light rounded-5 me-2"><span class="bi bi-list-columns"></span> View</button>
+                <button class="view btn btn-outline-light rounded-5 me-2"><span class="bi bi-list"></span> View Loans</button>
               </li>
               <li class="nav-item">
-                <button class="new btn btn-outline-light rounded-5 me-2"><span class="bi bi-cloud-plus-fill"></span> New</button>
-              </li>
-              <li class="nav-item">
-                <button class="update btn btn-outline-light rounded-5 me-2"><span class="bi bi-cloud-upload-fill"></span> Update</button>
+                <button class="new btn btn-outline-light rounded-5 me-2"><span class="bi bi-search"></span> Search</button>
               </li>
               <li class="nav-item">
                 <button class="logout btn btn-outline-light rounded-5 me-2"><span class="bi bi-door-open"></span> Logout</button>
