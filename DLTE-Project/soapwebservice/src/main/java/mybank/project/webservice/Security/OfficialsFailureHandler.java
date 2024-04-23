@@ -26,7 +26,7 @@ public class OfficialsFailureHandler extends SimpleUrlAuthenticationFailureHandl
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException, IOException, ServletException {
         String username = request.getParameter("username");
         MyBankOfficials myBankOfficials = service.findByUsername(username);
-        if(myBankOfficials!=null){
+            if(myBankOfficials!=null){
             if(myBankOfficials.getCustomerStatus().equalsIgnoreCase("Active")){
                 if(myBankOfficials.getAttempts()< myBankOfficials.getMaxAttempt()){
                     myBankOfficials.setAttempts(myBankOfficials.getAttempts()+1);

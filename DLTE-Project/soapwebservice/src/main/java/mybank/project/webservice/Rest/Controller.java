@@ -46,7 +46,7 @@ public class Controller {
         } catch (NoLoanData e) {
             //response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             logger.error(resourceBundle.getString("no.loanType"), e);
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());//for no loan data found 404
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());//for no loan data found 404 Not Found
         } catch (NoLoanException e) {
             //response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             logger.error(resourceBundle.getString("db.error"), e);
