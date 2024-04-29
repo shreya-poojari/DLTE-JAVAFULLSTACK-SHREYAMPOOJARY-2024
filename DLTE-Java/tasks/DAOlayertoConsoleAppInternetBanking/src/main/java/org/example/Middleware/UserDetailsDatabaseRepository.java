@@ -4,6 +4,7 @@ import org.example.Entity.Transactions;
 import org.example.Entity.UserDetails;
 import org.example.Exceptions.UserDetailsException;
 import org.example.Remote.UserDetailsRepository;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.sql.*;
@@ -14,7 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-public class UserDetailsDatabaseRepository implements UserDetailsRepository{
+public class UserDetailsDatabaseRepository implements UserDetailsRepository {
     private Connection connection;
     private ResourceBundle resourceBundle = ResourceBundle.getBundle("userdetails");
     private Logger logger = Logger.getLogger(UserDetailsDatabaseRepository.class.getName());
@@ -33,23 +34,23 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository{
         }
     }
 
-//    @Override
-//    public void addUsers() {
-//        try {
-//           PreparedStatement statement = connection.prepareStatement("INSERT INTO UserDetails(username, password, dob, address, email, phone) VALUES (?, ?, ?, ?, ?, ?)");
-//            statement.setString(1, "annapoornapai");
-//            statement.setString(2, "anna");
-//            statement.setDate(3, new java.sql.Date(new Date(2002, 7, 6).getTime()));
-//            statement.setString(4, "karkala");
-//            statement.setString(5, "annapoorna@gmail.com");
-//            statement.setLong(6, 9876543210L);
-//            statement.executeUpdate();
-//            statement.close();
-//            logger.log(Level.INFO, "Users added successfully to the database.");
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @Override
+    public void addUsers() {
+        try {
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO UserDetails(username, password, dob, address, email, phone) VALUES (?, ?, ?, ?, ?, ?)");
+            statement.setString(1, "annapoornapai");
+            statement.setString(2, "anna");
+            statement.setDate(3, new java.sql.Date(new Date(2002, 7, 6).getTime()));
+            statement.setString(4, "karkala");
+            statement.setString(5, "annapoorna@gmail.com");
+            statement.setLong(6, 9876543210L);
+            statement.executeUpdate();
+            statement.close();
+            logger.log(Level.INFO, "Users added successfully to the database.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     public void update(UserDetails userDetails) {
@@ -73,7 +74,7 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository{
             e.printStackTrace();
         }
     }
-//    @Override
+    //    @Override
 //    public Object verifyPassword(String username, String password) {
 //        int attempts = 3; // Number of attempts allowed
 //        Scanner scanner = new Scanner(System.in);
@@ -110,14 +111,13 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository{
 //                    logger.log(Level.WARNING, "username.not.found");
 //                    throw new UserDetailsException("Username not found.");
 //                }
-//            } catch (SQLException | UserDetailsException e) {
+//            } catch (SQLException e) {
 //                e.printStackTrace();
 //            }
 //        }
 //        scanner.close();
 //        return null;
 //    }
-
     @Override
     public Object verifyPassword(String username, String password) {
         int attempts = 3; // Number of attempts allowed
@@ -172,6 +172,8 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository{
         scanner.close();
         return null;
     }
+
+
 
     @Override
     public List<Transactions> findAll() {
@@ -229,4 +231,5 @@ public class UserDetailsDatabaseRepository implements UserDetailsRepository{
         }
         return transactionArrayList;
     }
+
 }

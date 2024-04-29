@@ -15,7 +15,7 @@ private JdbcTemplate jdbcTemplate;
 
 
     public MyBankOfficials signingUp(MyBankOfficials myBankOfficials){
-        int ack = jdbcTemplate.update("insert into my_bank_officials values(?,?,?,?,?)",new Object[]{
+        int ack = jdbcTemplate.update("insert into USERDETAILS values(?,?,?,?,?)",new Object[]{
                 myBankOfficials.getUsername(),
                 myBankOfficials.getPassword(),
                 myBankOfficials.getRole(),
@@ -25,7 +25,7 @@ private JdbcTemplate jdbcTemplate;
         return myBankOfficials;
     }
     public MyBankOfficials findByUsername(String username){
-        MyBankOfficials myBankOfficials = jdbcTemplate.queryForObject("select * from my_bank_officials where username=?",
+        MyBankOfficials myBankOfficials = jdbcTemplate.queryForObject("select * from USERDETAILS where username=?",
                 new Object[]{username},new BeanPropertyRowMapper<>(MyBankOfficials.class));
         return myBankOfficials;
     }

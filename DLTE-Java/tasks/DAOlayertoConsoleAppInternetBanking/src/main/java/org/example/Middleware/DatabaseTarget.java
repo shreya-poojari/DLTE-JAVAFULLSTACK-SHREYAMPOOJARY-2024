@@ -28,7 +28,6 @@ public class DatabaseTarget implements StorageTarget {
     }
     @Override
     public UserDetailsRepository getUserDetailsRepository() {
-
         return new UserDetailsDatabaseRepository(connection);
     }
 }

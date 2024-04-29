@@ -1,10 +1,11 @@
 package org.example.Services;
 import org.example.Entity.Transactions;
 import org.example.Entity.UserDetails;
+import org.example.Exceptions.UserDetailsException;
 import org.example.Remote.StorageTarget;
 import org.example.Remote.UserDetailsRepository;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 
 public class UserDetailsServices {
@@ -13,7 +14,7 @@ public class UserDetailsServices {
     public UserDetailsServices(StorageTarget storageTarget) {
         userDetailsRepository = storageTarget.getUserDetailsRepository();
     }
-    //    public UserDetails getUserDetailsByUsername(String username) {
+    //        public UserDetails getUserDetailsByUsername(String username) {
 //        try {
 //            List<UserDetails> userDetailsList = storageTarget.getUserDetailsRepository().getAllUserDetails();
 //
@@ -34,7 +35,7 @@ public class UserDetailsServices {
         userDetailsRepository.update(userDetails);
     }
 
-    public boolean callVerifyPassword(String username, String password) {
+    public UserDetails callVerifyPassword(String username, String password) {
         try {
             return (UserDetails) userDetailsRepository.verifyPassword(username, password);
         } catch (Exception e) {
