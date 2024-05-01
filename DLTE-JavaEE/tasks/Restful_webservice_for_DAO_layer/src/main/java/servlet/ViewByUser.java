@@ -1,13 +1,12 @@
 package servlet;
 import org.example.Entity.Transactions;
-import org.example.Entity.UserDetails;
 import org.example.Middleware.DatabaseTarget;
 import org.example.Middleware.UserDetailsDatabaseRepository;
 import org.example.Remote.StorageTarget;
 import org.example.Services.UserDetailsServices;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import rest.endpoints.UpdateAccount;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

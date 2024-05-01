@@ -1,10 +1,10 @@
 //package mybank.project.webservice;
 //
-//import mybank.project.loansdao.Entity.LoansAvailable;
-//import mybank.project.loansdao.Exception.NoLoanData;
-//import mybank.project.loansdao.Exception.NoLoanException;
-//import mybank.project.loansdao.Interface.LoanInterface;
-//import mybank.project.webservice.Configs.SoapPhase;
+//import mybank.project.loansdao.entity.LoansAvailable;
+//import mybank.project.loansdao.exception.NoLoanData;
+//import mybank.project.loansdao.exception.NoLoanException;
+//import mybank.project.loansdao.interfaces.LoanInterface;
+//import mybank.project.webservice.configs.SoapPhase;
 //
 //import org.junit.jupiter.api.Test;
 //import org.junit.jupiter.api.extension.ExtendWith;

@@ -22,7 +22,7 @@ public class TransactionService {
         String sql = "SELECT * FROM transaction WHERE transaction_to = ?";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Transactions.class), receiver);
     }
-    public List<Transactions> findByAmount(Long amount) {
+    public List<Transactions> findByAmount(Double amount) {
         String sql = "SELECT * FROM transaction WHERE transaction_amount = ?";
         return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Transactions.class), amount);
     }

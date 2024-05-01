@@ -30,7 +30,7 @@ public class TransactionController {
     }
     @GetMapping("/amount/{amount}")
     //http://localhost:1002/Transactions/amount/{amount}
-    public List<Transactions> findByAmount(@PathVariable Long amount) {
+    public List<Transactions> findByAmount(@PathVariable Double amount) {
         return transactionService.findByAmount(amount);
     }
     @PutMapping("/Update/*")
