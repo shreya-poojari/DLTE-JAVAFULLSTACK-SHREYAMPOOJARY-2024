@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -25,6 +26,7 @@ import java.util.ResourceBundle;
 
 @ComponentScan("mybank.project.loansdao")
 @Endpoint
+@CrossOrigin(origins = "*")
 public class SoapPhase {
     // Injecting LoanInterface bean
     @Autowired
@@ -56,12 +58,12 @@ public class SoapPhase {
         logger.info(resourceBundle.getString("loan.server.available"));
 
     }catch (NoLoanException exception){
-        serviceStatus.setStatus(HttpServletResponse.SC_NO_CONTENT);
+        serviceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         serviceStatus.setMessage(exception.toString());
         logger.info(resourceBundle.getString("loan.server.error"));
     }
     catch (NoLoanData exception){
-        serviceStatus.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        serviceStatus.setStatus(HttpServletResponse.SC_NOT_FOUND);
         serviceStatus.setMessage(exception.toString());
         logger.info(resourceBundle.getString("loan.server.error"));
     }

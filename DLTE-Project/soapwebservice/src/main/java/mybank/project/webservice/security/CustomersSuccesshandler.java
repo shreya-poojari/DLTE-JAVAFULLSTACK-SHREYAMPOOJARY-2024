@@ -40,6 +40,7 @@ public class CustomersSuccesshandler extends SimpleUrlAuthenticationSuccessHandl
             }
         }catch (UsernameNotFoundException e){
             logger.info(resourceBundle.getString("no.user"));
+            super.setDefaultTargetUrl("/weblogin/?error="+ resourceBundle.getString("account.redeem"));
         }
         super.onAuthenticationSuccess(request, response, authentication);
     }

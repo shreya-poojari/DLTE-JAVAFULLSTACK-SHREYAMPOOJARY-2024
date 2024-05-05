@@ -13,14 +13,49 @@
     object-fit: cover;
     max-width: 100%;
     height: auto;
-}.custom-image-container {
-     position: relative;
-     margin-top: 200px;
- }
+}
+.custom-image-container {
+    position: relative;
+    margin-top: 200px;
+}
 .custom-image {
     position: absolute;
     bottom: 350px;
     right: 0px;
     height: 200px;
-    width: 200px;
+    width: 220px;
+}
+.image-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-container .col-md-6 {
+    padding-right: 10px;
+}
+
+.image-container .col-md-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.image-container .col-md-2 {
+    padding-left: 20px;
+    position: relative;
+    padding-top: 70px;
+    padding-right: 5px;
+    justify-content: end;
+    align-items: end;
+    margin-left: 70px;
+}
+.contact{
+
+    margin-left: 70px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
 }
