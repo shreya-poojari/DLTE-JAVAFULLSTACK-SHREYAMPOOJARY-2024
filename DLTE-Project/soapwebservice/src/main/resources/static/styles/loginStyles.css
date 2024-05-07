@@ -1,11 +1,12 @@
 body.loginpage {
-    background-image:url("../images/loginBackground.png");
+    background-image:url("../images/login.png");
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #e9ecef;
 }
 .login-container {
     background-color: rgba(194, 195, 221, 0.8);
@@ -15,4 +16,5 @@ body.loginpage {
     max-width: 400px;
     width: 100%;
     margin-left: 60px;
+
 }

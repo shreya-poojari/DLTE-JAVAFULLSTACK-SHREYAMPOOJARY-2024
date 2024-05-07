@@ -6,10 +6,9 @@
     <title>Loan Form</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -87,75 +86,63 @@
 
     </style>
 
-    <script>
-        function submitLoanType() {
-            // Get the loan type from the input field
-            var loanType = $('#loanTypeInput').val();
 
-            // AJAX request to search.html with the loan type data
-            $.ajax({
-                url: `/loans/${loanType}`,
-                type: 'GET',
-                success: (data) => {
-                    displaySearchResults(data);
-                },
-                error: (xhr, status, error) => {
-                    console.error('Error fetching search results:', error);
-                    $('#searchResults').html('<p class="text-danger">An error occurred. Please try again later.</p>');
-                }
-            });
-        }
-        $(document).ready(() => {
-            const allLoanData = [];
-            let currentPage = 1;
-            const cardsPerPage = 3;
-            let totalPages = 0;// Initialize totalPages
-            const getAllLoanData = () => {
-                let soapRequest = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loan="http://loansavail.services">
+        <script>
+            $(document).ready(() => {
+
+                const allLoanData = [];
+                let currentPage = 1;
+                const cardsPerPage = 3;
+                let totalPages = 0; // Initialize totalPages
+                const getAllLoanData = () => {
+                    let soapRequest = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loan="http://loansavail.services">
                 <soapenv:Header/>
                 <soapenv:Body>
                 <loan:viewAllAvailableLoanRequest/>
                 </soapenv:Body>
                 </soapenv:Envelope>`;
-                $.ajax({
-                    url: "http://localhost:3001/loansrepo",
-                    type: "POST",
-                    dataType: "xml",
-                    beforeSend: function (handler) {
-                        //  handler.setRequestHeader("Authorization","Basic "+sessionStorage.getItem("logged"));
-                        // handler.setRequestHeader("Authorization","Basic "+credentials)
-                        handler.setRequestHeader("SOAPAction", "viewAllAvailableLoanRequest");
-                    },
-                    data: soapRequest,
-                    contentType: "text/xml;charset=utf-8",
-                    success: function(response) {
-                        $(response).find("ns2\\:LoanAvailable").each(function(index) {
-                            let loanType = $(this).find("ns2\\:loanType").text();
-                            let loanName = $(this).find("ns2\\:loanName").text();
-                            let loanDescription = $(this).find("ns2\\:loanDescription").text();
-                            let loanRoi = $(this).find("ns2\\:loanRoi").text();
+                    $.ajax({
+                        url: "http://localhost:3005/loansrepo/",
+                        type: "POST",
+                        dataType: "xml",
+                        beforeSend: function (handler) {
+                            handler.setRequestHeader("SOAPAction", "viewAllAvailableLoanRequest");
+                        },
+                        data: soapRequest,
+                        contentType: "text/xml;charset=utf-8",
+                        success: function (response) {
+                            $(response).find("ns2\\:LoanAvailable").each(function (index) {
+                                let loanType = $(this).find("ns2\\:loanType").text();
+                                let loanName = $(this).find("ns2\\:loanName").text();
+                                let loanDescription = $(this).find("ns2\\:loanDescription").text();
+                                let loanRoi = $(this).find("ns2\\:loanRoi").text();
+                                let loanNumber = $(this).find("ns2\\:loanNumber").text();
 
-                            allLoanData.push({ loanType,loanName,loanDescription,loanRoi});
-                        });
-                        // Calculate total pages after fetching data
-                        totalPages = Math.ceil(allLoanData.length / cardsPerPage);
-                        createLoanCards();
-                    },
-                    error: function(xhr, status, error) {
-                        console.error("Error fetching loan data:", error);
-                    }
-                });
-            };
-            const createLoanCards = () => {
-                const startIndex = (currentPage - 1) * cardsPerPage;
-                const endIndex = Math.min(startIndex + cardsPerPage, allLoanData.length);
-                $("#loanCards").empty();
-                // Loop through data and generate cards for current page
-                for (let i = startIndex; i < endIndex; i++) {
-                    if (i >= allLoanData.length) break; // Exit loop if reached end of data
+                                allLoanData.push({loanType, loanName, loanDescription, loanRoi, loanNumber});
+                            });
+                            // Calculate total pages after fetching data
+                            totalPages = Math.ceil(allLoanData.length / cardsPerPage);
+                            createLoanCards();
+                            console.log("hello");
+                        },
+                        error: function (xhr, status, error) {
+                            console.error("Error fetching insurance data:", error);
+                        }
+                    });
+                };
 
-                    const loan = allLoanData[i];
-                    let cardHtml = `
+
+
+                const createLoanCards = () => {
+                    const startIndex = (currentPage - 1) * cardsPerPage;
+                    const endIndex = Math.min(startIndex + cardsPerPage, allLoanData.length);
+                    $("#loanCards").empty();
+                    // Loop through data and generate cards for current page
+                    for (let i = startIndex; i < endIndex; i++) {
+                        if (i >= allLoanData.length) break; // Exit loop if reached end of data
+
+                        const loan = allLoanData[i];
+                        let cardHtml = `
               <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 20rem; border-radius: 15px; margin-left: 60px">
         <div class="card-body">
             <h5 class="card-title fst-montserrat" style="color: #182052; padding: 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; text-align: center;">${loan.loanType}</h5>
@@ -165,114 +152,168 @@
                 <p>${loan.loanDescription}</p>
             </div>
             <div style="display: flex; justify-content: space-between;">
-                <a href="#" class="btn btn-primary fst-poppins" style="background-color: #182052; color: white; margin-top:10px; border-radius: 15px;">APPLY</a>
-<!--                <a href="calculate" class="btn btn-secondary fst-poppins" style="background-color: #182052; color: white; margin-top:10px; border-radius: 15px;"><i class="bi bi-calculator"></i> EMI</a>-->
-                    <a href="calculate?loanName=${loan.loanName}&roi=${loan.loanRoi}" class="btn btn-secondary fst-poppins" style="background-color: #182052; color: white; margin-top:10px; border-radius: 15px;"><i class="bi bi-calculator"></i> EMI</a>
-
+                <button type="button" class="btn btn-primary fst-poppins" style="background-color: #182052; color: white; margin-top:10px; border-radius: 15px;"  onclick="window.location.href='/mybank/weblogin/errors?code=404&msg=Page Under Construction'" >APPLY</a>
+                <button type="button" class="btn btn-secondary fst-poppins" style="background-color: #182052; color: white; margin-top:10px; border-radius: 15px;"><i class="bi bi-calculator"  onclick="window.location.href='/mybank/weblogin/errors?code=404&msg=Page Under Construction'"></i> EMI</a>
             </div>
         </div>
     </div> `;
-                    $("#loanCards").append(cardHtml);
-                }
-                generatePageNumbers();
-            };
-            // Function to handle pagination
-            const handlePagination = (direction) => {
-                if (direction === 'next' && currentPage < totalPages) {
-                    currentPage++;
-                } else if (direction === 'prev' && currentPage > 1) {
-                    currentPage--;
-                }
-                createLoanCards();
-            };
-            // Function to generate page numbers
-            const generatePageNumbers = () => {
-                let pageNumberHtml = '';
-                pageNumberHtml += `<span class="page-number page-link border-2">${currentPage}</span>`;
-                $('#pageNumberContainer').html(pageNumberHtml);
-                // Highlight the current page number
-                $(`#pageNumberContainer .page-number[data-page="${currentPage}"]`).addClass('active');
-            };
+                        $("#loanCards").append(cardHtml);
+                    }
+                    generatePageNumbers();
+                };
+                // Function to handle pagination
+                const handlePagination = (direction) => {
+                    if (direction === 'next' && currentPage < totalPages) {
+                        currentPage++;
+                    } else if (direction === 'prev' && currentPage > 1) {
+                        currentPage--;
+                    }
+                    createLoanCards();
+                };
+                // Function to generate page numbers
+                const generatePageNumbers = () => {
+                    let pageNumberHtml = '';
+                    pageNumberHtml += `<span class="page-number page-link border-2">${currentPage}</span>`;
+                    $('#pageNumberContainer').html(pageNumberHtml);
+                    // Highlight the current page number
+                    $(`#pageNumberContainer .page-number[data-page="${currentPage}"]`).addClass('active');
+                };
+                // Event listener for next page button
+                $('#nextPage').click(() => {
+                    if (currentPage < totalPages) {
 
-            // Event listener for next page button
-            $('#nextPage').click(() => {
-                if (currentPage < totalPages) {
+                        handlePagination('next');
+                        updatePaginationButtons();
+                    }
+                });
+                // Event listener for previous page button
+                $('#prevPage').click(() => {
+                    if (currentPage > 1) {
 
-                    handlePagination('next');
-                    updatePaginationButtons();
-                }
-            });
-            // Event listener for previous page button
-            $('#prevPage').click(() => {
-                if (currentPage > 1) {
+                        handlePagination('prev');
+                        updatePaginationButtons();
+                    }
+                });
+                // Function to update pagination buttons visibility
+                const updatePaginationButtons = () => {
+                    if (currentPage === 1) {
+                        $('#prevPage').addClass('d-none');
+                    } else {
+                        $('#prevPage').removeClass('d-none');
+                    }
 
-                    handlePagination('prev');
-                    updatePaginationButtons();
-                }
+                    if (currentPage === totalPages) {
+                        $('#nextPage').addClass('d-none');
+                    } else {
+                        $('#nextPage').removeClass('d-none');
+                    }
+                };
+
+                // Call the function initially to set the initial visibility
                 updatePaginationButtons();
                 getAllLoanData();
+
+                // Existing code..
+                //.
+                $('#loanSearchForm').submit((event) => {
+                    event.preventDefault(); // Prevent default form submission behavior
+                    const loanType = $('#loanTypeInput').val().trim(); // Get the loan type input value
+                    if (loanType !== '') { // Check if input value is not empty
+                        if (!isNaN(loanType)) {
+                            // Show error message for invalid input
+                            let message = "Please enter the valid loan type";
+                            $('#invalidLoanTypeModal .modal-body').html(`<span style="color: black;">${message}</span>`);
+                            $('#invalidLoanTypeModal').modal('show');
+                        } else {
+                            // Proceed with the search
+                            searchLoansByType(loanType);
+                        } // Call function to search for loans by loan type
+                    } else {
+                        // Show modal if the input is empty
+                        $('#noLoansFoundModal').modal('show');
+                    }
+                });
+
+                const searchLoansByType = (loanType) => {
+                    $.ajax({
+                        url: `http://localhost:3005/loans/${loanType}`,
+                        type: 'GET',
+                        dataType: 'json',
+                        success: function(response) {
+                            $("#loanCards").empty();
+                            allLoanData.length = 0; // Clear existing loan data
+                            if (response.length === 0) {
+                                // No loans found, show modal
+                                console.log("No loans found for the selected loan type.");
+                                $('#noLoansFoundModal').modal('show');
+                            } else {
+                                response.forEach(function(loan) {
+                                    let loanType = `${loan.LOAN_TYPE}`;
+                                    let loanName = `${loan.LOAN_NAME}`;
+                                    let loanDescription = `${loan.LOAN_DESCRIPTION}`;
+                                    let loanRoi = `${loan.LOAN_ROI}`;
+                                    let loanNumber = `${loan.LOAN_NUMBER}`;
+                                    allLoanData.push({ loanType, loanName, loanDescription, loanRoi, loanNumber });
+                                });
+                                totalPages = Math.ceil(allLoanData.length / cardsPerPage); // Calculate total pages
+                                currentPage = 1; // Reset current page to 1
+                                createLoanCards(); // Update loan cards with search results
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error("Error fetching loans:", error);
+                            // Show modal indicating error
+                            let errorMessage = "There are no loans available for the selected loan type.";
+                            $('#noLoansFoundModal .modal-body').html(`<span style="color: black;">${errorMessage}</span>`);
+                            $('#noLoansFoundModal').modal('show');
+                        }
+                    });
+                };
+
             });
-            // Function to update pagination buttons visibility
-            const updatePaginationButtons = () => {
-                if (currentPage === 1) {
-                    $('#prevPage').addClass('d-none');
-                } else {
-                    $('#prevPage').removeClass('d-none');
-                }
 
-                if (currentPage === totalPages) {
-                    $('#nextPage').addClass('d-none');
-                } else {
-                    $('#nextPage').removeClass('d-none');
-                }
-            };
+        </script>
 
-            // Call the function initially to set the initial visibility
-            updatePaginationButtons();
-            getAllLoanData();
-        });
-    </script>
+
 
 
 </head>
 <body >
 <header><div th:insert="header::menu"></div></header>
-<!--<div th:replace="header :: menu"></div>-->
-<!--<h2 class="mb-0" style="color: grey; font-weight: bold; font-family: 'Poppins', sans-serif; padding: 20px; text-align: center">AVAILABLE LOANS</h2>-->
+<div class="container mt-3">
+    <div class="row">
+        <div class="col text-left">
+            <i class="bi bi-arrow-left-circle-fill ml-1 " style="color: #182052; font-size: 2rem;" onclick="window.history.back()"></i>
+        </div>
+    </div>
+</div>
 <div class="container">
     <!-- Search bar and "LOANS AVAILABLE" text -->
-    <div class="row justify-content-end align-items-center"> <!-- Center and align items -->
+    <div class="row justify-content-end align-items-center">
+        <!-- Center and align items -->
         <div class="col-md-6 text-center">
             <p class="loans-available" style="padding-top: 20px; color: #a5aaa8; font-size: 32px;">LOANS AVAILABLE</p>
         </div>
         <div class="col-md-3 text-end">
-<!--            <form id="loanTypeForm" class="input-group">-->
-<!--                <input type="text" class="form-control" id="loanTypeInput" placeholder="e.g., Gold, Home, Personal" style="background-color: #a5aaa8">-->
-<!--                <button type="submit" class="btn btn-secondary"><i class="bi bi-search"></i></button>-->
-<!--            </form>-->
-
-<!--            <form id="loanTypeForm" class="input-group" onsubmit="loadLoanCardsByType()">-->
-<!--                <input type="text" class="form-control" id="loanTypeInput" placeholder="e.g., Gold, Home, Personal" style="background-color: #a5aaa8">-->
-<!--                < type="submit" class="btn btn-secondary"><i class="bi bi-search"></i></button>-->
-<!--            </form>-->
-
-            <form id="loanTypeForm" class="input-group">
+            <form id="loanSearchForm" class="input-group">
                 <input type="text" class="form-control" id="loanTypeInput" placeholder="e.g., Gold, Home, Personal" style="background-color: #a5aaa8">
-                <button type="button" class="btn btn-secondary" onclick="submitLoanType()"><i class="bi bi-search"></i></button>
+                <button type="submit" class="btn btn-secondary"><i class="bi bi-search"></i></button>
             </form>
-
         </div>
     </div>
-    <div class="row justify-content-center" id="viewSection">
-    </div>
+    <div id="searchResults"></div> <!-- Add this line -->
 </div>
-<br>
-<div class="container-fluid col-10 ">
+
+</div>
+<div class="container-fluid col-10">
+    <!-- Loan cards section -->
     <div class="row">
         <div class="col card-container">
+<!--            <div id="searchResults"></div>-->
             <div id="loanCards" class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4 me-4"></div>
         </div>
     </div>
+    <!-- Pagination section -->
     <div class="row">
         <div class="col">
             <!-- Pagination -->
@@ -294,8 +335,48 @@
             </nav>
         </div>
     </div>
-    <!-- Page number container -->
-    <div id="modalContent"></div>
+    <!-- Modal content section -->
+<!--    <div id="modalContent"></div>-->
+    <div class="modal fade" id="noLoansFoundModal" tabindex="-1" role="dialog" aria-labelledby="noLoansFoundModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="noLoansFoundModalLabel">No Loans Found</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="location.reload()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    There are no loans available for the selected loan type.
+                </div>
+                <div class="modal-footer">
+<!--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                    <button type="button" class="btn btn-primary" style="background-color: #182052; border-color: darkblue;" onclick="location.reload()">Back</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for displaying error message -->
+    <div class="modal fade" id="invalidLoanTypeModal" tabindex="-1" role="dialog" aria-labelledby="invalidLoanTypeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="invalidLoanTypeModalLabel">Invalid Loan Type</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="location.reload()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Please enter a valid loan type.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" style="background-color: #182052; border-color: darkblue;" onclick="location.reload()">close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 <br><br>
 <div th:replace="footer :: footer"></div>

@@ -22,7 +22,7 @@ public class CustomersSuccesshandler extends SimpleUrlAuthenticationSuccessHandl
     @Autowired
     MyBankCustomersService myBankCustomersService;
     Logger logger= LoggerFactory.getLogger(CustomersFailureHandler.class);
-    ResourceBundle resourceBundle= ResourceBundle.getBundle("webservice");
+    ResourceBundle resourceBundle= ResourceBundle.getBundle("apps");
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         try {
@@ -36,11 +36,12 @@ public class CustomersSuccesshandler extends SimpleUrlAuthenticationSuccessHandl
                 super.setDefaultTargetUrl("/mybank/dashboard");
             } else {
                 logger.warn(resourceBundle.getString("account.redeem"));
-                super.setDefaultTargetUrl("/mybank/weblogin/");
+               // super.setDefaultTargetUrl("/mybank/weblogin/");
+                super.setDefaultTargetUrl("/mybank/weblogin/?errors="+ resourceBundle.getString("account.redeem"));
             }
         }catch (UsernameNotFoundException e){
             logger.info(resourceBundle.getString("no.user"));
-            super.setDefaultTargetUrl("/weblogin/?error="+ resourceBundle.getString("account.redeem"));
+           // super.setDefaultTargetUrl("/weblogin/?error="+ resourceBundle.getString("account.redeem"));
         }
         super.onAuthenticationSuccess(request, response, authentication);
     }

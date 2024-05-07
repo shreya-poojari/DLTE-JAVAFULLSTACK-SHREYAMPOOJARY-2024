@@ -1,5 +1,6 @@
 package mybank.project.webservice.mvc;
 
+
 import mybank.project.loansdao.interfaces.LoanInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,14 +24,10 @@ public class WebController {
         return "index";
     }
 
-
-
-
     @GetMapping("/viewAll")
     public String viewAll(){
         return "viewAll";
     }
-
 
     @GetMapping("/dashboard")
     public String dashboard(){

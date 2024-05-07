@@ -12,9 +12,12 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
+import java.util.ResourceBundle;
+
 @EnableWs
 @Configuration
 public class SoapServiceConfiguration extends WsConfigurerAdapter {
+    ResourceBundle resourceBundle= ResourceBundle.getBundle("apps");
     @Bean
     public ServletRegistrationBean servletRegistrationBean(ApplicationContext applicationContext){
         MessageDispatcherServlet servlet=new MessageDispatcherServlet();

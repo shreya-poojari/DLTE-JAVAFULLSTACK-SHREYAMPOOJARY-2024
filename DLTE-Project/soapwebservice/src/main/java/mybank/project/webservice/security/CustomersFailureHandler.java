@@ -24,7 +24,7 @@ public class CustomersFailureHandler extends SimpleUrlAuthenticationFailureHandl
     @Autowired
     MyBankCustomersService myBankCustomersService;
     Logger logger= LoggerFactory.getLogger(CustomersFailureHandler.class);
-    ResourceBundle resourceBundle= ResourceBundle.getBundle("webservice");
+    ResourceBundle resourceBundle= ResourceBundle.getBundle("apps");
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
         String username = request.getParameter("username");
@@ -45,16 +45,16 @@ public class CustomersFailureHandler extends SimpleUrlAuthenticationFailureHandl
                         myBankCustomersService.updateStatus(myBankCustomers);
                         logger.warn(resourceBundle.getString("attempts.suspend"));
                         exception=new LockedException(resourceBundle.getString("attempts.suspend"));
-                        setDefaultFailureUrl("/mybank/weblogin/?error=" + exception.getMessage());
+                        super.setDefaultFailureUrl("/mybank/weblogin/?error=" + exception.getMessage());
                     }
                 }
             }else{
-                logger.warn(resourceBundle.getString("account.suspend"));
+                logger.warn(resourceBundle.getString("no.account"));
                 exception = new LockedException("no account");
                 super.setDefaultFailureUrl("/mybank/weblogin/?error=" + exception.getMessage());
             }
         }catch (UsernameNotFoundException e){
-            logger.warn(resourceBundle.getString("account.suspend"));
+            logger.warn(resourceBundle.getString("no.account"));
             exception = new LockedException(resourceBundle.getString("incorrect.username"));
             super.setDefaultFailureUrl("/mybank/weblogin/?error=" + exception.getMessage());
         }

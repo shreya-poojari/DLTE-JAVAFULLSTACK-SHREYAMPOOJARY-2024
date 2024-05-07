@@ -55,17 +55,21 @@ public class CustomerSecureConfiguration {
         httpSecurity.cors();
         httpSecurity.authorizeRequests().antMatchers("/profile/register").permitAll();
         httpSecurity.authorizeRequests().antMatchers("/v3/api-docs").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/mybank/weblogin/**").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/images/**").permitAll();
-        httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
-
         httpSecurity.formLogin().loginPage("/mybank/weblogin/").
                 usernameParameter("username").
                 failureHandler(customersFailureHandler).
                 successHandler(customersSuccessHandler);
+
+        httpSecurity.authorizeRequests().antMatchers("/mybank/weblogin/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/images/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/styles/**").permitAll();
+        httpSecurity.authorizeRequests().antMatchers("/scripts/**").permitAll();
+
         httpSecurity.csrf().disable();
 
         httpSecurity.authorizeRequests().anyRequest().authenticated();
+        httpSecurity.logout().permitAll();
+
         AuthenticationManagerBuilder builder=httpSecurity.getSharedObject(AuthenticationManagerBuilder.class);
         builder.userDetailsService(service);
         authenticationManager=builder.build();
