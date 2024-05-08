@@ -58,18 +58,13 @@
     </style>
 </head>
 <body>
-<!--<div class="container">-->
-<!--    <h1>SOMETHING WENT WRONG</h1>-->
-<!--    <p>&lt;&lt; we've encountered a problem! Try refreshing the page or return back to Home &gt;&gt;</p>-->
-<!--    <button onclick="window.location.href='/'">BACK TO HOME<i class="bi bi-arrow-right-circle-fill"></i></button>-->
-<!--</div>-->
 <div class="container">
 
     <h1 th:if="${param.msg != null}" th:text="${param.code}"></h1>
     <h1 th:if="${param.msg != null}" th:text="${param.msg}"></h1>
 
     <h1 th:unless="${param.msg != null}">Page Not Found</h1>
-    <a th:href="@{'/userlogin/dashboards'}"><button >BACK TO HOME<i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    <a th:href="@{'/mybank/dashboard'}"><button >BACK TO HOME<i class="bi bi-arrow-right-circle-fill"></i></button></a>
 </div>
 </body>
 </html>

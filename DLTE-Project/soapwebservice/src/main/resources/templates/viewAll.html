@@ -19,6 +19,9 @@
     <link rel="stylesheet" th:href="@{/styles/footer.css}" type="text/css">
     <link rel="stylesheet" th:href="@{/styles/style.css}" type="text/css">
     <style>
+        .modal fade show{
+            color: black;
+        }
         .fst-poppins {
             font-family: 'Poppins', sans-serif;
         }
@@ -123,10 +126,9 @@
                             // Calculate total pages after fetching data
                             totalPages = Math.ceil(allLoanData.length / cardsPerPage);
                             createLoanCards();
-                            console.log("hello");
                         },
                         error: function (xhr, status, error) {
-                            console.error("Error fetching insurance data:", error);
+                            console.error("Error fetching loans data:", error);
                         }
                     });
                 };
@@ -142,10 +144,11 @@
                         if (i >= allLoanData.length) break; // Exit loop if reached end of data
 
                         const loan = allLoanData[i];
+                        let loanTypeCamelCase = loan.loanType.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
                         let cardHtml = `
               <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 20rem; border-radius: 15px; margin-left: 60px">
         <div class="card-body">
-            <h5 class="card-title fst-montserrat" style="color: #182052; padding: 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; text-align: center;">${loan.loanType}</h5>
+            <h5 class="card-title fst-montserrat" style="color: #182052; padding: 10px; border-top-left-radius: 15px; border-top-right-radius: 15px; text-align: center;">${loanTypeCamelCase}</h5>
             <p class="card-text fst-montserrat" style="background-color: #f25c19; color: white; padding: 10px; margin-bottom: 0; border-top-left-radius: 15px; border-top-right-radius: 15px; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; text-align: center;">${loan.loanName}</p>
             <div class="fst-poppins" style="width: 15rem; margin: 0 auto; background-color:rgba(128, 128, 128, 0.5); padding: 8px; margin-top: 0; text-align: center; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px;">
                 <p style="color: #182052; font-weight: bold;">ROI : ${loan.loanRoi}</p>
@@ -157,6 +160,10 @@
             </div>
         </div>
     </div> `;
+
+
+
+
                         $("#loanCards").append(cardHtml);
                     }
                     generatePageNumbers();
@@ -213,23 +220,24 @@
                 updatePaginationButtons();
                 getAllLoanData();
 
-                // Existing code..
-                //.
+
                 $('#loanSearchForm').submit((event) => {
                     event.preventDefault(); // Prevent default form submission behavior
                     const loanType = $('#loanTypeInput').val().trim(); // Get the loan type input value
                     if (loanType !== '') { // Check if input value is not empty
                         if (!isNaN(loanType)) {
-                            // Show error message for invalid input
-                            let message = "Please enter the valid loan type";
-                            $('#invalidLoanTypeModal .modal-body').html(`<span style="color: black;">${message}</span>`);
+                            // error message for invalid input
+                            let errMessage = "Please enter a valid loan type";
+                            $('#invalidLoanTypeModal .modal-body').html(`<span style="color: black;">${errMessage}</span>`);
                             $('#invalidLoanTypeModal').modal('show');
                         } else {
-                            // Proceed with the search
+                            // search
                             searchLoansByType(loanType);
-                        } // Call function to search for loans by loan type
+                        }
                     } else {
-                        // Show modal if the input is empty
+                        // modal if the input is empty
+                        let emptyMessage = "Please enter a loan type to search";
+                        $('#noLoansFoundModal .modal-body').html(`<span style="color: black;">${emptyMessage}</span>`);
                         $('#noLoansFoundModal').modal('show');
                     }
                 });
@@ -336,8 +344,8 @@
         </div>
     </div>
     <!-- Modal content section -->
-<!--    <div id="modalContent"></div>-->
-    <div class="modal fade" id="noLoansFoundModal" tabindex="-1" role="dialog" aria-labelledby="noLoansFoundModalLabel" aria-hidden="true">
+    <div id="modalContent"></div>
+    <div class="modal fade show" id="noLoansFoundModal" tabindex="-1" role="dialog" aria-labelledby="noLoansFoundModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -346,7 +354,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="color: black">
                     There are no loans available for the selected loan type.
                 </div>
                 <div class="modal-footer">

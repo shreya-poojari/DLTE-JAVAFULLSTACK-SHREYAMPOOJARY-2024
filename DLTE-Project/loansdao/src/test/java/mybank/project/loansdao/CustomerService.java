@@ -1,8 +1,6 @@
 package mybank.project.loansdao;
 
 import mybank.project.loansdao.entity.MyBankCustomers;
-import mybank.project.loansdao.exception.NoLoanData;
-import mybank.project.loansdao.exception.NoLoanException;
 import mybank.project.loansdao.service.LoanService;
 import mybank.project.loansdao.service.MyBankCustomersService;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -71,7 +68,6 @@ public class CustomerService {
         MyBankCustomers customer = new MyBankCustomers();
         customer.setUsername("kavya");
         customer.setPassword("kav");
-
         assertEquals("kavya", customer.getUsername());
         assertEquals("kav", customer.getPassword());
         assertTrue(customer.isAccountNonExpired());
@@ -86,11 +82,9 @@ public class CustomerService {
         MyBankCustomers mockCustomer = new MyBankCustomers();
         mockCustomer.setUsername("kavya");
         mockCustomer.setPassword("kav");
-
         // Mock behavior
         when(jdbcTemplate.queryForObject(anyString(), any(Object[].class), any(Class.class)))
                 .thenReturn(mockCustomer);
-
         // Test and verify
         assertDoesNotThrow(() -> {
             try {
@@ -140,7 +134,6 @@ public class CustomerService {
         when(jdbcTemplate.query(anyString(), any(RowMapper.class))).thenReturn(mockCustomersList);
         // Test
         MyBankCustomers result = myBankCustomersService.findByUsername("kavya");
-
         // Verify
         assertNotNull(result);
         assertEquals("kavya", result.getUsername());

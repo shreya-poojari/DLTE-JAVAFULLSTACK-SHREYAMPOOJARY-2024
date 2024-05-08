@@ -43,6 +43,7 @@ public class Controller {
     })
     public ResponseEntity<Object> findByLoanType(@PathVariable String loanType, HttpServletResponse response) throws SQLException{
         try {
+            loanType = loanType.toLowerCase();
             if (!isValidLoanType(loanType)) {
                 return ResponseEntity.badRequest().body(resourceBundle.getString("enter.proper.loantype"));
             }

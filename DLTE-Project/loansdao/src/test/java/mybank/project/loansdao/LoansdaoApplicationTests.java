@@ -49,10 +49,8 @@ private LoansdaoApplication loansdaoApplication;
         availableLoans.add(new LoansAvailable(101,"Gold","Gold Loan","education, medical expenses, travel or use for personal cases",9.75));
         availableLoans.add(new LoansAvailable(102, "Home", "Home Loan", "to build home of dreams", 9.75));
         when(jdbcTemplate.query(anyString(), any(LoanService.LoansMapper.class))).thenReturn(availableLoans);
-
         // Calling the method of test
         List<LoansAvailable> result = loanService.allAvailableLoans();
-
         assertEquals(2, result.size());//pass
 
         assertEquals("Gold", result.get(0).getLoanType());//pass

@@ -62,7 +62,7 @@ public class LoanService implements LoanInterface {
     @Override
     public List<LoansAvailable> findByLoanType(String loanType) throws SQLException {
         if (loanType == null || loanType.isEmpty()) {
-            throw new IllegalArgumentException("Loan type cannot be null or empty");
+            throw new IllegalArgumentException("loan.empty");
         }
 
         try {
@@ -79,10 +79,10 @@ public class LoanService implements LoanInterface {
                     new SqlOutParameter("loan_info", Types.VARCHAR)
             ));
 
-            // Get the loan information from the output parameters
+            // Get the loan_info from the output parameters
             String loanInfo = (String) returnedLoans.get("loan_info");
 
-            // Check if the loan information indicates an error
+            // Check if there is an error in loan_info
             if (loanInfo != null && !loanInfo.isEmpty()) {
                 if (loanInfo.equals("NO_LOAN_FOUND")) {
                     logger.warn(resourceBundle.getString("no.loanType"));
@@ -93,10 +93,10 @@ public class LoanService implements LoanInterface {
                 }
             }
 
-            // If there was no error, return the list of loans
+            // return the list of loans if there is no error
             ArrayList<LoansAvailable> result = (ArrayList<LoansAvailable>) returnedLoans.get("loans_cursor");
 
-            // Check if the result is empty and throw NoLoanData exception if so
+            // Check if the result is empty,if empty throw NoLoanData exception
             if (result == null || result.isEmpty()) {
                 logger.warn(resourceBundle.getString("no.loanType"));
                 throw new NoLoanData(resourceBundle.getString("no.loanType") + loanType);
