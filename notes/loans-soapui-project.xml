@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c1fbfc39-af25-4fc5-b23b-37b6baf98cc4" activeEnvironment="Default" name="loans" resourceRoot="" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="597ae7e0-c4e5-412a-b2c2-1d4c02c3c1d2" wsaVersion="NONE" name="LoansPortSoap11" type="wsdl" bindingName="{http://loans.services}LoansPortSoap11" soapVersion="1_1" anonymous="optional" definition="http://localhost:3001/loansrepo/loans.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:3001/loansrepo/loans.wsdl"><con:part><con:url>http://localhost:3001/loansrepo/loans.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://loans.services" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://loansavail.services" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://loans.services">
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://loansavail.services" xmlns:tns="http://loansavail.services" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <!--Entity for loanAvailable-->
+      <xsd:complexType name="LoanAvailable">
+        <xsd:sequence>
+          <xsd:element name="loanNumber" type="xsd:int"/>
+          <xsd:element name="loanType" type="xsd:string"/>
+          <xsd:element name="loanName" type="xsd:string"/>
+          <xsd:element name="loanDescription" type="xsd:string"/>
+          <xsd:element name="loanRoi" type="xsd:double"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--serviceStatus-->
+      <xsd:complexType name="serviceStatus">
+        <xsd:sequence>
+          <xsd:element name="status" type="xsd:int"/>
+          <xsd:element name="message" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+      <!--List All the loans Available-->
+      <xsd:element name="viewAllAvailableLoanRequest">
+        <xsd:complexType/>
+      </xsd:element>
+      <xsd:element name="viewAllAvailableLoanResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="serviceStatus" type="tns:serviceStatus"/>
+            <xsd:element maxOccurs="unbounded" name="LoanAvailable" type="tns:LoanAvailable"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <!--filter by loan type-->
+      <xsd:element name="viewByLoanTypeRequest">
+        <xsd:complexType/>
+      </xsd:element>
+      <xsd:element name="viewByLoanTypeResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="serviceStatus" type="tns:serviceStatus"/>
+            <xsd:element maxOccurs="unbounded" name="LoanAvailable" type="tns:LoanAvailable"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="viewAllAvailableLoanRequest">
+    <wsdl:part element="sch:viewAllAvailableLoanRequest" name="viewAllAvailableLoanRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="viewByLoanTypeRequest">
+    <wsdl:part element="sch:viewByLoanTypeRequest" name="viewByLoanTypeRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="viewAllAvailableLoanResponse">
+    <wsdl:part element="sch:viewAllAvailableLoanResponse" name="viewAllAvailableLoanResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="viewByLoanTypeResponse">
+    <wsdl:part element="sch:viewByLoanTypeResponse" name="viewByLoanTypeResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="LoansPort">
+    <wsdl:operation name="viewAllAvailableLoan">
+      <wsdl:input message="tns:viewAllAvailableLoanRequest" name="viewAllAvailableLoanRequest"></wsdl:input>
+      <wsdl:output message="tns:viewAllAvailableLoanResponse" name="viewAllAvailableLoanResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewByLoanType">
+      <wsdl:input message="tns:viewByLoanTypeRequest" name="viewByLoanTypeRequest"></wsdl:input>
+      <wsdl:output message="tns:viewByLoanTypeResponse" name="viewByLoanTypeResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LoansPortSoap11" type="tns:LoansPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="viewAllAvailableLoan">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="viewAllAvailableLoanRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="viewAllAvailableLoanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="viewByLoanType">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="viewByLoanTypeRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="viewByLoanTypeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LoansPortService">
+    <wsdl:port binding="tns:LoansPortSoap11" name="LoansPortSoap11">
+      <soap:address location="http://localhost:3001/loansrepo"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:3001/loansrepo</con:endpoint></con:endpoints><con:operation id="8885ac97-e48c-4e60-92da-3ac6108c69be" isOneWay="false" action="" name="viewAllAvailableLoan" bindingOperationName="viewAllAvailableLoan" type="Request-Response" outputName="viewAllAvailableLoanResponse" inputName="viewAllAvailableLoanRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8c29c0ac-52af-4670-b6fb-332cd7217fd5" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:3001/loansrepo</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loan="http://loansavail.services">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <loan:viewAllAvailableLoanRequest/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>snehal</con:username><con:password>sne</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://loans.services/LoansPort/viewAllAvailableLoanRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="8f902012-602b-4d13-a5fd-9a49e48516dc" isOneWay="false" action="" name="viewByLoanType" bindingOperationName="viewByLoanType" type="Request-Response" outputName="viewByLoanTypeResponse" inputName="viewByLoanTypeRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3d288266-35cc-4aa7-b5ec-7b0a158e3a7b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:3001/loansrepo</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:loan="http://loansavail.services">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <loan:viewByLoanTypeRequest/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://loans.services/LoansPort/viewByLoanTypeRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

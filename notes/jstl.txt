@@ -1,0 +1,8 @@
+jstl
+core:
+if
+set
+remove
+out
+foreach
+choose>>when>>otherwise

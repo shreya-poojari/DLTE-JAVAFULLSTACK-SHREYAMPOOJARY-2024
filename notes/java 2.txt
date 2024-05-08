@@ -1,0 +1,137 @@
+operators:
+arithmatic + - * / %
+unary ++ --
+bitwise >> << & | ^
+shorthand += -= *= /= %= >>= <<=
+ 
+relational < > <= >= == !=
+logical && ||
+relational and logical>>boolen output true/false
+
+credit card EMI Processing fee calculation
+principle amount = 50000
+processing fee in percentage=1% with GST >>500+90>590
+RoI >>21.25% >>10500
+principle + roI >>60500
+tenure          >>10
+EMI             >>6050
+First month     >>6640
+close scanner >>scanner.close()
+
+control statements:  user requirement and provide solution based on that
+if(any datatype, work with all the relational and logical operators)
+switch(Whole no., ,charecters,string, equal and or)
+
+SIP Calculator
+RD calculator
+
+Looping statement:
+entry check for and while
+exit check do while
+
+avoids space complexity
+while (Transaction history,kyc form)  >>position insert the value to index
+do while(pin validation)
+for(conditions, works with ranges, linear iterative 
+for each(storage logic,never work with ranges,no index >>it is getting copy of particular index and has a copy of it if we want to store a value in particular array it wont impact original array
+not for search update insert delete
+
+system.out,println()
+
+task-- first ten transactions
+
+
+Type Conversion:
+type casting  (between any two datatypes)
+   eg:
+int accountType='s'; ->implicit casting(prints ascii number of s
+converting from low size datatype to large size datatypetransactionType='d';, int transType=transactionType;
+char 
+explicit casting->
+double intrest rate =7.2
+int deposited amount=24500, maturity amount=0
+maturityamount=int(depositamount+(depositamount*intrestrate)/100);
+system.out.println(maturityamount+"is returns from" depositeamount);
+
+type parsing (conversion from string to other types using respective wrapper class parse method)
+String myExperience"l1.0";
+if(myExperience==0 &&myExperience==8){
+ststem.out.println(
+
+String
+immutable
+read
+system.out.println(myPortfolio.CharAt(0));
+system.out.println(myStocks.substring(10,14));
+
+//storage logic:curd
+myStocks=myStocks.concat(", Microsoft);
+system.out.println(myStocks);
+
+//update
+myStocks=myStocks.replace("HP", Bharat petroleum");
+
+Regular expression
+RegEx:
+data validation:
+pattern>>compile,match
+matcher>matches
+
+^ >>start
+$ >>end
+
+[0-9] >>numbers
+[a-z A-Z] >>alphabets
+?= >>grouping
+
+[start,limit] >>length of the string
+singleton class cant create a number of classes
+passsword expression
+string passwordExpression="^(?=.[a-zA-Z])(?=.[0-9])(?=.[@$#_])(?=.//S+$)
+
+
+array:
+storage logic: Temporary,fixed Size,type specific
+
+Types
+single, multi, jagged
+declaration:
+Type[] var/obj={v1,v2,v3,......};
+type[] var/obj=new type[size];//10>>default value in all indecies
+
+operation
+CURD
+search
+sort
+analysis
+
+methods:
+minimize space complexity by distributed code of grouping statement based on nature
+executed when make a call
+
+types:
+inbuilt methods
+user defined
+
+category:
+pram with return: Type parsing.
+param without return:  println
+no param without return: finalize
+no param with return: scanner methods
+
+//CURD
+//Read
+//system.out.println(arrays.tostring(spends));
+
+for(int index=0; index=spends;
+
+
+casting is possible only btw objects involved in source point and destination point rather than in classes
+static object[] storage={"shreya m poojary",12.5,true,25000);
+public static void main(string[] args)
+{
+filters.map();
+system.out.println(filters.search(object 12.5)
+}
+//param with return
+public static int search(object object)

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBank</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-image: url('Images/mybank_background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            padding: 20px;
+        }
+
+        .product {
+            margin: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            color: crimson;
+            width: 200px;
+        }
+
+        .product img, .product video {
+            width: 150px;
+            height: 100px;
+            object-fit: cover; 
+            border-radius: 5px;
+        }
+
+        .product h2 {
+            margin-top: 10px;
+        }
+
+        .details {
+            display: none;
+        }
+
+        .product:hover .details {
+            display: block;
+        }
+
+        #depositFeatures,
+        #availableLoans {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            color: crimson;
+        }
+
+        #depositFeatures ul,
+        #availableLoans ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <div class="product">
+        <div>
+            <h2>ACCOUNT</h2>
+        </div>
+        <img src="Images/image1.jpg" alt="Bank Product 1">
+        <div class="details">
+            <p>A versatile financial product </p>
+        </div>
+    </div>
+    <div class="product">
+        <div>
+            <h2>CREDIT CARD</h2>
+        </div>
+        <img src="Images/image4.jpg" alt="Bank Product 2">
+        <div class="details">
+            <p>Experience financial flexibility</p>
+            <p>through our credit card offerings</p>
+        </div>
+    </div>
+    <div class="product">
+        <div>
+            <h2>INSURANCE</h2>
+        </div>
+        <img src="Images/image3.jpg" alt="Bank Product 3">
+        <div class="details">
+            <p>Protect your future with</p>
+            <p>comprehensive insurance coverage</p>
+        </div>
+    </div>
+    <div class="product">
+        <div>
+            <h2>MY BANK</h2>
+        </div>
+        <video controls muted autoplay>
+            <source src="Images/istockphoto-1486117185-640_adpp_is.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="details">
+            <p>Empower your financial journey</p>
+            <p>with our comprehensive banking solutions</p>
+        </div>    
+    </div>
+</div>
+
+<div id="depositFeatures">
+    <h2>Deposit Features:</h2>
+    <ul>
+        <li>High-interest savings account</li>
+        <li>Flexible term deposits</li>
+        <li>Online banking</li>
+        <li>Mobile banking app</li>
+    </ul>
+</div>
+
+<div id="availableLoans">
+    <h2>Available Loans:</h2>
+    <ol>
+        <li>Personal loans</li>
+        <li>Home loans</li>
+        <li>Vehicle loans</li>
+        <li>Education loans</li>
+    </ol>
+</div>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

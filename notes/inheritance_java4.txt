@@ -1,0 +1,56 @@
+Inheritance
+class:
+interface
+
+
+single,multi level, hirarchy, hybrid
+
+derivedClass extends baseClass
+derivedinterface extends baseinterface
+
+derivedClass implements baseinterface
+
+virtual feature not offered in class
+
+java class is virtual
+try to avoid ambiguity btw thw classes
+hirarchy inheritance- 
+
+keeping member inside a class and keeping member inside interface ->is it same.
+
+ array in interface cannot be updated but class can.
+we can do overloading in interface.
+writing same method from parent to child->overriding
+exact interface has only abstract methods.
+when you inherit the class there is no abstract method you are supposed to override it in interface
+clonable is interface does not have abstract method->marked interface.
+
+this->represents current object
+super->represents parent object
+if we have two interfaces saring the common properties we are implementing both as multiple inheritance then it serves first come frst serve rule and gets overriden with first interface.
+
+inner class
+class may be the member of another class
+1. static
+2.non static3.local
+4.anonyomus
+
+Modifiers:
+public
+private
+protected: inheritance required when tried to access outside of a package.
+			should be member of another class
+default: package scope
+abstract: given in front of method->shouldnt have any defination
+						""	class
+		once created cannot instantiated directly need to be inherited.
+		
+final
+static-> used in frot of methods, data members, class.
+							
+stand around classes: public, final, default, abstract.
+member classes: private, protected, static.
+
+if any local variable or local member is there we need to change within a block we can only reach from outside the block
+
+Runtime-> class allows us to run any class/application and allocate memory
